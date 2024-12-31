@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="./css/search.css">
     <link rel="stylesheet" href="./css/product.css">
-	<link rel="shortcut icon" type="image/png" href="./images/logo.png">
+	  <link rel="shortcut icon" type="image/png" href="./images/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Welcome to Vince Vineyard International</title>
 </head>
@@ -20,7 +21,7 @@
 			<a href="" class="nav__link">About</a>
 			<a href="" class="nav__link">Men</a>
 			<a href="" class="nav__link">Women</a>
-            <a href="" class="nav__link">Contact</a>
+      <a href="" class="nav__link">Contact</a>
 		</div>
 
 		<div class="more_options">
@@ -57,19 +58,19 @@
         </div>
     </div>
 
-    <main>
+    <main style="border: none;">
       <div class="product_preview_plus_extra_images">
         <div class="additional_images">
-          <div class="additional_image" data-left="0">
+          <div class="additional_image active">
             <img src="./images/1.jpg" alt="Image">
           </div>
-          <div class="additional_image inactive" data-left="70">
+          <div class="additional_image">
             <img src="./images/2.jpg" alt="Image">
           </div>
-          <div class="additional_image inactive" data-left="140">
+          <div class="additional_image">
             <img src="./images/3.jpg" alt="Image">
           </div>
-          <div class="additional_image inactive" data-left="210">
+          <div class="additional_image">
             <img src="./images/4.jpg" alt="Image">
           </div>
         </div>
@@ -142,6 +143,18 @@
         </div>
 
         <p style="font-weight: bold;">Size</p>
+
+        <div class="pagination_container" style="justify-content: unset; gap: 10px">
+          <a href="" class="active_page">S</a>
+          <a href="">M</a>
+          <a href="">L</a>
+          <a href="">XL</a>
+        </div>
+
+        <div class="completion_buttons">
+          <button>Add To Cart</button>
+          <button>Checkout Now</button>
+        </div>
       </div>
     </main>
 
@@ -201,11 +214,11 @@
 
       sideBarButton.addEventListener("click", (e)=>{
         e.preventDefault();
-          sideBar.style.left = "0";
+        sideBar.style.left = "0";
       });
 
       closeButton.addEventListener("click", (e)=>{
-          sideBar.style.left = "100%";
+        sideBar.style.left = "100%";
       });
 
       var allImages = [1,2,3,7,5];
