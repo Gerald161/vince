@@ -1,3 +1,7 @@
+:root{
+  --image_width:45vw;
+}
+
 body{
   overflow-x: hidden;
 }
@@ -15,13 +19,13 @@ main .product_preview_plus_extra_images{
 main .first{
   position: relative;
   border-radius: 20px;
-  width: 45vw;
+  width: var(--image_width);
   overflow: hidden;
 }
 
 .slider{
   position: relative;
-  width: 45vw;
+  width: var(--image_width);
   left: 0;
   display: flex;
   transition: all 0.7s;
@@ -29,7 +33,7 @@ main .first{
 
 .slider img{
   height: 76vh;
-  width: 45vw;
+  width: var(--image_width);
   object-fit: cover;
   border-radius: 20px;
 }
