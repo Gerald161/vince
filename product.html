@@ -11,7 +11,7 @@
     <title>Welcome to Vince Vineyard International</title>
 </head>
 <body>
-    <nav>
+  <nav>
 		<a href="index.html" class="logo">
 			<img src="./images/logo.png" loading="lazy" alt="Logo">
 			<h4>Vince Vineyard</h4>
@@ -21,7 +21,7 @@
 			<a href="" class="nav__link">About</a>
 			<a href="" class="nav__link">Men</a>
 			<a href="" class="nav__link">Women</a>
-      <a href="" class="nav__link">Contact</a>
+            <a href="" class="nav__link">Contact</a>
 		</div>
 
 		<div class="more_options">
@@ -42,9 +42,14 @@
 			</a>
 		</div>
 
-		<a href="" class="nav_icon">
-			<i class="fa fa-bars"></i>
-		</a>
+    <div class="nav_icon_container">
+        <a href="">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+        <a href="" class="nav_icon">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
 	</nav>
 
 	<div class="mobile_screen_sidebar">
@@ -91,7 +96,11 @@
           </div>
   
           <a class="prev">&#10094;</a>
-          <a class="next">&#10095;</a> 
+          <a class="next">&#10095;</a>
+
+          <a href="">
+            <i class="fa-regular fa-heart like_product_container"></i>
+          </a>
         </div>
       </div>
 
@@ -106,13 +115,16 @@
           <p class="discount">5% Disc</p>
         </div>
         
-        <div class="reviews">
-					<i class="fa-solid fa-star"></i>
-					<i class="fa-solid fa-star"></i>
-					<i class="fa-solid fa-star"></i>
-					<i class="fa-solid fa-star"></i>
-					<i class="fa-solid fa-star" style="color: grey"></i>
-				</div>
+        <div class="star_container">
+          <div class="star_reviews">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star" style="color: grey"></i>
+          </div>
+          <p>(4.6) | 200 ratings</p>
+        </div>
 
         <p style="font-weight: bold;">Descriptions</p>
 
@@ -142,7 +154,9 @@
           </div>
         </div>
 
-        <p style="font-weight: bold;">Size</p>
+        <div>
+          <p style="font-weight: bold;">Size</p>
+        </div>
 
         <div class="pagination_container" style="justify-content: unset; gap: 10px">
           <a href="" class="active_page">S</a>
@@ -165,6 +179,103 @@
     </div>
 
     <h3 style="padding: 10px 0 0 20px;">Reviews</h3>
+
+    <div class="general_reviews_container">
+      <div class="reviews_section">
+        <select name="" id="">
+          <option value="">Newest</option>
+          <option value="">Positive</option>
+          <option value="">Negative</option>
+        </select>
+
+        <div class="reviews_container">
+          <div class="user_image"></div>
+          <div class="review_detail_container">
+            <div class="name_and_time">
+              <p>Helen M</p>
+              <p>Yesterday</p>
+            </div>
+
+            <div class="star_container">
+              <div class="star_reviews">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star" style="color: grey"></i>
+              </div>
+              <!-- #28A745 -->
+              <p style="color: #32CD32;">Verified Purchase</p>
+              <div class="check_container">
+                <i style="color: white;" class="fa-solid fa-check"></i>
+              </div>
+            </div>
+
+            <p>Excellent Running shoes</p>
+
+            <div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ratings_explanation_section">
+        <div class="star_container" style="
+          justify-content: space-between;
+          border-bottom: 1px solid #666;
+          padding-bottom: 5px;
+        "
+        >
+          <div class="star_reviews" style="gap: 10px;">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star" style="color: grey"></i>
+          </div>
+          <h2>4.6</h2>
+        </div>
+
+        <div class="rating_bars">
+          <div class="rating_bar">
+            <p>5</p>
+            <div class="progress_bar">
+              <div class="progress_fill"></div>
+            </div>
+            <p>28</p>
+          </div>
+          <div class="rating_bar">
+            <p>4</p>
+            <div class="progress_bar">
+              <div class="progress_fill" style="width: 30%;"></div>
+            </div>
+            <p>9</p>
+          </div>
+          <div class="rating_bar">
+            <p>3</p>
+            <div class="progress_bar">
+              <div class="progress_fill" style="width: 15%;"></div>
+            </div>
+            <p>4</p>
+          </div>
+          <div class="rating_bar">
+            <p>2</p>
+            <div class="progress_bar">
+              <div class="progress_fill" style="width: 5%;"></div>
+            </div>
+            <p>1</p>
+          </div>
+          <div class="rating_bar">
+            <p>1</p>
+            <div class="progress_bar">
+              <div class="progress_fill" style="width: 5%;"></div>
+            </div>
+            <p>1</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer>
         <div class="footer_info">
@@ -221,7 +332,7 @@
         sideBar.style.left = "100%";
       });
 
-      var allImages = [1,2,3,7,5];
+      var allImages = [1,2,3,7,5,6];
 
       const featured_products = document.querySelector(".featured_products");
       

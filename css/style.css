@@ -61,7 +61,6 @@ nav .nav_links .nav__link{
     display: inline-block;
     padding: calc(var(--spacing) / 2) var(--spacing);
     position: relative;
-    /* letter-spacing: 2px; */
     font-size: 0.9rem;
   }
   
@@ -92,7 +91,7 @@ nav .more_options{
 
 nav .more_options a{
 	display: flex; 
-	gap: 5px; 
+	gap: 10px; 
 	align-items: center;
 }
 
@@ -100,11 +99,10 @@ nav .more_options a i{
 	font-size: 1.2em;
 }
 
-nav .nav_icon{
-    display: none !important;
-    font-size: 25px;
-	gap: 5px; 
-	align-items: center;
+nav .nav_icon_container{
+    display: none !important;;
+    align-items: center;
+    gap: 15px;
 }
 
 .mobile_screen_sidebar{
@@ -194,7 +192,6 @@ nav .nav_icon{
     text-align: center;
 	flex-direction: column;
 	gap: 30px;
-	max-width: 60%;
 }
 
 .intro .overlay .welcome_message button{
@@ -439,18 +436,27 @@ footer .footer_info a i{
 		display: none;
 	}
 
-	nav .nav_icon{
+	nav .nav_icon_container{
 		display: flex !important;
 	}
+
+    .featured_styles .big_feature{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .featured_products{
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .featured_products .product .image_container{
+        height: 150px;
+    }
 }
 
 @media (prefers-color-scheme: dark){
 	body{
         background-color: #121212;
-    }
-
-    .nav_icon, .nav_icon2{
-        color: white;
     }
 
     .mobile_screen_sidebar{
@@ -459,10 +465,6 @@ footer .footer_info a i{
 
     .intro{
 		height: 60vh;
-	}
-
-    .intro .overlay .welcome_message{
-		max-width: unset;
 	}
 
     a{
