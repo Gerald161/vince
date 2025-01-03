@@ -388,6 +388,24 @@ p:nth-child(2){
   background-color: #2a2a2a;
 }
 
+.personal_review_container .star_reviews{
+  font-size: 2em;
+  flex-direction: row-reverse;
+}
+
+.personal_review_container .star_reviews i{
+  color: grey;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.personal_review_container .star_reviews 
+i:hover, .personal_review_container .star_reviews 
+i:hover ~ i
+{
+  color: white;
+}
+
 @media(max-width: 700px){
   main{
     flex-direction: column;
