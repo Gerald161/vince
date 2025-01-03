@@ -10,46 +10,52 @@
     <title>Welcome to Vince Vineyard International</title>
 </head>
 <body>
-  <nav>
-		<a href="index.html" class="logo">
-			<img src="./images/logo.png" loading="lazy" alt="Logo">
-			<h4>Vince Vineyard</h4>
-		</a>
+  <header>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="./images/logo.png" loading="lazy" alt="Logo">
+            <h4>Vince Vineyard</h4>
+        </a>
 
-		<div class="nav_links">
-			<a href="" class="nav__link">About</a>
-			<a href="" class="nav__link">Men</a>
-			<a href="" class="nav__link">Women</a>
+        <div class="nav_links">
+            <a href="" class="nav__link">About</a>
+            <a href="" class="nav__link">Men</a>
+            <a href="" class="nav__link">Women</a>
             <a href="" class="nav__link">Contact</a>
-		</div>
+        </div>
 
-		<div class="more_options">
-			<a href="">
-			    <i class="fa-regular fa-sun"></i>
-			</a>
+        <div class="more_options">
+            <a href="">
+                <i class="fa-regular fa-sun"></i>
+            </a>
 
-			<a href="">
-				<i class="fa-regular fa-heart"></i>
-			</a>
+            <a href="">
+                <i class="fa-regular fa-heart"></i>
+            </a>
 
-			<a href="./checkout.html">
-				<i class="fa-solid fa-cart-shopping"></i>
-			</a>
+            <a href="./checkout.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
 
-			<a href="">
-				<i class="fa-regular fa-circle-user"></i>
-			</a>
-		</div>
+            <a href="">
+                <i class="fa-regular fa-circle-user"></i>
+            </a>
+        </div>
 
-    <div class="nav_icon_container">
-        <a href="">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </a>
-        <a href="" class="nav_icon">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
-	</nav>
+        <div class="nav_icon_container">
+            <a href="#" class="show_search_form_button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            <a href="" class="nav_icon">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+    <form action="">
+        <input type="text" placeholder="What are you looking for">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+  </header>
 
 	<div class="mobile_screen_sidebar">
       <i class="close_button fas fa-times"></i>
@@ -80,7 +86,7 @@
           <div class="filter_section">
             <div class="filter_options_section_option">
               <div class="icon_and_text_container">
-                <img src="icons/1.png">
+                <!-- <img src="icons/1.png"> -->
                 <p>Diet</p>
               </div>
     
@@ -89,7 +95,7 @@
     
             <div class="filter_options_section_option">
               <div class="icon_and_text_container">
-                <img src="icons/2.png">
+                <!-- <img src="icons/2.png"> -->
                 <p>Cuisine</p>
               </div>
     
@@ -98,7 +104,7 @@
     
             <div class="filter_options_section_option">
               <div class="icon_and_text_container">
-                <img src="icons/3.png">
+                <!-- <img src="icons/3.png"> -->
                 <p>Health</p>
               </div>
     
@@ -107,7 +113,7 @@
     
             <div class="filter_options_section_option">
               <div class="icon_and_text_container">
-                <img src="icons/4.png">
+                <!-- <img src="icons/4.png"> -->
                 <p>Time</p>
               </div>
     
@@ -116,7 +122,7 @@
     
             <div class="filter_options_section_option">
               <div class="icon_and_text_container">
-                <img src="icons/5.png">
+                <!-- <img src="icons/5.png"> -->
                 <p>Chef's Special</p>
               </div>
     
@@ -210,6 +216,15 @@
 
       closeButton.addEventListener("click", (e)=>{
           sideBar.style.left = "100%";
+      });
+
+      var show_search_form_button = document.querySelector(".show_search_form_button");
+
+      var header_form = document.querySelector("header").querySelector("form");
+      
+      show_search_form_button.addEventListener("click", (e)=>{
+          e.preventDefault();
+          header_form.classList.toggle("show_header");
       });
 
       var allImages = [1,2,3,4,5,6,7,8];

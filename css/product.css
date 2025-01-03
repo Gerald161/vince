@@ -281,7 +281,22 @@ main .product_description .completion_buttons button:hover{
 }
 
 .general_reviews_container .reviews_section .reviews_container .review_container input{
-  width: 60%;
+  width: 350px;
+}
+
+.general_reviews_container .reviews_section .reviews_container .review_container button{
+  cursor: pointer;
+  padding: 10px 20px;
+  max-width: fit-content;
+  border: none;
+  background-color: dodgerblue;
+  color: white;
+  transition: all 0.5s;
+  pointer-events: initial;
+}
+
+.general_reviews_container .reviews_section .reviews_container .review_container button:hover{
+  background-color: #1e6fd9;
 }
 
 .general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container{
@@ -406,7 +421,20 @@ i:hover ~ i
   color: white;
 }
 
-@media(max-width: 700px){
+.show_more{
+  transition: all 0.5s;
+  padding: 10px;
+  border-radius: 5px;
+  width: fit-content;
+  margin-left: 59px;
+  color: dodgerblue;
+}
+
+.show_more:hover{
+  background-color: #2a2a2a;
+}
+
+@media(max-width: 900px){
   main{
     flex-direction: column;
     gap: 20px;
@@ -419,10 +447,8 @@ i:hover ~ i
 
   main .first{
     position: relative;
-    border-radius: 20px;
     width: 100vw;
-    height: 70vh;
-    overflow-x: hidden;
+    height: 60vh;
   }
   
   .slider{
@@ -447,6 +473,7 @@ i:hover ~ i
   main .product_preview_plus_extra_images{
     flex-direction: column-reverse;
     position: relative;
+    max-height: unset;
   }
 
   main .additional_images{
@@ -465,6 +492,18 @@ i:hover ~ i
 
   .featured_products .product .image_container{
     height: 110px;
+  }
+
+  .general_reviews_container{
+    flex-direction: column-reverse;
+  }
+
+  .like_product_container{
+    font-size: 1em;
+  }
+
+  .general_reviews_container .reviews_section .reviews_container .review_container input{
+    width: 220px;
   }
 }
 

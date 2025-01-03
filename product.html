@@ -11,46 +11,52 @@
     <title>Welcome to Vince Vineyard International</title>
 </head>
 <body>
-  <nav>
-		<a href="index.html" class="logo">
-			<img src="./images/logo.png" loading="lazy" alt="Logo">
-			<h4>Vince Vineyard</h4>
-		</a>
+  <header>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="./images/logo.png" loading="lazy" alt="Logo">
+            <h4>Vince Vineyard</h4>
+        </a>
 
-		<div class="nav_links">
-			<a href="" class="nav__link">About</a>
-			<a href="" class="nav__link">Men</a>
-			<a href="" class="nav__link">Women</a>
+        <div class="nav_links">
+            <a href="" class="nav__link">About</a>
+            <a href="" class="nav__link">Men</a>
+            <a href="" class="nav__link">Women</a>
             <a href="" class="nav__link">Contact</a>
-		</div>
+        </div>
 
-		<div class="more_options">
-			<a href="">
-			    <i class="fa-regular fa-sun"></i>
-			</a>
+        <div class="more_options">
+            <a href="">
+                <i class="fa-regular fa-sun"></i>
+            </a>
 
-			<a href="">
-				<i class="fa-regular fa-heart"></i>
-			</a>
+            <a href="">
+                <i class="fa-regular fa-heart"></i>
+            </a>
 
-			<a href="./checkout.html">
-				<i class="fa-solid fa-cart-shopping"></i>
-			</a>
+            <a href="./checkout.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
 
-			<a href="">
-				<i class="fa-regular fa-circle-user"></i>
-			</a>
-		</div>
+            <a href="">
+                <i class="fa-regular fa-circle-user"></i>
+            </a>
+        </div>
 
-    <div class="nav_icon_container">
-        <a href="">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </a>
-        <a href="" class="nav_icon">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
-	</nav>
+        <div class="nav_icon_container">
+            <a href="#" class="show_search_form_button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            <a href="" class="nav_icon">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+    <form action="">
+      <input type="text" placeholder="What are you looking for">
+      <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+  </header>
 
 	<div class="mobile_screen_sidebar">
         <i class="close_button fas fa-times"></i>
@@ -195,7 +201,10 @@
         <div class="reviews_container">
           <div class="review_container">
             <div class="user_image"></div>
-            <input type="text" placeholder="Leave a public review (Optional)">
+            <form action="">
+              <input type="text" placeholder="Leave a public review (Optional)">
+              <button>Submit</button>
+            </form>
           </div>
         </div>
 
@@ -372,17 +381,7 @@
           </div>
         </div>
 
-        <div class="navigation_container" style="justify-content: initial; gap: 20px;">
-          <a href=""><i class="fa-solid fa-arrow-left"></i> Prev</a>
-  
-          <div class="pagination_container">
-            <a href="" class="active_page">1</a>
-            <a href="">2</a>
-            <a href="">3</a>
-          </div>
-  
-          <a href="">Next <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
+        <a href="" class="show_more">Show more reviews</a>
       </div>
 
       <div class="ratings_explanation_section">
@@ -495,6 +494,15 @@
 
       closeButton.addEventListener("click", (e)=>{
         sideBar.style.left = "100%";
+      });
+
+      var show_search_form_button = document.querySelector(".show_search_form_button");
+
+      var header_form = document.querySelector("header").querySelector("form");
+      
+      show_search_form_button.addEventListener("click", (e)=>{
+          e.preventDefault();
+          header_form.classList.toggle("show_header");
       });
 
       var allImages = [1,2,3,7,5,6];

@@ -82,7 +82,7 @@ window.onresize = checkWindowSize;
 
 function checkWindowSize(){
     selected_index --;
-    if(window.innerWidth <= '700'){
+    if(window.innerWidth <= '900'){
         current_slider_value = 100;
         slideRight();
     }else{
