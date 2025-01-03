@@ -280,6 +280,10 @@ main .product_description .completion_buttons button:hover{
   background: url(../images/avatar.jpeg) no-repeat center/cover;
 }
 
+.general_reviews_container .reviews_section .reviews_container .review_container input{
+  width: 60%;
+}
+
 .general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container{
   display: flex;
   flex-direction: column;
@@ -395,14 +399,11 @@ p:nth-child(2){
     border-radius: 0 !important;
   }
 
-  .slider img{
-    height: 60vh;
-  }
-
   main .first{
     position: relative;
     border-radius: 20px;
     width: 100vw;
+    height: 70vh;
     overflow-x: hidden;
   }
   
@@ -427,6 +428,7 @@ p:nth-child(2){
 
   main .product_preview_plus_extra_images{
     flex-direction: column-reverse;
+    position: relative;
   }
 
   main .additional_images{

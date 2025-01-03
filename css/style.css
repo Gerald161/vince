@@ -61,7 +61,8 @@ nav .nav_links .nav__link{
     display: inline-block;
     padding: calc(var(--spacing) / 2) var(--spacing);
     position: relative;
-    font-size: 0.9rem;
+    font-weight: bold;
+    /* font-size: 0.9rem; */
   }
   
 nav .nav_links .nav__link:after {
@@ -213,7 +214,7 @@ nav .nav_icon_container{
     background-color: orangered;   
 }
 
-form input{
+input{
     padding: 10px;
 }
 
@@ -494,8 +495,11 @@ footer .footer_info a i{
 	  border: 1px solid #333; /* Subtle border */
 	  outline: none; /* Remove default outline */
 	  border-radius: 4px; /* Smooth corners */
-	  padding: 0 2px 3px 0;
 	}
+
+    textarea{
+        padding: 0 2px 3px 0;
+    }
 
 	input:focus, textarea:focus {
 	  border-color: #007bff; /* Highlighted border on focus */
