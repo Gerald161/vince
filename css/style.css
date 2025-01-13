@@ -39,7 +39,6 @@ header{
 }
 
 nav{
-    flex: 1;
 	display: flex;
 	justify-content: space-between;
 	padding: 15px;
@@ -53,14 +52,9 @@ nav .logo{
 }
 
 nav .logo img{ 
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     object-fit: cover;
-}
-
-nav .logo h4{
-    font-family: 'Disney';
-    font-weight: normal;
 }
 
 nav .nav_links{
@@ -76,7 +70,6 @@ nav .nav_links .nav__link{
     padding: calc(var(--spacing) / 2) var(--spacing);
     position: relative;
     font-weight: bold;
-    /* font-size: 0.9rem; */
   }
   
 nav .nav_links .nav__link:after {
@@ -106,7 +99,7 @@ nav .more_options{
 
 nav .more_options a{
 	display: flex; 
-	gap: 10px; 
+	gap: 5px; 
 	align-items: center;
 }
 
@@ -115,9 +108,13 @@ nav .more_options a i{
 }
 
 nav .nav_icon_container{
-    display: none !important;;
+    display: none !important;
     align-items: center;
     gap: 15px;
+}
+
+.hide_nav_links{
+	display: none !important;
 }
 
 header form{
@@ -130,13 +127,21 @@ header form{
     position: relative;
 }
 
-header form input, 
-.welcome_message form input{
+.first_form{
+	max-width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.second_form{
+	display: none;
+}
+
+header form input{
     padding-right: 35px;
 }
 
-header form .search_suggestions, 
-.welcome_message form .search_suggestions{
+header form .search_suggestions{
     position: absolute;
     margin-top: 1px;
     width: 100%;
@@ -167,8 +172,7 @@ header form .search_suggestions{
     background-color: rgba(255,255,255,0.3);
 }
 
-header form .search_suggestions a,
-.welcome_message form .search_suggestions a{
+header form .search_suggestions a{
     text-decoration: none;
     transition: all 0.5s;
     padding: 12px 15px;
@@ -177,17 +181,20 @@ header form .search_suggestions a,
     gap: 15px;
 }
 
-header form .search_suggestions a:hover,
-.welcome_message form .search_suggestions a:hover{
+header form .search_suggestions a:hover{
     background: #B3B3B3;
     color: black !important;
 }
 
 .show_header{
+	/* for first header */
+	max-width: 100%;
+	pointer-events: all;
+	position: relative;
+	/* it ends here */
     opacity: 1;
     max-height: 300px;
     margin: 0 8px;
-    padding-bottom: 10px;
 }
 
 header form input{
@@ -238,67 +245,71 @@ header form button{
     width: 100%;
 }
 
-.intro{
-	height: 75vh;
-	width: 100%;
+.welcome_container{
+	height: 60vh;
+	/* changed below from 500 to 400 */
+	width: 400%;
+	position: relative;
+	display: flex;
+	/* below is what I added later */
+	transition: all 1s;
+	left: 0;
+}
+
+.welcome_plus_slider{
 	position: relative;
 }
 
-.intro .slider_info{
+.welcome_plus_slider .slider_controller{
 	position: absolute;
-    width: 100%;
-    height: 100%;
+	left: 45vw;
+	bottom: 20px;
+	z-index: 100;
+	display: flex;
+	gap: 20px;
 }
 
-.intro img{
+.welcome_plus_slider .slider_controller i{
+	font-size: 1.5em;
+	cursor: pointer;
+}
+
+.hide_icon{
+	display: none;
+}
+
+.welcome_container .slider_info{
+	flex-basis: 50%;
+	position: relative;
+}
+
+.welcome_container img{
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.intro img:nth-child(2){
-    animation: animate ease 10s infinite alternate;
-    animation-delay: 5s;
-}
-
-@keyframes animate{
-	0%{
-		opacity: 1;
-	}
-    50%{
-        opacity: 0;
-    }
-	100%{
-		opacity: 1;
-	}
-}
-
-.intro .overlay{
+.welcome_container .overlay{
     background-color: rgba(0,0,0,0.6);
     position: absolute;
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
 }
 
-.intro .overlay .welcome_message{
+.welcome_container .overlay .welcome_message{
 	color: white;
 	padding: 20px;
 	display: flex;
-    align-items: center;
-    text-align: center;
 	flex-direction: column;
 	gap: 30px;
+	max-width: 60%;
 }
 
-.intro .overlay .welcome_message form{
-    position: relative;
-}
-
-.intro .overlay .welcome_message button{
+.welcome_container .overlay .welcome_message button, 
+.main_categories .category .category_description button{
     cursor: pointer;
     padding: 10px 20px;
     max-width: fit-content;
@@ -309,20 +320,64 @@ header form button{
     pointer-events: initial;
 }
 
-.intro .overlay .welcome_message button{
+.welcome_container .overlay .welcome_message button{
 	background-color: dodgerblue;
 }
 
-.intro .overlay .welcome_message button:hover{
+.welcome_container .overlay .welcome_message button:hover, 
+.main_categories .category .category_description button:hover{
     background-color: orangered;   
-}
-
-input{
-    padding: 10px;
 }
 
 main{
     padding: 20px;
+	padding-bottom: 40px;
+}
+
+main .small_info{
+	margin: 30px 0;
+	text-align: center;
+}
+
+main .small_info p{
+	color: rgb(170, 170, 170); 
+	margin: 10px
+}
+
+.why_us_reasons{
+	display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: fit-content;
+    grid-auto-flow: dense;
+    background-color: #EAEAEA;
+}	
+
+.why_us_reasons .reason{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	padding: 20px;
+	gap: 15px;
+	border-right: 2px solid #ccc;
+}
+
+.why_us_reasons .reason img{
+	height: 50px;
+	width: 50px;
+	object-fit: cover;
+}
+
+.why_us_reasons .reason img:nth-child(2){
+	display: none;
+}
+
+.why_us_reasons .reason:last-child{
+	border-right: none;
+}
+
+input{
+    padding: 10px;
 }
 
 .heading{
@@ -330,12 +385,13 @@ main{
     align-items: center;
     flex-direction: column;
     gap: 10px;
-    padding: 20px;
+    padding-top: 20px;
 }
 
 .heading .header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 20px;
     width: 100%;
 }
@@ -364,7 +420,7 @@ main{
 }
 
 .featured_styles .featured_style .overlay{
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0,0,0,0.2);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -485,17 +541,107 @@ main{
     background: url(../images/1.jpg) no-repeat center/cover;
 }
 
+.other_categories{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-auto-rows: 190px;
+    grid-auto-flow: dense;
+    padding: 10px;
+}
+
+.other_categories .other_category{
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.other_categories .other_category img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.other_categories .other_category .overlay{
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.other_categories .other_category .overlay button{
+    cursor: pointer;
+    padding: 5px 15px;
+    max-width: fit-content;
+    border: none;
+    border-radius: 7px;
+    background-color: dodgerblue;
+    color: white;
+    transition: background-color 0.5s;
+    pointer-events: initial;
+}
+
+.other_categories .other_category .overlay button:hover{
+    background-color: orangered;   
+}
+
+.other_categories .other_category .overlay .heading{
+    gap: 20px;
+    padding-top: 0;
+    width: 70%;
+    transition: all 0.7s;
+    opacity: 0;
+}
+
+.other_categories .other_category .overlay:hover .heading{
+    opacity: 1;
+}
+
+.other_categories .big{
+    grid-row: span 2;
+}
+
+.other_categories .big .overlay{
+    gap: 20px;
+}
+
+.faq_section{
+    display: flex;
+    gap: 10px;
+    margin: 40px 0;
+}
+
+.faq_section .image_section{
+    flex: 1;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 55vh;
+    max-height: 55vh;
+}
+
+.faq_section .image_section img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .faq-container {
-    width: 60%;
-    margin: 30px auto;
-    padding: 20px;
+    flex: 1;
+    padding: 0 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     background-color: var(--container-bg);
 }
 
-.faq-container h1{
-    margin-bottom: 30px;
+.faq-container h2{
+    margin-bottom: 20px;
 }
 
 /* FAQ item styles */
@@ -556,6 +702,8 @@ footer{
     padding: 20px;
     flex-wrap: wrap;
     background-color: #e0e0e0; 
+    gap: 5px;
+    padding-bottom: 40px;
 }
 
 footer .footer_info{
@@ -563,18 +711,49 @@ footer .footer_info{
     flex-direction: column;
 }
 
+footer .footer_info:nth-child(1){
+	display: flex;
+	flex-direction: column;
+	gap: 20px;	
+}
+
+footer .footer_info button{
+    cursor: pointer;
+    padding: 10px 20px;
+    max-width: fit-content;
+    border: none;
+    background-color: dodgerblue;
+    color: white;
+    transition: background-color 0.5s;
+    pointer-events: initial;
+}
+
+footer .footer_info button:hover{
+	background-color: orangered;
+}
+
+footer .footer_info h1{
+	font-weight: normal;
+	font-size: 1.4em;
+}
+
 footer .footer_info h2{
-    font-style: normal;
-    font-weight: 500;
-    text-align: center;
-    font-size: 1rem;   
+    font-size: 1.2em;   
     padding-bottom: 10px;
-    border-bottom: 1px solid #ccc;
 }
 
 footer .footer_info a{
     padding: 10px 0;
-    text-align: center;
+    transition: all 0.5s;
+    color: #4A4A4A;
+}
+
+footer .footer_info .first_p{
+	color: #4A4A4A;
+}
+
+footer .footer_info a:hover{
+	color: dodgerblue;
 }
 
 footer .footer_info a i{
@@ -593,10 +772,6 @@ footer .footer_info a i{
 		display: none;
 	}
 
-	.welcome_container{
-		height: 84.5vh;
-	}
-
 	nav .nav_links{
 		display: none;
 	}
@@ -605,12 +780,24 @@ footer .footer_info a i{
 		display: none;
 	}
 
-    .close_button{
-        color: white;
-    }
+	.close_button{
+		color: white;
+	}
 
 	nav .nav_icon_container{
 		display: flex !important;
+	}
+
+	.first_form{
+		display: none !important;
+	}
+
+	.second_form{
+		display: flex !important;
+	}
+
+	.show_header{
+		padding-bottom: 10px;
 	}
 
     .featured_styles .big_feature{
@@ -626,6 +813,24 @@ footer .footer_info a i{
         height: 150px;
     }
 
+    .welcome_container .overlay .welcome_message{
+		max-width: unset;
+	}
+
+    .why_us_reasons{
+		grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    	margin-bottom: 50px;
+	}
+
+	.why_us_reasons .reason:nth-child(1){
+		border-bottom: 2px solid #ccc;
+	}
+
+	.why_us_reasons .reason:nth-child(2){
+		border-bottom: 2px solid #ccc;
+		border-right: none;
+	}
+
     .break_info .left_side{
         flex: 1;
         height: 230px;
@@ -635,6 +840,10 @@ footer .footer_info a i{
         width: 100%;
         margin: 30px auto;
     }
+
+    footer{
+    	gap: 30px;
+	}
 }
 
 @media (prefers-color-scheme: dark){
@@ -663,6 +872,10 @@ footer .footer_info a i{
     .mobile_screen_sidebar{
         background-color: #121212;
     }
+
+    .close_button{
+		color: white;
+	}
 
     .intro{
 		height: 60vh;
@@ -693,6 +906,26 @@ footer .footer_info a i{
         color: rgb(170, 170, 170);
     }
 
+    .why_us_reasons{
+    	background-color: #1f1f1f;
+    }
+
+    .why_us_reasons .reason{
+		border-right: 2px solid #141414;
+	}
+
+	.why_us_reasons .reason img:nth-child(1){
+		display: none;
+	}
+
+	.why_us_reasons .reason img:nth-child(2){
+		display: block;
+	}
+
+	.message button{
+		background-color: #333;
+	}
+
 	input, textarea{
 	  background-color: #0f0f0f; /* Dark mode background */
 	  color: #fff; /* Text color for contrast */
@@ -709,17 +942,19 @@ footer .footer_info a i{
 	  border-color: #007bff; /* Highlighted border on focus */
 	}
 
-	.inquiries .desc .fancy_stuff{
-		background-color: #333;
-	}
+    /* .faq-container{
+		box-shadow: 0 4px 10px #333333;
+	} */
 
-	.inquiries .desc{
-		border-right: solid 2px #141414;
-	}
+	@media(max-width: 700px){
+		.why_us_reasons .reason:nth-child(1){
+			border-bottom: 2px solid #141414;
+		}
 
-    .inquiries, .testimonials .testimonial{
-    	background-color: #1f1f1f;
-    }
+		.why_us_reasons .reason:nth-child(2){
+			border-bottom: 2px solid #141414;
+		}
+	}
 
     h1, h2, h3, p{
     	color: white;
@@ -727,12 +962,19 @@ footer .footer_info a i{
     
     footer{
         background-color: #1f1f1f;
-        border-bottom: solid #ccc 1px;
     }
 
     footer .footer_info h2{
         color: white;
     }
+
+    footer .footer_info a{
+	    color: rgb(190, 190, 190);
+	}
+
+	footer .footer_info .first_p{
+		color: rgb(190, 190, 190);
+	}
 
     .copyright{
         color: white;

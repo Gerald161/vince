@@ -12,51 +12,93 @@
 </head>
 <body>
   <header>
-    <nav>
-        <a href="index.html" class="logo">
-            <img src="./images/logo.png" loading="lazy" alt="Logo">
-            <h4>Vince Vineyard</h4>
-        </a>
+		<nav>
+			<a href="index.html" class="logo">
+				<img src="./images/logo.png" loading="lazy" alt="Lazy">
+				<h4>Vinyard</h4>
+			</a>
 
-        <div class="nav_links">
-            <a href="" class="nav__link">About</a>
-            <a href="" class="nav__link">Men</a>
-            <a href="" class="nav__link">Women</a>
-            <a href="" class="nav__link">Contact</a>
-        </div>
+			<div class="nav_links">
+                <a href="testimonials.html" class="nav__link">Testimonials</a>
+                <a href="events.html" class="nav__link">Events</a>
+                <a href="blogs.html" class="nav__link">Blogs</a>
+            </div>
 
-        <div class="more_options">
-            <a href="">
-                <i class="fa-regular fa-sun"></i>
-            </a>
+			<form action="" class="first_form">
+				<input type="text" placeholder="What are you looking for">
+				<i class="fa-solid fa-xmark"></i>
+				<button><i class="fa-solid fa-magnifying-glass"></i></button>
+				<div class="search_suggestions">
+					<a href="#">
+						<i class="fa-solid fa-magnifying-glass"></i>
+						<p>Test</p>
+					</a>
+					<a href="#">
+						<i class="fa-solid fa-magnifying-glass"></i>
+						<p>Search</p>
+					</a>
+					<a href="#">
+						<i class="fa-solid fa-magnifying-glass"></i>
+						<p>Test</p>
+					</a>
+					<a href="#">
+						<i class="fa-solid fa-magnifying-glass"></i>
+						<p>Search</p>
+					</a>
+				</div>
+			</form>
 
-            <a href="">
-                <i class="fa-regular fa-heart"></i>
-            </a>
+			<div class="more_options">
+				<a href="#" class="toggle_big_search_button">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</a>
 
-            <a href="./checkout.html">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </a>
+				<a href="">
+					<i class="fa-regular fa-heart"></i>
+				</a>
 
-            <a href="">
-                <i class="fa-regular fa-circle-user"></i>
-            </a>
-        </div>
+				<a href="./check_out_page.html">
+					<i class="fa-solid fa-cart-shopping"></i>
+				</a>
 
-        <div class="nav_icon_container">
-            <a href="#" class="show_search_form_button">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-            <a href="" class="nav_icon">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
-    </nav>
-    <form action="">
-      <input type="text" placeholder="What are you looking for">
-      <button><i class="fa-solid fa-magnifying-glass"></i></button>
-    </form>
-  </header>
+				<a href="">
+					<i class="fa-regular fa-circle-user"></i>
+				</a>
+			</div>
+
+			<div class="nav_icon_container">
+	            <a href="#" class="show_search_form_button">
+	                <i class="fa-solid fa-magnifying-glass"></i>
+	            </a>
+	            <a href="" class="nav_icon">
+	                <i class="fa fa-bars"></i>
+	            </a>
+	        </div>
+		</nav>
+		<form action="" class="second_form">
+            <input type="text" placeholder="What are you looking for">
+            <i class="fa-solid fa-xmark"></i>
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <div class="search_suggestions">
+                <a href="#">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>Test</p>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>Search</p>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>Test</p>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>Search</p>
+                </a>
+            </div>
+        </form>
+	</header>
 
 	<div class="mobile_screen_sidebar">
         <i class="close_button fas fa-times"></i>
@@ -67,381 +109,394 @@
             <a href="#services" class="nav_link">Services</a>
             <a href="#" class="nav_link">Contact</a>
         </div>
-    </div>
+  </div>
 
-    <main style="border: none;">
-      <div class="product_preview_plus_extra_images">
-        <div class="additional_images">
-          <div class="additional_image active">
-            <img src="./images/1.jpg" alt="Image">
-          </div>
-          <div class="additional_image">
-            <img src="./images/2.jpg" alt="Image">
-          </div>
-          <div class="additional_image">
-            <img src="./images/3.jpg" alt="Image">
-          </div>
-          <div class="additional_image">
-            <img src="./images/4.jpg" alt="Image">
-          </div>
+  <main style="border: none;">
+    <div class="product_preview_plus_extra_images">
+      <div class="additional_images">
+        <div class="additional_image active">
+          <img src="./images/1.jpg" alt="Image">
         </div>
-        <div class="first">
-          <div class="slider">
-            <div class="img" data-left="">
-              <img src="./images/1.jpg" alt="image">
-            </div>
-            <div class="img" data-left>
-               <img src="./images/2.jpg" alt="image">
-            </div>
-            <div class="img" data-left>
-               <img src="./images/3.jpg" alt="image">
-             </div>
-             <div class="img" data-left>
-               <img src="./images/4.jpg" alt="image">
-             </div> 
-          </div>
-  
-          <a class="prev">&#10094;</a>
-          <a class="next">&#10095;</a>
-
-          <a href="">
-            <i class="fa-regular fa-heart like_product_container"></i>
-          </a>
+        <div class="additional_image">
+          <img src="./images/2.jpg" alt="Image">
+        </div>
+        <div class="additional_image">
+          <img src="./images/3.jpg" alt="Image">
+        </div>
+        <div class="additional_image">
+          <img src="./images/4.jpg" alt="Image">
         </div>
       </div>
-
-      <div class="product_description">
-        <p style="color: #666">Jolt/Jackets</p>
-
-        <h2>Boa Fleece Jacket</h2>
-
-        <div class="prices_and_discount">
-          <p class="old_price">$129.00</p>
-          <h2>$122.00</h2>
-          <p class="discount">5% Disc</p>
-        </div>
-        
-        <div class="star_container">
-          <div class="star_reviews">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star" style="color: grey"></i>
+      <div class="first">
+        <div class="slider">
+          <div class="img" data-left="">
+            <img src="./images/1.jpg" alt="image">
           </div>
-          <p>(4.6) | 200 ratings</p>
+          <div class="img" data-left>
+              <img src="./images/2.jpg" alt="image">
+          </div>
+          <div class="img" data-left>
+              <img src="./images/3.jpg" alt="image">
+            </div>
+            <div class="img" data-left>
+              <img src="./images/4.jpg" alt="image">
+            </div> 
         </div>
 
-        <p style="font-weight: bold;">Descriptions</p>
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
 
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-           Non, soluta voluptatem modi doloremque ipsam excepturi recusandae, ad 
-           consectetur alias distinctio suscipit repellendus explicabo, dignissimos saepe nemo cum! 
-           Natus, illo commodi.
-        </p>
+        <a href="">
+          <i class="fa-regular fa-heart like_product_container"></i>
+        </a>
+      </div>
+    </div>
 
-        <p style="font-weight: bold;">Available Color</p>
+    <div class="product_description">
+      <p style="color: #666">Jolt/Jackets</p>
 
-        <div class="various_colors">
-          <div>
-            <div>
-              
-            </div>
-          </div>
-          <div>
-            <div>
-              
-            </div>
-          </div>
-          <div>
-            <div>
-              
-            </div>
-          </div>
+      <h2>Boa Fleece Jacket</h2>
+
+      <div class="prices_and_discount">
+        <p class="old_price">$129.00</p>
+        <h2>$122.00</h2>
+        <p class="discount">5% Disc</p>
+      </div>
+      
+      <div class="star_container">
+        <div class="star_reviews">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star" style="color: grey"></i>
         </div>
+        <p>(4.6) | 200 ratings</p>
+      </div>
 
+      <p style="font-weight: bold;">Descriptions</p>
+
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Non, soluta voluptatem modi doloremque ipsam excepturi recusandae, ad 
+          consectetur alias distinctio suscipit repellendus explicabo, dignissimos saepe nemo cum! 
+          Natus, illo commodi.
+      </p>
+
+      <p style="font-weight: bold;">Available Color</p>
+
+      <div class="various_colors">
         <div>
-          <p style="font-weight: bold;">Size</p>
+          <div>
+            
+          </div>
         </div>
-
-        <div class="pagination_container" style="justify-content: unset; gap: 10px">
-          <a href="" class="active_page">S</a>
-          <a href="">M</a>
-          <a href="">L</a>
-          <a href="">XL</a>
+        <div>
+          <div>
+            
+          </div>
         </div>
-
-        <div class="completion_buttons">
-          <button>Add To Cart</button>
-          <button>Checkout Now</button>
+        <div>
+          <div>
+            
+          </div>
         </div>
       </div>
-    </main>
 
-    <h3 style="padding: 10px 0 0 20px;">This item can be cool with</h3>
+      <div>
+        <p style="font-weight: bold;">Size</p>
+      </div>
 
-    <div class="featured_products" style="padding: 20px;">
+      <div class="pagination_container" style="justify-content: unset; gap: 10px">
+        <a href="" class="active_page">S</a>
+        <a href="">M</a>
+        <a href="">L</a>
+        <a href="">XL</a>
+      </div>
 
+      <div class="completion_buttons">
+        <button>Add To Cart</button>
+        <button>Checkout Now</button>
+      </div>
     </div>
+  </main>
 
-    <div class="general_reviews_container">
-      <div class="reviews_section">
-        <h3>Rate this product</h3>
+  <h3 style="padding: 10px 0 0 20px;">This item can be cool with</h3>
 
-        <div class="star_container personal_review_container">
-          <div class="star_reviews">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
+  <div class="featured_products" style="padding: 20px;">
+
+  </div>
+
+  <div class="general_reviews_container">
+    <div class="reviews_section">
+      <h3>Rate this product</h3>
+
+      <div class="star_container personal_review_container">
+        <div class="star_reviews">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </div>
+
+      <div class="reviews_container">
+        <div class="review_container">
+          <div class="user_image"></div>
+          <form action="">
+            <input type="text" placeholder="Leave a public review (Optional)">
+            <button>Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <h3>Ratings & Reviews</h3>
+
+      <select name="" id="">
+        <option value="">Recent</option>
+        <option value="">Highest Rated</option>
+        <option value="">Lowest Rated</option>
+        <option value="">Verified</option>
+      </select>
+
+      <div class="reviews_container">
+        <div class="review_container">
+          <div class="user_image"></div>
+          <div class="review_detail_container">
+            <div class="name_and_time">
+              <p>Helen M</p>
+              <p>Yesterday</p>
+            </div>
+
+            <div class="star_container">
+              <div class="star_reviews">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star" style="color: grey"></i>
+              </div>
+              <!-- #28A745 -->
+              <p style="color: #32CD32;">Verified Purchase</p>
+              <div class="check_container">
+                <i style="color: white;" class="fa-solid fa-check"></i>
+              </div>
+            </div>
+
+            <p>Best Purchase I've made all year, highly recommend it.</p>
+
+            <div class="helpful_container">
+              <p style="color: grey">Helpful?</p>
+
+              <div class="thumb_icons">
+                <a href="">
+                  <i class="fa-regular fa-thumbs-up"></i>
+                  <span>200</span>
+                </a>
+
+                <a href="">
+                  <i style="transform: rotate(-180deg); scale: 1 -1;" class="fa-regular fa-thumbs-down"></i>
+                  <span>19</span>
+                </a>
+              </div>
+
+              <!-- style="color: #DC143C" -->
+              <a href="" style="text-decoration: underline; margin-left: 20px; font-weight: 600;">Report</a>
+            </div>
+
+            <div class="seller_response">
+              <div class="name_and_time" style="justify-content: space-between;">
+                <p>Vince Vineyard</p>
+                <p>1 hr ago</p>
+              </div>
+              <p>
+                This is going to be an encouraging text we will send our customers so 
+                they keep working with us
+
+              </p>
+            </div>
           </div>
         </div>
 
-        <div class="reviews_container">
-          <div class="review_container">
-            <div class="user_image"></div>
-            <form action="">
-              <input type="text" placeholder="Leave a public review (Optional)">
-              <button>Submit</button>
+        <div class="review_container">
+          <div class="user_image"></div>
+          <div class="review_detail_container">
+            <div class="name_and_time">
+              <p>Helen M</p>
+              <p>Yesterday</p>
+            </div>
+
+            <div class="star_container">
+              <div class="star_reviews">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star" style="color: grey"></i>
+              </div>
+
+              <!-- <p style="color: #32CD32;">Verified Purchase</p>
+              <div class="check_container">
+                <i style="color: white;" class="fa-solid fa-check"></i>
+              </div> -->
+            </div>
+
+            <p>Excellent Running shoes</p>
+
+            <div class="helpful_container">
+              <p style="color: grey">Helpful?</p>
+
+              <div class="thumb_icons">
+                <a href="">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  <span>30</span>
+                </a>
+
+                <a href="">
+                  <i style="transform: rotate(-180deg); scale: 1 -1;" class="fa-regular fa-thumbs-down"></i>
+                  <span>1</span>
+                </a>
+              </div>
+
+              <!-- style="color: #DC143C" -->
+              <a href="" style="text-decoration: underline; margin-left: 20px; font-weight: 600;">Report</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="review_container">
+          <div class="user_image"></div>
+          <div class="review_detail_container">
+            <div class="name_and_time">
+              <p>Gerald Darko</p>
+              <p>20/11/2025</p>
+            </div>
+
+            <div class="star_container">
+              <div class="star_reviews">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star" style="color: grey"></i>
+                <i class="fa-solid fa-star" style="color: grey"></i>
+              </div>
+              <!-- #28A745 -->
+              <p style="color: #32CD32;">Verified Purchase</p>
+              <div class="check_container">
+                <i style="color: white;" class="fa-solid fa-check"></i>
+              </div>
+            </div>
+
+            <p>Best Purchase I've made all year, highly recommend it.</p>
+
+            <div class="helpful_container">
+              <p style="color: grey">Helpful?</p>
+
+              <div class="thumb_icons">
+                <a href="">
+                  <i class="fa-regular fa-thumbs-up"></i>
+                  <span>17</span>
+                </a>
+
+                <a href="">
+                  <i style="transform: rotate(-180deg); scale: 1 -1;" class="fa-solid fa-thumbs-down"></i>
+                  <span>19</span>
+                </a>
+              </div>
+
+              <!-- style="color: #DC143C" -->
+              <a href="" style="text-decoration: underline; margin-left: 20px; font-weight: 600;">Report</a>
+            </div>
+
+            <div class="seller_response">
+              <div class="name_and_time" style="justify-content: space-between;">
+                <p>Vince Vineyard</p>
+                <p>1 hr ago</p>
+              </div>
+              <p>
+                This is going to be an encouraging text we will send our customers so 
+                they keep working with us
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="" class="show_more">Show more reviews</a>
+    </div>
+
+    <div class="ratings_explanation_section">
+      <div class="star_container" style="
+        justify-content: space-between;
+        border-bottom: 1px solid #666;
+        padding-bottom: 5px;
+      "
+      >
+        <div class="star_reviews" style="gap: 10px;">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star" style="color: grey"></i>
+        </div>
+        <h2>4.6</h2>
+      </div>
+
+      <div class="rating_bars">
+        <div class="rating_bar">
+          <p>5</p>
+          <div class="progress_bar">
+            <div class="progress_fill"></div>
+          </div>
+          <p>28</p>
+        </div>
+        <div class="rating_bar">
+          <p>4</p>
+          <div class="progress_bar">
+            <div class="progress_fill" style="width: 30%;"></div>
+          </div>
+          <p>9</p>
+        </div>
+        <div class="rating_bar">
+          <p>3</p>
+          <div class="progress_bar">
+            <div class="progress_fill" style="width: 15%;"></div>
+          </div>
+          <p>4</p>
+        </div>
+        <div class="rating_bar">
+          <p>2</p>
+          <div class="progress_bar">
+            <div class="progress_fill" style="width: 5%;"></div>
+          </div>
+          <p>1</p>
+        </div>
+        <div class="rating_bar">
+          <p>1</p>
+          <div class="progress_bar">
+            <div class="progress_fill" style="width: 5%;"></div>
+          </div>
+          <p>1</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+		<div class="footer_info" style="max-width: 400px;">
+            <h1>Support your wellness journey</h1>
+
+            <p class="first_p">Our comprehensive health resourses and staff to guide you every step of the way</p>
+
+            <p style="font-weight: bold;">Subscribe to our newsletter</p>
+
+            <form>
+            	<input type="text" name="" placeholder="Enter your email">
+            	<button>Submit</button>
             </form>
-          </div>
         </div>
 
-        <h3>Ratings & Reviews</h3>
-
-        <select name="" id="">
-          <option value="">Recent</option>
-          <option value="">Highest Rated</option>
-          <option value="">Lowest Rated</option>
-          <option value="">Verified</option>
-        </select>
-
-        <div class="reviews_container">
-          <div class="review_container">
-            <div class="user_image"></div>
-            <div class="review_detail_container">
-              <div class="name_and_time">
-                <p>Helen M</p>
-                <p>Yesterday</p>
-              </div>
-
-              <div class="star_container">
-                <div class="star_reviews">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star" style="color: grey"></i>
-                </div>
-                <!-- #28A745 -->
-                <p style="color: #32CD32;">Verified Purchase</p>
-                <div class="check_container">
-                  <i style="color: white;" class="fa-solid fa-check"></i>
-                </div>
-              </div>
-
-              <p>Best Purchase I've made all year, highly recommend it.</p>
-
-              <div class="helpful_container">
-                <p style="color: grey">Helpful?</p>
-
-                <div class="thumb_icons">
-                  <a href="">
-                    <i class="fa-regular fa-thumbs-up"></i>
-                    <span>200</span>
-                  </a>
-
-                  <a href="">
-                    <i style="transform: rotate(-180deg); scale: 1 -1;" class="fa-regular fa-thumbs-down"></i>
-                    <span>19</span>
-                  </a>
-                </div>
-
-                <!-- style="color: #DC143C" -->
-                <a href="" style="text-decoration: underline; margin-left: 20px; font-weight: 600;">Report</a>
-              </div>
-
-              <div class="seller_response">
-                <div class="name_and_time" style="justify-content: space-between;">
-                  <p>Vince Vineyard</p>
-                  <p>1 hr ago</p>
-                </div>
-                <p>
-                  This is going to be an encouraging text we will send our customers so 
-                  they keep working with us
-
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="review_container">
-            <div class="user_image"></div>
-            <div class="review_detail_container">
-              <div class="name_and_time">
-                <p>Helen M</p>
-                <p>Yesterday</p>
-              </div>
-
-              <div class="star_container">
-                <div class="star_reviews">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star" style="color: grey"></i>
-                </div>
-
-                <!-- <p style="color: #32CD32;">Verified Purchase</p>
-                <div class="check_container">
-                  <i style="color: white;" class="fa-solid fa-check"></i>
-                </div> -->
-              </div>
-
-              <p>Excellent Running shoes</p>
-
-              <div class="helpful_container">
-                <p style="color: grey">Helpful?</p>
-
-                <div class="thumb_icons">
-                  <a href="">
-                    <i class="fa-solid fa-thumbs-up"></i>
-                    <span>30</span>
-                  </a>
-
-                  <a href="">
-                    <i style="transform: rotate(-180deg); scale: 1 -1;" class="fa-regular fa-thumbs-down"></i>
-                    <span>1</span>
-                  </a>
-                </div>
-
-                <!-- style="color: #DC143C" -->
-                <a href="" style="text-decoration: underline; margin-left: 20px; font-weight: 600;">Report</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="review_container">
-            <div class="user_image"></div>
-            <div class="review_detail_container">
-              <div class="name_and_time">
-                <p>Gerald Darko</p>
-                <p>20/11/2025</p>
-              </div>
-
-              <div class="star_container">
-                <div class="star_reviews">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star" style="color: grey"></i>
-                  <i class="fa-solid fa-star" style="color: grey"></i>
-                </div>
-                <!-- #28A745 -->
-                <p style="color: #32CD32;">Verified Purchase</p>
-                <div class="check_container">
-                  <i style="color: white;" class="fa-solid fa-check"></i>
-                </div>
-              </div>
-
-              <p>Best Purchase I've made all year, highly recommend it.</p>
-
-              <div class="helpful_container">
-                <p style="color: grey">Helpful?</p>
-
-                <div class="thumb_icons">
-                  <a href="">
-                    <i class="fa-regular fa-thumbs-up"></i>
-                    <span>17</span>
-                  </a>
-
-                  <a href="">
-                    <i style="transform: rotate(-180deg); scale: 1 -1;" class="fa-solid fa-thumbs-down"></i>
-                    <span>19</span>
-                  </a>
-                </div>
-
-                <!-- style="color: #DC143C" -->
-                <a href="" style="text-decoration: underline; margin-left: 20px; font-weight: 600;">Report</a>
-              </div>
-
-              <div class="seller_response">
-                <div class="name_and_time" style="justify-content: space-between;">
-                  <p>Vince Vineyard</p>
-                  <p>1 hr ago</p>
-                </div>
-                <p>
-                  This is going to be an encouraging text we will send our customers so 
-                  they keep working with us
-
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <a href="" class="show_more">Show more reviews</a>
-      </div>
-
-      <div class="ratings_explanation_section">
-        <div class="star_container" style="
-          justify-content: space-between;
-          border-bottom: 1px solid #666;
-          padding-bottom: 5px;
-        "
-        >
-          <div class="star_reviews" style="gap: 10px;">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star" style="color: grey"></i>
-          </div>
-          <h2>4.6</h2>
-        </div>
-
-        <div class="rating_bars">
-          <div class="rating_bar">
-            <p>5</p>
-            <div class="progress_bar">
-              <div class="progress_fill"></div>
-            </div>
-            <p>28</p>
-          </div>
-          <div class="rating_bar">
-            <p>4</p>
-            <div class="progress_bar">
-              <div class="progress_fill" style="width: 30%;"></div>
-            </div>
-            <p>9</p>
-          </div>
-          <div class="rating_bar">
-            <p>3</p>
-            <div class="progress_bar">
-              <div class="progress_fill" style="width: 15%;"></div>
-            </div>
-            <p>4</p>
-          </div>
-          <div class="rating_bar">
-            <p>2</p>
-            <div class="progress_bar">
-              <div class="progress_fill" style="width: 5%;"></div>
-            </div>
-            <p>1</p>
-          </div>
-          <div class="rating_bar">
-            <p>1</p>
-            <div class="progress_bar">
-              <div class="progress_fill" style="width: 5%;"></div>
-            </div>
-            <p>1</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <footer>
         <div class="footer_info">
             <h2>COMPANY INFO</h2>
 
@@ -461,24 +516,27 @@
         <div class="footer_info">
             <h2>CUSTOMER CARE</h2>
 
-            <a href="#">Contact Us</a>
-            <a href="tel:+233548448856">0548448856</a>
-            <a href="mailto:vincevineyard@gmail.com@mail.com">vincevineyard@gmail.com</a>
+            <a href="tel:+233256038319">+233256038319</a>
+            <a href="mailto:globalatomyghana@gmail.com">globalatomyghana@gmail.com</a>
         </div>
+  </footer>
 
-        <div class="footer_info">
-            <h2>Social Media</h2>
+  <div class="copyright">
+    <div class="social_media_icons">
+      <a href="https://www.facebook.com/61571417091501"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/atomy_africaofficial"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+    <div style="text-align: center;">
+      <p>&copy2009-2025 Atomy Global Africa All Rights Reserved</p>
+    </div>
+    <div style="text-align: right;">
+      <a href="#">Terms and Conditions</a>
+    </div>
+  </div>
 
-            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-        </div>
-    </footer>
-
-    <p class="copyright">&copy2025 Vince Vineyard Empire Limited</p>
-
-    <script src="https://kit.fontawesome.com/2843b9be73.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/2843b9be73.js" crossorigin="anonymous"></script>
 
 	<script>
       var sideBarButton = document.querySelector(".nav_icon");

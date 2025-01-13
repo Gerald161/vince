@@ -1,7 +1,32 @@
+.category_classifications{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 10px;
+  border-top: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
+  justify-content: space-around;
+}
+
+.category_classifications img{
+  object-fit: cover;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+}
+
+.category_classifications .description{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
 main{
   display: flex;
-  border-top: solid 1px #ccc;
   margin-bottom: 5px;
+  padding: 0 20px;
+	padding-bottom: 40px;
 }
   
 main .filter_options_section{
@@ -10,49 +35,6 @@ main .filter_options_section{
   flex-direction: column;
   align-items: center;
   gap: 20px;
-}
-  
-main .filter_options_section form{
-  position: relative;
-  width: 90%;
-}
-
-main .filter_options_section form .search_block input{
-  width: 100%;
-  padding: 10px 33px 10px 15px;
-  margin-top: 15px;
-}
-
-main .filter_options_section form .search_block .fa-xmark{
-  position: absolute;
-  right: 3px;
-  top: 20px;
-  cursor: pointer;
-}
-
-main .filter_options_section form .search_suggestions{
-  position: absolute;
-  margin-top: 1px;
-  width: 100%;
-  background: #f2f2f2;
-  z-index: 3333;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-main .filter_options_section form .search_suggestions a{
-  text-decoration: none;
-  transition: all 0.5s;
-  padding: 12px 15px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-main .filter_options_section form .search_suggestions a:hover{
-  background: #B3B3B3;
-  color: black !important;
 }
 
 main .filter_results_section{
@@ -67,32 +49,23 @@ main .filter_results_section{
 main .filter_options_section .filter_section{
   width: 100%;
   flex: 7;
+  margin-top: 8px;
 }
 
 main .filter_options_section .filter_section .filter_options_section_option{
   display: flex;
   padding: 15px;
+  margin-right: 18px;
   justify-content: space-between;
   cursor: pointer;
   align-items: center;
   gap: 20px;
   transition: all 0.6s;
+  border-bottom: solid 1px #ccc;
 }
 
 main .filter_options_section .filter_section .filter_options_section_option:hover{
   background: #333333;
-}
-
-main .filter_options_section .filter_section .filter_options_section_option .icon_and_text_container{
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-main .filter_options_section .filter_section .filter_options_section_option .icon_and_text_container img{
-  width: 30px;
-  height: 30px;
-  object-fit: cover;
 }
 
 main .filter_options_section .filter_section .filter_options_section_option a{
@@ -116,12 +89,14 @@ main .filter_options_section .apply_clear_options button{
   flex: 1;
   padding: 15px 25px;
   cursor: pointer;
-  transition: all 0.1s;
+  transition: all 0.4s;
   border: none;
+  background-color: dodgerblue;
+  color: white;
 }
 
 main .filter_options_section .apply_clear_options button:hover{
-  background: #ccc;
+  background: orangered;
 }
 
 main .filter_results_section .search_results{
@@ -216,23 +191,27 @@ main .filter_results_section .search_results .search_result h4{
   color: black !important;
 }
 
-@media(max-width: 900px){
-    main{
-      flex-direction: column;
-    }
+@media(max-width: 700px){
+  main{
+    flex-direction: column;
+  }
 
-    main .filter_options_section h3, main .filter_options_section .filter_section .filter_options_section_option, main .filter_options_section .apply_clear_options{
-        display: none;
-    }
+  main .filter_options_section h3, main .filter_options_section .filter_section .filter_options_section_option, main .filter_options_section .apply_clear_options{
+    display: none;
+  }
 
-    main .filter_results_section .search_results{
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        grid-auto-rows: 200px;
-    }
+  main .filter_results_section .search_results{
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-auto-rows: 200px;
+  }
 
-    main .filter_results_section h3{
-        text-align: center;
-    }
+  main .filter_results_section h3{
+    text-align: center;
+  }
+
+  main .filter_results_section{
+    border-left: none !important;
+  }
 }
 
 /* take off later */
@@ -248,33 +227,50 @@ main .filter_results_section .search_results .search_result h4{
 
 
 @media (prefers-color-scheme: dark){
-    .page_numbering_section, 
-    .pagination_container a{
-      color: white;
-    }
+  .page_numbering_section, 
+  .pagination_container a{
+    color: white;
+  }
 
-    .pagination_container a{
-      background-color: #222222; 
-    }
+  .pagination_container a{
+    background-color: #222222; 
+  }
 
-    .pagination_container a:hover{
-      color: black;
-    }
+  .pagination_container a:hover{
+    color: black;
+  }
 
-    main .filter_options_section .filter_section .filter_options_section_option a{
-      color: white;
-    }
+  main .filter_results_section{
+    border-left: solid 1px #222222;
+  }
 
-    main .filter_options_section form .search_suggestions a{
-      background-color: #333333;
-    }
+  main .filter_options_section .filter_section .filter_options_section_option{
+    border-bottom: solid 1px #222222;
+  }
 
-    main .filter_options_section form .search_suggestions a:hover{
-      background: #222222;
-      color: white !important;
-    }
+  .category_classifications{
+    border-top: solid 1px #222222;
+    border-bottom: solid 1px #222222;
+  }
 
-    main .filter_options_section form .search_block .fa-xmark{
-      color: white;
-    }
+  main .filter_options_section .apply_clear_options{
+    border-top: solid 1px #222222;
+  }
+
+  main .filter_options_section .filter_section .filter_options_section_option a{
+    color: white;
+  }
+
+  main .filter_options_section form .search_suggestions a{
+    background-color: #333333;
+  }
+
+  main .filter_options_section form .search_suggestions a:hover{
+    background: #222222;
+    color: white !important;
+  }
+
+  main .filter_options_section form .search_block .fa-xmark{
+    color: white;
+  }
 }
