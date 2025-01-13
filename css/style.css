@@ -309,7 +309,8 @@ header form button{
 }
 
 .welcome_container .overlay .welcome_message button, 
-.main_categories .category .category_description button{
+.main_categories .category .category_description button
+{
     cursor: pointer;
     padding: 10px 20px;
     max-width: fit-content;
@@ -520,7 +521,15 @@ input{
     flex: 1;
     height: 450px;
     border-radius: 20px;
-    background: url(../images/1.jpg) no-repeat center/cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.break_info .left_side img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .break_info .right_side{
@@ -534,11 +543,32 @@ input{
 .break_info .right_side div{
     flex: 1;
     border-radius: 20px;
-    background: url(../images/2.jpg) no-repeat center/cover;
+    position: relative;
+    overflow: hidden;
 }
 
-.break_info .right_side div:nth-child(2){
-    background: url(../images/1.jpg) no-repeat center/cover;
+.break_info .right_side div img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.break_info .left_side .overlay, 
+.break_info .right_side div .overlay{
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.break_info .right_side div .overlay h2{
+    font-weight: normal;
 }
 
 .other_categories{
@@ -767,6 +797,27 @@ footer .footer_info a i{
     color: rgb(61, 57, 53);
 }
 
+.tags{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.tag{
+    border-radius: 15px;
+    border: solid 1px #ccc;
+    max-width: fit-content;
+    padding: 5px 15px;
+	transition: all 0.5s;
+    height: fit-content;
+}
+
+.tag:hover{
+	background-color: black;
+	border-color: black;
+	color: white;
+}
+
 @media(max-width: 700px){
 	nav .nav_links{
 		display: none;
@@ -941,10 +992,6 @@ footer .footer_info a i{
 	input:focus, textarea:focus {
 	  border-color: #007bff; /* Highlighted border on focus */
 	}
-
-    /* .faq-container{
-		box-shadow: 0 4px 10px #333333;
-	} */
 
 	@media(max-width: 700px){
 		.why_us_reasons .reason:nth-child(1){

@@ -34,7 +34,11 @@ main .filter_options_section{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
+  height: 66vh;
+  position: sticky;
+  top: 0;
 }
 
 main .filter_results_section{
@@ -48,7 +52,6 @@ main .filter_results_section{
 
 main .filter_options_section .filter_section{
   width: 100%;
-  flex: 7;
   margin-top: 8px;
 }
 
@@ -78,11 +81,10 @@ main .filter_options_section .apply_clear_options{
   padding: 10px;
   display: flex;
   width: 100%;
-  flex: 1;
+  margin-right: 20px;
   gap: 5px;
   align-items: center;
   justify-content: space-between;
-  border-top: solid 1px #ccc;
 }
 
 main .filter_options_section .apply_clear_options button{
@@ -134,7 +136,6 @@ main .filter_results_section .search_results .search_result .bottom_section i:ho
 main .filter_results_section .search_results .search_result .search_result_image_container{
   flex: 9;
   position: relative;
-  background: url(../images/1.jpg) no-repeat center/cover;
   overflow: hidden;
   transition: all 0.8s;
 }
@@ -251,10 +252,6 @@ main .filter_results_section .search_results .search_result h4{
   .category_classifications{
     border-top: solid 1px #222222;
     border-bottom: solid 1px #222222;
-  }
-
-  main .filter_options_section .apply_clear_options{
-    border-top: solid 1px #222222;
   }
 
   main .filter_options_section .filter_section .filter_options_section_option a{
