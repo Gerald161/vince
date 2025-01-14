@@ -26,11 +26,7 @@ body{
 a{
 	text-decoration: none;
 	color: black;
-	transition: color 0.5s;
-}
-
-a:hover{
-	color: dodgerblue;
+    transition: color 0.5s;
 }
 
 header{
@@ -101,10 +97,31 @@ nav .more_options a{
 	display: flex; 
 	gap: 5px; 
 	align-items: center;
+    padding: 5px 13px;
+    border-radius: 100%;
+    transition: all 0.5s;
 }
 
-nav .more_options a i{
-	font-size: 1.2em;
+nav .more_options .notifications_button{
+    position: relative;
+}
+
+nav .more_options .notifications_button div{
+    position: absolute;
+    right: -6px;
+    top: -2px;
+    width: 20px;
+    height: 20px;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .more_options a:hover{
+    background-color: rgba(255,255,255,0.3);
 }
 
 nav .nav_icon_container{
@@ -333,6 +350,7 @@ header form button{
 main{
     padding: 20px;
 	padding-bottom: 40px;
+    min-height: 60vh;
 }
 
 main .small_info{
@@ -791,10 +809,27 @@ footer .footer_info a i{
 }
 
 .copyright{
-    text-align: center; 
-    padding: 20px 15px 15px 15px; 
-    margin-bottom: 0; 
-    color: rgb(61, 57, 53);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.copyright div{
+	flex: 1;
+}
+
+.copyright .social_media_icons{
+	display: flex;
+	gap: 20px;
+	font-size: 1.3em;
+}
+
+.social_media_icons a{
+    transition: color 0.5s;
+}
+
+.social_media_icons a:hover{
+    color: dodgerblue;
 }
 
 .tags{
@@ -1003,7 +1038,7 @@ footer .footer_info a i{
 		}
 	}
 
-    h1, h2, h3, p{
+    h1, h2, h3, p, label{
     	color: white;
     }
     
