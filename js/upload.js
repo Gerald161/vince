@@ -1,6 +1,6 @@
 var extra_image_button = document.querySelector("#extra_image");
 
-var selected_images_container = document.querySelector(".selected_images_container");
+var selected_images_container = document.querySelectorAll(".selected_images_container")[1];
 
 var all_extra_images = [];
 
