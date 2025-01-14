@@ -118,10 +118,11 @@ nav .more_options .notifications_button div{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 nav .more_options a:hover{
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(0,0,0,0.3);
 }
 
 nav .nav_icon_container{
@@ -250,7 +251,7 @@ header form button{
     align-self: flex-end;
     cursor: pointer;
     flex: 1;
-    color: black !important;
+    color: black;
 }
 
 .mobile_screen_sidebar div{
@@ -415,7 +416,8 @@ input{
     width: 100%;
 }
 
-.heading h3, .heading i,.heading h2{
+.heading h3, .heading i,
+.heading h2{
     font-weight: normal;
 }
 
@@ -589,6 +591,10 @@ input{
     font-weight: normal;
 }
 
+.break_info .heading,.break_info .heading .tags .tag{
+    color: white;
+}
+
 .other_categories{
     display: grid;
     gap: 10px;
@@ -657,6 +663,12 @@ input{
 
 .other_categories .big .overlay{
     gap: 20px;
+}
+
+.other_categories .other_category .overlay h2,
+.other_categories .other_category .overlay .heading
+{
+    color: white;
 }
 
 .faq_section{
@@ -866,10 +878,6 @@ footer .footer_info a i{
 		display: none;
 	}
 
-	.close_button{
-		color: white;
-	}
-
 	nav .nav_icon_container{
 		display: flex !important;
 	}
@@ -953,6 +961,10 @@ footer .footer_info a i{
     .welcome_message form .search_suggestions a:hover{
         background: #222222;
         color: white !important;
+    }
+
+    nav .more_options a:hover{
+        background-color: rgba(255,255,255,0.3);
     }
 
     .mobile_screen_sidebar{

@@ -317,7 +317,7 @@ p{
 
 .general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container .name_and_time 
 p:nth-child(2){
-  color: grey;
+  color: #4A4A4A;
 }
 
 .general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container .check_container{
@@ -348,7 +348,7 @@ p:nth-child(2){
 
 .general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container
 .seller_response{
-  background-color: #2a2a2a;
+  background-color: #ccc;
   padding: 10px 15px;
   max-width: 450px;
   display: flex;
@@ -543,5 +543,15 @@ i:hover ~ i
   .general_reviews_container .ratings_explanation_section .rating_bars .rating_bar .progress_bar 
   .progress_fill{
     background-color:  white;
+  }
+
+  .general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container
+  .seller_response{
+    background-color: #2a2a2a;
+  }
+
+  .general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container .name_and_time 
+  p:nth-child(2){
+    color: grey;
   }
 }
