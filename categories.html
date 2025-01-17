@@ -173,7 +173,14 @@
     </div>
 
     <main>
-		
+		<h2>All Categories</h2>
+
+		<div class="categories_container">
+			<!-- <a href="#" class="category">
+				<div class="representation"></div>
+				<p>3D illustrations</p>
+			</a> -->
+		</div>
     </main>
 
     <footer>
@@ -276,6 +283,17 @@
             e.preventDefault();
             second_header_form.classList.toggle("show_header");
         });
+
+		var categories_container = document.querySelector(".categories_container");
+
+		for(var i = 0; i < 12; i ++){
+			categories_container.innerHTML += `
+				<a href="search.html" class="category">
+					<div class="representation"></div>
+					<p>3D illustrations</p>
+				</a>
+			`
+		}
     </script>
 </body>
 </html>

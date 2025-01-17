@@ -68,7 +68,7 @@ main .filter_options_section .filter_section .filter_options_section_option{
 }
 
 main .filter_options_section .filter_section .filter_options_section_option:hover{
-  background: #ccc;
+  background: #e0e0e0;
 }
 
 main .filter_options_section .filter_section .filter_options_section_option a{
@@ -252,6 +252,10 @@ main .filter_results_section .search_results .search_result h4{
   .category_classifications{
     border-top: solid 1px #222222;
     border-bottom: solid 1px #222222;
+  }
+
+  main .filter_options_section .filter_section .filter_options_section_option:hover{
+    background: #2a2a2a;
   }
 
   main .filter_options_section .filter_section .filter_options_section_option a{
