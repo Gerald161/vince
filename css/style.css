@@ -163,7 +163,7 @@ nav .more_options .notifications_button .number_of_notifications{
 nav .more_options .tooltip .notifications_container{
     position: absolute;
     top: 124%;
-    left: -230px;
+    left: -250px;
     background-color: white;
     color: black;
     z-index: 200;
@@ -177,10 +177,15 @@ nav .more_options .tooltip .notifications_container{
 
 .notifications_container .button{
     padding: 10px 20px;
-    margin-bottom: 20px;
+    margin: 20px;
     background-color: dodgerblue;
     border-radius: 20px;
     color: white;
+    transition: all 0.7s;
+}
+
+.notifications_container .button:hover{
+    background-color: orangered;
 }
 
 nav .more_options .tooltip .stuff{
@@ -191,10 +196,21 @@ nav .more_options .tooltip .stuff{
     text-align: center;
 }
 
+nav .more_options .tooltip .mark_all{
+    transition: all 0.5s;
+    padding: 10px 0;
+}
+
+nav .more_options .tooltip .mark_all:hover{
+    color: dodgerblue;
+}
+
 .notifications_container .all_notifications{
     width: 100%;
     display: flex;
     flex-direction: column;
+    max-height: 400px;
+    overflow-y: auto;
     gap: 0;
 }
 
@@ -241,10 +257,6 @@ nav .more_options .tooltip .stuff{
 .notifications_container .all_notifications .notification .message_container p{
     word-break: break-all;
     white-space: normal;
-}
-
-.notifications_container .all_notifications .notification .message_container span{
-    font-weight: bold;
 }
 
 .notifications_container .all_notifications .notification .message_container .time{
