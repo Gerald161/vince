@@ -274,9 +274,10 @@ main .product_description .completion_buttons button:hover{
 }
 
 .general_reviews_container .reviews_section .reviews_container .review_container .user_image{
-  width: 50px;
-  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
   border-radius: 50%;
+  align-self: flex-start;
   background: url(../images/avatar.jpeg) no-repeat center/cover;
 }
 
@@ -303,6 +304,11 @@ main .product_description .completion_buttons button:hover{
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container p{
+  word-break: break-all;
+  white-space: normal;
 }
 
 .general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container .name_and_time{

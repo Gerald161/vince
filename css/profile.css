@@ -17,10 +17,11 @@ main .filter_options_section .filter_section .filter_options_section_option:nth-
 }
 
 .profile_change_container .profile_pic{
-    width: 100px;
-    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 50%;
+    align-self: flex-start;
     background: url(../images/avatar.jpeg) no-repeat center/cover;
-    border-radius: 100%;
 }
 
 .profile_change_container input[type='file']{
