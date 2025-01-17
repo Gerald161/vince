@@ -18,6 +18,37 @@
     src: url('/fonts/waltographUI.ttf');
 }
 
+.tooltip {
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip .tooltip-text{
+    visibility: hidden;
+    width: 150px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    position: absolute;
+    top: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+
+.tooltip:last-child .tooltip-text{
+    left: -20px;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
 body{
 	overflow-x: hidden;
     transition: background-color 0.3s;
@@ -97,7 +128,14 @@ nav .more_options a{
 	display: flex; 
 	gap: 5px; 
 	align-items: center;
-    padding: 5px 13px;
+}
+
+/* nav .more_options a:last-child{
+    cursor: default;
+} */
+
+nav .more_options a i{
+    padding: 13px;
     border-radius: 100%;
     transition: all 0.5s;
 }
@@ -106,7 +144,7 @@ nav .more_options .notifications_button{
     position: relative;
 }
 
-nav .more_options .notifications_button div{
+nav .more_options .notifications_button .number_of_notifications{
     position: absolute;
     right: -6px;
     top: -2px;
@@ -121,7 +159,44 @@ nav .more_options .notifications_button div{
     color: white;
 }
 
-nav .more_options a:hover{
+nav .more_options .tooltip .notifications_container{
+    position: absolute;
+    top: 124%;
+    left: -100px;
+    /* width: 250px; */
+    background-color: white;
+    color: black;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+}
+
+nav .more_options .tooltip .profile{
+    width: 200px;
+    left: -142px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+nav .more_options .tooltip .profile .profile_option{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: white;
+    transition: background-color 0.7s;
+}
+
+nav .more_options .tooltip .profile .profile_option:hover{
+    background-color: #333333;
+}
+
+nav .more_options .tooltip .notifications_container p:nth-child(1){
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 0;
+}
+
+nav .more_options a i:hover{
     background-color: rgba(0,0,0,0.3);
 }
 
@@ -290,6 +365,7 @@ header form button{
 .welcome_plus_slider .slider_controller i{
 	font-size: 1.5em;
 	cursor: pointer;
+    color: white;
 }
 
 .hide_icon{
@@ -952,6 +1028,15 @@ footer .footer_info a i{
         background-color: #121212;
     }
 
+    .tooltip .tooltip-text {
+        background-color: #ccc;
+        color: black;
+    }
+
+    nav .more_options .tooltip .notifications_container{
+        background-color: #4A4A4A;
+    }
+
     header form .search_suggestions,
     .welcome_message form .search_suggestions{
         background-color: #333333;
@@ -963,7 +1048,7 @@ footer .footer_info a i{
         color: white !important;
     }
 
-    nav .more_options a:hover{
+    nav .more_options a i:hover{
         background-color: rgba(255,255,255,0.3);
     }
 
