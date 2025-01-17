@@ -124,20 +124,20 @@ nav .more_options{
 	gap: 50px;
 }
 
-nav .more_options a{
+nav .more_options a, nav .more_options div{
 	display: flex; 
 	gap: 5px; 
 	align-items: center;
 }
 
-/* nav .more_options a:last-child{
-    cursor: default;
-} */
-
-nav .more_options a i{
+nav .more_options i{
     padding: 13px;
     border-radius: 100%;
     transition: all 0.5s;
+}
+
+nav .more_options i:hover{
+    background-color: rgba(0,0,0,0.3);
 }
 
 nav .more_options .notifications_button{
@@ -163,7 +163,6 @@ nav .more_options .tooltip .notifications_container{
     position: absolute;
     top: 124%;
     left: -100px;
-    /* width: 250px; */
     background-color: white;
     color: black;
     z-index: 200;
@@ -179,8 +178,7 @@ nav .more_options .tooltip .profile{
 }
 
 nav .more_options .tooltip .profile .profile_option{
-    display: flex;
-    gap: 10px;
+    width: 100%;
     align-items: center;
     color: white;
     transition: background-color 0.7s;
@@ -194,10 +192,6 @@ nav .more_options .tooltip .notifications_container p:nth-child(1){
     font-weight: bold;
     text-align: center;
     padding: 15px 0;
-}
-
-nav .more_options a i:hover{
-    background-color: rgba(0,0,0,0.3);
 }
 
 nav .nav_icon_container{
@@ -1048,7 +1042,11 @@ footer .footer_info a i{
         color: white !important;
     }
 
-    nav .more_options a i:hover{
+    nav .more_options i{
+        color:white;
+    }
+
+    nav .more_options i:hover{
         background-color: rgba(255,255,255,0.3);
     }
 
