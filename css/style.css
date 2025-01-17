@@ -1186,7 +1186,7 @@ footer .footer_info a i{
 
 	.tag:hover{
 		background-color: #ccc;
-		color: black;
+		color: black !important;
 	}
 
     .small_info h2{
