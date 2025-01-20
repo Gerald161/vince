@@ -41,7 +41,7 @@
 }
 
 .tooltip:last-child .tooltip-text{
-    left: -20px;
+    left: -25px;
 }
 
 .tooltip:hover .tooltip-text {
@@ -88,6 +88,7 @@ nav .nav_links{
 	display: flex;
 	align-items: center;
 	gap: 50px;
+    transition: all 0.7s;
 }
 
 nav .nav_links .nav__link{
@@ -166,13 +167,17 @@ nav .more_options .tooltip .notifications_container{
     left: -250px;
     background-color: white;
     color: black;
-    z-index: 200;
-    display: flex;
+    z-index: 10;
+    display: none;
     flex-direction: column;
     width: 450px;
     cursor: default;
     overflow: hidden;
     border-radius: 10px;
+}
+
+.show_display{
+    display: flex !important;
 }
 
 .notifications_container .button{
@@ -277,7 +282,7 @@ nav .more_options .tooltip .mark_all:hover{
 
 nav .more_options .tooltip .profile{
     width: 210px;
-    left: -142px;
+    left: -155px;
 }
 
 nav .more_options .tooltip .profile .profile_option{
@@ -301,7 +306,9 @@ nav .nav_icon_container{
 }
 
 .hide_nav_links{
-	display: none !important;
+    opacity: 0;
+    max-width: 0;
+    transition: all 0.5s;
 }
 
 header form{
@@ -310,7 +317,7 @@ header form{
     gap: 5px;
     opacity: 0;
     max-height: 0;
-    transition: opacity 0.5s, max-height 0.5s;
+    transition: all 0.5s;
     position: relative;
 }
 
@@ -451,7 +458,7 @@ header form button{
 	position: absolute;
 	left: 45vw;
 	bottom: 20px;
-	z-index: 100;
+	z-index: 9;
 	display: flex;
 	gap: 20px;
 }

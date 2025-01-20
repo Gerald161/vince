@@ -54,7 +54,7 @@
 
 				<div class="notifications_button tooltip">
 					<span class="tooltip-text">Notifications</span>
-					<i class="fa-solid fa-bell"></i>
+					<i class="fa-solid fa-bell show_more_nav_icon"></i>
 					<div class="number_of_notifications">2</div>
 					<div class="notifications_container">
 						<p class="stuff">Your Notifications <span style="font-weight: bold;">5</span></p>
@@ -104,7 +104,7 @@
 									<div class="response">
 										<p>
 											This is going to be an encouraging text we will send our customers so 
-											they keep working with us.
+											they keep working with us
 										</p>
 									</div>
 								</div>
@@ -117,15 +117,15 @@
 					</div>
 				</div>
 
-				<a href="./check_out_page.html" class="tooltip">
+				<a href="./checkout.html" class="tooltip">
 					<span class="tooltip-text">Cart</span>
 					<i class="fa-solid fa-cart-shopping"></i>
 				</a>
 
 				<div class="tooltip">
 					<span class="tooltip-text">Log/Sign in</span>
-					<i class="fa-regular fa-circle-user"></i>
-					<!-- <div class="notifications_container profile">
+					<i class="fa-regular fa-circle-user show_more_nav_icon"></i>
+					<div class="notifications_container profile">
 						<a href="profile.html" class="profile_option">
 							<i class="fa-duotone fa-solid fa-gear"></i>
 							<p>Settings</p>
@@ -135,7 +135,7 @@
 							<i class="fa-solid fa-arrow-right-from-bracket"></i>
 							<p>Logout</p>
 						</a>						
-					</div> -->
+					</div>
 				</div>
 			</div>
 
@@ -155,19 +155,19 @@
             <div class="search_suggestions">
                 <a href="#">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <p>Test</p>
+                    <p>Test2</p>
                 </a>
                 <a href="#">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <p>Search</p>
+                    <p>Search2</p>
                 </a>
                 <a href="#">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <p>Test</p>
+                    <p>Test2</p>
                 </a>
                 <a href="#">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <p>Search</p>
+                    <p>Search2</p>
                 </a>
             </div>
         </form>
@@ -609,6 +609,20 @@
                 `
             });
         });
+
+		var all_show_more_nav_icon = document.querySelectorAll(".show_more_nav_icon");
+
+		all_show_more_nav_icon.forEach((show_more_nav_icon)=>{
+			show_more_nav_icon.addEventListener("click", (e)=>{
+				var old_one = document.querySelector(".show_display");
+
+				show_more_nav_icon.parentElement.querySelector(".notifications_container").classList.toggle("show_display");
+
+				if(old_one !== null){
+					old_one.classList.remove("show_display");
+				}
+			});
+		})
 
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {
