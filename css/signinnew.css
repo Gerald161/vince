@@ -1,3 +1,8 @@
+main{
+    min-height: 100vh;
+    padding: 40px;
+}
+
 main, main .bottom_section{
     display: flex;
     flex-direction: column;
@@ -68,7 +73,7 @@ main .sign_options_container .sign_up_google img{
 
 main .bottom_section{
     gap: 30px;
-    max-width: 450px;
+    /* max-width: 450px; */
     line-height: 30px;
 }
 

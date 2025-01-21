@@ -4,7 +4,7 @@ h2{
 
 .product_and_detail_container{
   display: flex;
-  gap: 5px;
+  gap: 50px;
 }
 
 .product_and_detail_container .product_list_container{
@@ -114,6 +114,73 @@ h2{
 
 .product_and_detail_container .detail_summary_container{
   flex: 1;
+  /* below here can take off in smaller screen */
+  top: 0;
+  height: 66vh;
+  position: sticky;
+}
+
+.product_and_detail_container .detail_summary_container .detail_summary_list{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.product_and_detail_container .detail_summary_container .detail_summary_list 
+.detail_summary_breakdown{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product_and_detail_container .detail_summary_container h3{
+  font-weight: normal;
+}
+
+.product_and_detail_container .detail_summary_container .total_container{
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.product_and_detail_container .detail_summary_container .total_container .total_figure_cont{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product_and_detail_container .detail_summary_container .total_container .discount_container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product_and_detail_container .detail_summary_container .total_container .discount_container .in_plus_but{
+  display: flex;
+  gap: 5px;
+}
+
+.product_and_detail_container .detail_summary_container .total_container .discount_container input{
+  border-radius: 10px;
+  flex: 1;
+}
+
+.product_and_detail_container .detail_summary_container .total_container button{
+  cursor: pointer;
+  padding: 10px 20px;
+  max-width: fit-content;
+  border: none;
+  background-color: dodgerblue;
+  color: white;
+  transition: background-color 0.5s;
+  pointer-events: initial;
+}
+
+.product_and_detail_container .detail_summary_container .total_container button:hover{
+  background-color: orangered;
 }
 
 @media (prefers-color-scheme: dark){
@@ -137,5 +204,9 @@ h2{
   .product_and_detail_container .product_list_container .product_list .product .product_details 
   .product_desc p{
     color: #E0E0E0;
+  }
+
+  .product_and_detail_container .detail_summary_container .total_container{
+    border-top: 1px solid #4a4a4a;
   }
 }
