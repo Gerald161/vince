@@ -165,7 +165,7 @@ nav .more_options .tooltip .notifications_container{
     position: absolute;
     top: 124%;
     left: -250px;
-    background-color: white;
+    background-color: #eee;
     color: black;
     z-index: 10;
     display: none;
@@ -957,7 +957,7 @@ footer{
     justify-content: space-around;
     padding: 20px;
     flex-wrap: wrap;
-    background-color: #e0e0e0; 
+    background-color: #eee; 
     gap: 5px;
     padding-bottom: 40px;
 }

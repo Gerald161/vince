@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel="stylesheet" href="./css/checkout.css">
+    <link rel="stylesheet" href="./css/categories.css">
 	<link rel="shortcut icon" type="image/png" href="./images/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Welcome to Vince Vineyard International</title>
+    <title>All Notifications</title>
 </head>
 <body>
     <header>
 		<nav>
-			<a href="index.html" class="logo">
+			<a href="#" class="logo">
 				<img src="./images/logo.png" loading="lazy" alt="Lazy">
 				<h4>Vineyard</h4>
 			</a>
@@ -26,6 +26,10 @@
 			<form action="" class="first_form">
 				<input type="text" placeholder="What are you looking for">
 				<i class="fa-solid fa-xmark"></i>
+				<label for="picture" class="picture_label">
+					<i class="fa-solid fa-camera camera_upload"></i>
+				</label>
+				<input id="picture" type="file" accept="image/*" name="">
 				<button><i class="fa-solid fa-magnifying-glass"></i></button>
 				<div class="search_suggestions">
 					<a href="#">
@@ -131,6 +135,11 @@
 							<i class="fa-duotone fa-solid fa-gear"></i>
 							<p>Settings</p>
 						</a>
+
+						<a href="signinnew.html" class="profile_option">
+							<i class="fa-solid fa-user"></i>
+							<p>Sign in</p>
+						</a>
 						
 						<a href="#" class="profile_option">
 							<i class="fa-solid fa-arrow-right-from-bracket"></i>
@@ -152,6 +161,10 @@
 		<form action="" class="second_form">
             <input type="text" placeholder="What are you looking for">
             <i class="fa-solid fa-xmark"></i>
+			<label for="picture" class="picture_label">
+				<i class="fa-solid fa-camera camera_upload"></i>
+			</label>
+			<input id="picture" type="file" accept="image/*" name="">
             <button><i class="fa-solid fa-magnifying-glass"></i></button>
             <div class="search_suggestions">
                 <a href="#">
@@ -175,125 +188,25 @@
 	</header>
 
 	<div class="mobile_screen_sidebar">
-      <i class="close_button fas fa-times"></i>
+        <i class="close_button fas fa-times"></i>
 
-      <div style="display: flex; justify-content: space-between; flex-direction: column;">
-          <a href="index.html" class="nav_link">Home</a>
-          <a href="#about" class="nav_link">Products</a>
-          <a href="#services" class="nav_link">Services</a>
-          <a href="#" class="nav_link">Contact</a>
-      </div>
+        <div style="display: flex; justify-content: space-between; flex-direction: column;">
+            <a href="index.html" class="nav_link">Home</a>
+            <a href="#about" class="nav_link">Products</a>
+            <a href="#services" class="nav_link">Services</a>
+            <a href="#" class="nav_link">Contact</a>
+        </div>
     </div>
 
     <main>
-        <form method="get" action="./shipping_details.html" class="product_and_detail_container">
-            <div class="product_list_container">
-                <h2>Your Product List</h2>
+		<h2>All Categories</h2>
 
-                <div class="product_list">
-                    <div class="product">
-                        <a href="product.html" class="product_image"></a>
-                        <div class="product_details">
-                            <div class="product_name_plus_delete">
-                                <p>Axis 2-Seat Sofa</p>
-                                <i class="fa-solid fa-trash"></i>
-                            </div>
-                            <div class="product_desc">
-                                <p>Size: L</p>
-                                <p>Color: Grey</p>
-                            </div>
-                            <div class="count_plus_price">
-                                <div class="count">
-                                    <i class="fa-solid fa-minus"></i>
-                                    <p>1</p>
-                                    <i class="fa-solid fa-plus"></i>
-                                </div>
-                                <p>$200</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <a href="product.html" class="product_image" style="background-image: url(images/2.jpg);"></a>
-                        <div class="product_details">
-                            <div class="product_name_plus_delete">
-                                <p>Axis 2-Seat Sofa</p>
-                                <i class="fa-solid fa-trash"></i>
-                            </div>
-                            <div class="product_desc">
-                                <p>Size: M</p>
-                                <p>Color: Grey</p>
-                            </div>
-                            <div class="count_plus_price">
-                                <div class="count">
-                                    <i class="fa-solid fa-minus"></i>
-                                    <p>3</p>
-                                    <i class="fa-solid fa-plus"></i>
-                                </div>
-                                <p>$200</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <a href="product.html" class="product_image" style="background-image: url(images/5.jpg);"></a>
-                        <div class="product_details">
-                            <div class="product_name_plus_delete">
-                                <p>Axis 2-Seat Sofa</p>
-                                <i class="fa-solid fa-trash"></i>
-                            </div>
-                            <div class="product_desc">
-                                <p>Size: M</p>
-                                <p>Color: Grey</p>
-                            </div>
-                            <div class="count_plus_price">
-                                <div class="count">
-                                    <i class="fa-solid fa-minus"></i>
-                                    <p>3</p>
-                                    <i class="fa-solid fa-plus"></i>
-                                </div>
-                                <p>$200</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="detail_summary_container">
-                <h2>Detail Summary</h2>
-                
-                <div class="detail_summary_list">
-                    <div class="detail_summary_breakdown">
-                        <h3>Subtotal Product</h3>
-                        <h3>$1,017.00</h3>
-                    </div>
-                    <div class="detail_summary_breakdown">
-                        <h3>Price Delivery</h3>
-                        <h3>$0</h3>
-                    </div>
-                    <div class="detail_summary_breakdown">
-                        <h3>Tax</h3>
-                        <h3>$5.00</h3>
-                    </div>
-                </div>
-
-                <div class="total_container">
-                    <div class="discount_container">
-                        <h3>Promo/Discount Code</h3>
-                        <div class="in_plus_but">
-                            <input type="text" placeholder="Enter your promo/Discount Code">
-                            <button>Apply</button>
-                        </div>
-                    </div>
-
-                    <div class="total_figure_cont">
-                        <h3>Total</h3>
-                        <h3>$3,000</h3>
-                    </div>
-
-                    <button style="max-width: unset; border-radius: 20px;">Checkout Now</button>
-                </div>
-            </div>
-        </form>
+		<div class="categories_container">
+			<!-- <a href="#" class="category">
+				<div class="representation"></div>
+				<p>3D illustrations</p>
+			</a> -->
+		</div>
     </main>
 
     <footer>
@@ -351,7 +264,9 @@
 
     <script src="https://kit.fontawesome.com/2843b9be73.js" crossorigin="anonymous"></script>
 
-    <script>
+    <script src="js/carousel.js"></script>
+
+	<script>
         var sideBarButton = document.querySelector(".nav_icon");
 
         var closeButton = document.querySelector(".close_button");
@@ -359,79 +274,80 @@
         var sideBar = document.querySelector(".mobile_screen_sidebar");
 
         sideBarButton.addEventListener("click", (e)=>{
-            e.preventDefault();
+        	e.preventDefault();
             sideBar.style.left = "0";
         });
 
-        closeButton.addEventListener("click", (e)=>{
+		closeButton.addEventListener("click", (e)=>{
             sideBar.style.left = "100%";
         });
 
         var toggle_big_search_button = document.querySelector(".toggle_big_search_button");
 
-        var nav_links = document.querySelector(".nav_links");
+		var nav_links = document.querySelector(".nav_links");
 
-        var first_header_form = document.querySelector("header").querySelector(".first_form");
+		var first_header_form = document.querySelector("header").querySelector(".first_form");
 
-        toggle_big_search_button.addEventListener("click", (e)=>{
-            e.preventDefault();
+		toggle_big_search_button.addEventListener("click", (e)=>{
+			e.preventDefault();
 
-            if(nav_links.classList.contains("hide_nav_links")){
-                first_header_form.style.transition = "all 0s";
-            }else{
-                first_header_form.style.transition = "all 0.5s";
-            }
-            nav_links.classList.toggle("hide_nav_links");
+			if(nav_links.classList.contains("hide_nav_links")){
+				first_header_form.style.transition = "all 0s";
+			}else{
+				first_header_form.style.transition = "all 0.5s";
+			}
+			nav_links.classList.toggle("hide_nav_links");
 
-            first_header_form.classList.toggle("show_header");
-        });
+			first_header_form.classList.toggle("show_header");
+		});
 
         var show_search_form_button = document.querySelector(".show_search_form_button");
 
         var second_header_form = document.querySelector("header").querySelector(".second_form");
-
+        
         show_search_form_button.addEventListener("click", (e)=>{
             e.preventDefault();
             second_header_form.classList.toggle("show_header");
         });
 
-        var allImages = [[5,6,7,8,3], [1,2,3,4,5]];
+		var all_show_more_nav_icon = document.querySelectorAll(".show_more_nav_icon");
 
-        const featured_products = document.querySelectorAll(".featured_products");
+		all_show_more_nav_icon.forEach((show_more_nav_icon)=>{
+			show_more_nav_icon.addEventListener("click", (e)=>{
+				var old_one = document.querySelector(".show_display");
 
-        featured_products.forEach((featured_product, index)=>{
-            allImages[index].forEach((image)=>{
-                featured_product.innerHTML += `
-                <a href="product.html" class="product">
-                    <div class="image_container">
-                        <img src="./images/${image}.jpg" loading="lazy" alt="Ginseng">
-                    </div>
+				show_more_nav_icon.parentElement.querySelector(".notifications_container").classList.toggle("show_display");
 
-                    <i class="fa-regular fa-heart"></i>
+				if(old_one !== null){
+					old_one.classList.remove("show_display");
+				}
+			});
+		});
 
-                    <h3>Product Name</h3>
+		var categories_container = document.querySelector(".categories_container");
 
-                    <p>$45.5</p>
-                </a>
-                `
-            });
-        });
+		var all_categories = [
+			"Men", "Ladies", "Children", "Babies", "Car Spare Parts",
+			"Machine Spare Parts", "Festive", "Designer", "Brand",
+		]
 
-        var all_show_more_nav_icon = document.querySelectorAll(".show_more_nav_icon");
+		all_categories.forEach((category)=>{
+			categories_container.innerHTML += `
+				<a href="subcategories.html" class="category">
+					<div class="representation"></div>
+					<p>${category}</p>
+				</a>
+			`
+		})
 
-        all_show_more_nav_icon.forEach((show_more_nav_icon)=>{
-            show_more_nav_icon.addEventListener("click", (e)=>{
-                var old_one = document.querySelector(".show_display");
-
-                show_more_nav_icon.parentElement.querySelector(".notifications_container").classList.toggle("show_display");
-
-                if(old_one !== null){
-                    old_one.classList.remove("show_display");
-                }
-            });
-        })
+		// for(var i = 0; i < 12; i ++){
+		// 	categories_container.innerHTML += `
+		// 		<a href="search.html" class="category">
+		// 			<div class="representation"></div>
+		// 			<p>${all_categories[i]}</p>
+		// 		</a>
+		// 	`
+		// }
     </script>
-    
-    <script src="./js/check_out_page.js"></script>
 </body>
 </html>

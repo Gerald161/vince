@@ -20,7 +20,7 @@ h2{
   display: flex;
   gap: 20px;
   padding: 20px 0;
-  border-bottom: solid 1px #2a2a2a;
+  border-bottom: solid 1px #ccc;
 }
 
 .product_and_detail_container .product_list_container .product_list .product:last-child{
@@ -164,7 +164,6 @@ h2{
 }
 
 .product_and_detail_container .detail_summary_container .total_container .discount_container input{
-  border-radius: 10px;
   flex: 1;
 }
 
@@ -184,6 +183,10 @@ h2{
 }
 
 @media (prefers-color-scheme: dark){
+  .product_and_detail_container .product_list_container .product_list .product{
+    border-bottom: solid 1px #2a2a2a;
+  }
+
   .product_and_detail_container .product_list_container .product_list .product .product_details
   .product_name_plus_delete i{
     color: white;

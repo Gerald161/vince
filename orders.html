@@ -5,9 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" href="./css/checkout.css">
+    <link rel="stylesheet" href="./css/notifications.css">
 	<link rel="shortcut icon" type="image/png" href="./images/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Welcome to Vince Vineyard International</title>
+    <title>Your Orders</title>
+    <style>
+        main{
+            padding: 0;
+        }
+
+        .product_and_detail_container .product_list_container .product_list .product{
+            padding: 20px;
+            transition: background-color 0.5s;
+        }
+
+        .product_and_detail_container .product_list_container .product_list .product:hover{
+            background-color: #d3d3d3;
+        }
+
+        @media (prefers-color-scheme: dark){
+            .product_and_detail_container .product_list_container .product_list .product:hover{
+                background-color: rgba(255,255,255,0.1);
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,6 +47,10 @@
 			<form action="" class="first_form">
 				<input type="text" placeholder="What are you looking for">
 				<i class="fa-solid fa-xmark"></i>
+				<label for="picture" class="picture_label">
+					<i class="fa-solid fa-camera camera_upload"></i>
+				</label>
+				<input id="picture" type="file" accept="image/*" name="">
 				<button><i class="fa-solid fa-magnifying-glass"></i></button>
 				<div class="search_suggestions">
 					<a href="#">
@@ -58,13 +83,13 @@
 					<i class="fa-solid fa-bell show_more_nav_icon"></i>
 					<div class="number_of_notifications">2</div>
 					<div class="notifications_container">
-						<p class="stuff">Your Notifications <span style="font-weight: bold;">5</span></p>
+						<!-- <p class="stuff">Your Notifications <span style="font-weight: bold;">5</span></p> -->
 
-						<a href="#" class="mark_all">Mark all as read</a>
+						<!-- <a href="#" class="mark_all">Mark all as read</a> -->
 
-						<!-- <p style="padding: 20px;">No messages available</p> -->
+						<p style="padding: 20px;">No messages available</p>
 						
-						<div class="all_notifications">
+						<!-- <div class="all_notifications">
 							<a href="#" class="notification">
 								<div class="profile_pic"></div>
 								<div class="message_container">
@@ -114,7 +139,7 @@
 
 						<a href="notifications.html" class="button">
 							View All Messages
-						</a>
+						</a> -->
 					</div>
 				</div>
 
@@ -130,6 +155,11 @@
 						<a href="profile.html" class="profile_option">
 							<i class="fa-duotone fa-solid fa-gear"></i>
 							<p>Settings</p>
+						</a>
+
+						<a href="signinnew.html" class="profile_option">
+							<i class="fa-solid fa-user"></i>
+							<p>Sign in</p>
 						</a>
 						
 						<a href="#" class="profile_option">
@@ -152,6 +182,10 @@
 		<form action="" class="second_form">
             <input type="text" placeholder="What are you looking for">
             <i class="fa-solid fa-xmark"></i>
+			<label for="picture" class="picture_label">
+				<i class="fa-solid fa-camera camera_upload"></i>
+			</label>
+			<input id="picture" type="file" accept="image/*" name="">
             <button><i class="fa-solid fa-magnifying-glass"></i></button>
             <div class="search_suggestions">
                 <a href="#">
@@ -175,50 +209,32 @@
 	</header>
 
 	<div class="mobile_screen_sidebar">
-      <i class="close_button fas fa-times"></i>
+        <i class="close_button fas fa-times"></i>
 
-      <div style="display: flex; justify-content: space-between; flex-direction: column;">
-          <a href="index.html" class="nav_link">Home</a>
-          <a href="#about" class="nav_link">Products</a>
-          <a href="#services" class="nav_link">Services</a>
-          <a href="#" class="nav_link">Contact</a>
-      </div>
+        <div style="display: flex; justify-content: space-between; flex-direction: column;">
+            <a href="index.html" class="nav_link">Home</a>
+            <a href="#about" class="nav_link">Products</a>
+            <a href="#services" class="nav_link">Services</a>
+            <a href="#" class="nav_link">Contact</a>
+        </div>
     </div>
 
     <main>
-        <form method="get" action="./shipping_details.html" class="product_and_detail_container">
+		<div class="options">
+			<button><span>20</span>All Orders</button>
+			<button><span>5</span>Shipped</button>
+			<button><span>2</span>Pending</button>
+		</div>
+		<div class="product_and_detail_container">
             <div class="product_list_container">
-                <h2>Your Product List</h2>
-
                 <div class="product_list">
-                    <div class="product">
-                        <a href="product.html" class="product_image"></a>
+                    <a href="" class="product">
+                        <div class="product_image"></div>
                         <div class="product_details">
                             <div class="product_name_plus_delete">
                                 <p>Axis 2-Seat Sofa</p>
-                                <i class="fa-solid fa-trash"></i>
-                            </div>
-                            <div class="product_desc">
-                                <p>Size: L</p>
-                                <p>Color: Grey</p>
-                            </div>
-                            <div class="count_plus_price">
-                                <div class="count">
-                                    <i class="fa-solid fa-minus"></i>
-                                    <p>1</p>
-                                    <i class="fa-solid fa-plus"></i>
-                                </div>
-                                <p>$200</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <a href="product.html" class="product_image" style="background-image: url(images/2.jpg);"></a>
-                        <div class="product_details">
-                            <div class="product_name_plus_delete">
-                                <p>Axis 2-Seat Sofa</p>
-                                <i class="fa-solid fa-trash"></i>
+                                <!-- <i class="fa-solid fa-trash"></i> -->
+                                 <p>$652</p>
                             </div>
                             <div class="product_desc">
                                 <p>Size: M</p>
@@ -226,21 +242,22 @@
                             </div>
                             <div class="count_plus_price">
                                 <div class="count">
-                                    <i class="fa-solid fa-minus"></i>
-                                    <p>3</p>
-                                    <i class="fa-solid fa-plus"></i>
+                                    <!-- <i class="fa-solid fa-minus"></i> -->
+                                    <p>Quantity: 1</p>
+                                    <!-- <i class="fa-solid fa-plus"></i> -->
                                 </div>
-                                <p>$200</p>
+                                <!-- <p>$200</p> -->
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product">
-                        <a href="product.html" class="product_image" style="background-image: url(images/5.jpg);"></a>
+                    <a href="#" class="product">
+                        <div class="product_image" style="background-image: url(images/2.jpg);"></div>
                         <div class="product_details">
                             <div class="product_name_plus_delete">
                                 <p>Axis 2-Seat Sofa</p>
-                                <i class="fa-solid fa-trash"></i>
+                                <!-- <i class="fa-solid fa-trash"></i> -->
+                                 <p>$652</p>
                             </div>
                             <div class="product_desc">
                                 <p>Size: M</p>
@@ -248,52 +265,59 @@
                             </div>
                             <div class="count_plus_price">
                                 <div class="count">
-                                    <i class="fa-solid fa-minus"></i>
-                                    <p>3</p>
-                                    <i class="fa-solid fa-plus"></i>
+                                    <!-- <i class="fa-solid fa-minus"></i> -->
+                                    <p>Quantity: 2</p>
+                                    <!-- <i class="fa-solid fa-plus"></i> -->
                                 </div>
-                                <p>$200</p>
+                                <!-- <p>$200</p> -->
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="detail_summary_container">
-                <h2>Detail Summary</h2>
-                
-                <div class="detail_summary_list">
-                    <div class="detail_summary_breakdown">
-                        <h3>Subtotal Product</h3>
-                        <h3>$1,017.00</h3>
-                    </div>
-                    <div class="detail_summary_breakdown">
-                        <h3>Price Delivery</h3>
-                        <h3>$0</h3>
-                    </div>
-                    <div class="detail_summary_breakdown">
-                        <h3>Tax</h3>
-                        <h3>$5.00</h3>
-                    </div>
-                </div>
+                    </a>
 
-                <div class="total_container">
-                    <div class="discount_container">
-                        <h3>Promo/Discount Code</h3>
-                        <div class="in_plus_but">
-                            <input type="text" placeholder="Enter your promo/Discount Code">
-                            <button>Apply</button>
+                    <a href="#" class="product">
+                        <div class="product_image" style="background-image: url(images/5.jpg);"></div>
+                        <div class="product_details">
+                            <div class="product_name_plus_delete">
+                                <p>Axis 2-Seat Sofa</p>
+                                <!-- <i class="fa-solid fa-trash"></i> -->
+                                 <p>$652</p>
+                            </div>
+                            <div class="product_desc">
+                                <p>Size: M</p>
+                                <p>Color: Grey</p>
+                            </div>
+                            <div class="count_plus_price">
+                                <div class="count">
+                                    <!-- <i class="fa-solid fa-minus"></i> -->
+                                    <p>Quantity: 3</p>
+                                    <!-- <i class="fa-solid fa-plus"></i> -->
+                                </div>
+                                <!-- <p>$200</p> -->
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="total_figure_cont">
-                        <h3>Total</h3>
-                        <h3>$3,000</h3>
-                    </div>
-
-                    <button style="max-width: unset; border-radius: 20px;">Checkout Now</button>
+                    </a>
                 </div>
+
+                <!-- <div class="bottom_info">
+                    <h2>Order Summary</h2>
+
+                    <div class="both">
+                        <p>Subtotal Product</p>
+                        <p>$1,017.00</p>
+                    </div>
+
+                    <div class="both">
+                        <p>Delivery Fee</p>
+                        <p>Free</p>
+                    </div>
+
+                    <div class="both">
+                        <p>Total Product</p>
+                        <p>$1,017.00</p>
+                    </div>
+                </div> -->
             </div>
-        </form>
+        </div>
     </main>
 
     <footer>
@@ -351,7 +375,7 @@
 
     <script src="https://kit.fontawesome.com/2843b9be73.js" crossorigin="anonymous"></script>
 
-    <script>
+	<script>
         var sideBarButton = document.querySelector(".nav_icon");
 
         var closeButton = document.querySelector(".close_button");
@@ -359,79 +383,55 @@
         var sideBar = document.querySelector(".mobile_screen_sidebar");
 
         sideBarButton.addEventListener("click", (e)=>{
-            e.preventDefault();
+        	e.preventDefault();
             sideBar.style.left = "0";
         });
 
-        closeButton.addEventListener("click", (e)=>{
+		closeButton.addEventListener("click", (e)=>{
             sideBar.style.left = "100%";
         });
 
         var toggle_big_search_button = document.querySelector(".toggle_big_search_button");
 
-        var nav_links = document.querySelector(".nav_links");
+		var nav_links = document.querySelector(".nav_links");
 
-        var first_header_form = document.querySelector("header").querySelector(".first_form");
+		var first_header_form = document.querySelector("header").querySelector(".first_form");
 
-        toggle_big_search_button.addEventListener("click", (e)=>{
-            e.preventDefault();
+		toggle_big_search_button.addEventListener("click", (e)=>{
+			e.preventDefault();
 
-            if(nav_links.classList.contains("hide_nav_links")){
-                first_header_form.style.transition = "all 0s";
-            }else{
-                first_header_form.style.transition = "all 0.5s";
-            }
-            nav_links.classList.toggle("hide_nav_links");
+			if(nav_links.classList.contains("hide_nav_links")){
+				first_header_form.style.transition = "all 0s";
+			}else{
+				first_header_form.style.transition = "all 0.5s";
+			}
+			nav_links.classList.toggle("hide_nav_links");
 
-            first_header_form.classList.toggle("show_header");
-        });
+			first_header_form.classList.toggle("show_header");
+		});
 
         var show_search_form_button = document.querySelector(".show_search_form_button");
 
         var second_header_form = document.querySelector("header").querySelector(".second_form");
-
+        
         show_search_form_button.addEventListener("click", (e)=>{
             e.preventDefault();
             second_header_form.classList.toggle("show_header");
         });
 
-        var allImages = [[5,6,7,8,3], [1,2,3,4,5]];
-
-        const featured_products = document.querySelectorAll(".featured_products");
-
-        featured_products.forEach((featured_product, index)=>{
-            allImages[index].forEach((image)=>{
-                featured_product.innerHTML += `
-                <a href="product.html" class="product">
-                    <div class="image_container">
-                        <img src="./images/${image}.jpg" loading="lazy" alt="Ginseng">
-                    </div>
-
-                    <i class="fa-regular fa-heart"></i>
-
-                    <h3>Product Name</h3>
-
-                    <p>$45.5</p>
-                </a>
-                `
-            });
-        });
-
         var all_show_more_nav_icon = document.querySelectorAll(".show_more_nav_icon");
 
-        all_show_more_nav_icon.forEach((show_more_nav_icon)=>{
-            show_more_nav_icon.addEventListener("click", (e)=>{
-                var old_one = document.querySelector(".show_display");
+		all_show_more_nav_icon.forEach((show_more_nav_icon)=>{
+			show_more_nav_icon.addEventListener("click", (e)=>{
+				var old_one = document.querySelector(".show_display");
 
-                show_more_nav_icon.parentElement.querySelector(".notifications_container").classList.toggle("show_display");
+				show_more_nav_icon.parentElement.querySelector(".notifications_container").classList.toggle("show_display");
 
-                if(old_one !== null){
-                    old_one.classList.remove("show_display");
-                }
-            });
-        })
+				if(old_one !== null){
+					old_one.classList.remove("show_display");
+				}
+			});
+		})
     </script>
-    
-    <script src="./js/check_out_page.js"></script>
 </body>
 </html>
