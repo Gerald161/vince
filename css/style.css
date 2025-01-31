@@ -849,10 +849,12 @@ input{
     width: 70%;
     transition: all 0.7s;
     opacity: 0;
+    height: 0;
 }
 
 .other_categories .other_category .overlay:hover .heading{
     opacity: 1;
+    height: auto;
 }
 
 .other_categories .big{
