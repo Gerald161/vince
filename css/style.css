@@ -848,13 +848,11 @@ input{
     padding-top: 0;
     width: 70%;
     transition: all 0.7s;
-    opacity: 0;
-    height: 0;
+    transform: scale(0);
 }
 
 .other_categories .other_category .overlay:hover .heading{
-    opacity: 1;
-    height: auto;
+    transform: scale(1);
 }
 
 .other_categories .big{
