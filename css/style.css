@@ -847,12 +847,6 @@ input{
     gap: 20px;
     padding-top: 0;
     width: 70%;
-    transition: all 0.7s;
-    transform: scale(0);
-}
-
-.other_categories .other_category .overlay:hover .heading{
-    transform: scale(1);
 }
 
 .other_categories .big{

@@ -394,7 +394,7 @@ p:nth-child(2){
   border-radius: 5px;
   overflow: hidden;
   padding: 10px;
-  background-color: #ccc !important;
+  background-color: #ccc;
   flex: 10;
   position: relative;
 }
@@ -540,10 +540,6 @@ i:hover ~ i
   
   .general_reviews_container .ratings_explanation_section .rating_bars .rating_bar .progress_bar{
     background-color: #2a2a2a;
-  }
-
-  .general_reviews_container .ratings_explanation_section .rating_bars .rating_bar .progress_bar{
-    background-color: #2a2a2a !important;
   }
   
   .general_reviews_container .ratings_explanation_section .rating_bars .rating_bar .progress_bar 
