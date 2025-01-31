@@ -12,6 +12,7 @@ main .options{
 
 main .options button{
     padding: 10px 20px;
+    padding-bottom: 2px;
     flex: 1;
     /* the justify content above is affecting the width I set */
     /* width: 200px; */
