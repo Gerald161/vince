@@ -22,8 +22,12 @@
     justify-content: space-between;
 }
 
-.progress_tab .all_progress .checkpoint p{
+.progress_tab .all_progress .checkpoint .unfulfilled{
     color: #6b7280;
+}
+
+.progress_tab .all_progress .checkpoint .ongoing{
+    color: #5B78F6;
 }
 
 .progress_tab .all_progress .checkpoint .point_and_progress{
