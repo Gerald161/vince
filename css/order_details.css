@@ -69,6 +69,32 @@
 .progress_tab .bottom_double_text{
     display: flex;
     gap: 10px;
+    align-items: center;
+}
+
+#packaging{
+    padding: 3px 5px;
+    border-radius: 5px;
+    color:#5B78F6;
+    border: solid 1px #5B78F6;
+}
+
+#estimate{
+    padding: 3px 5px;
+    border-radius: 5px;
+    background-color: #dadada;
+}
+
+.show_more{
+    transition: all 0.5s;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    color: dodgerblue;
+}
+
+.show_more:hover{
+    background-color: rgba(0,0,0,0.1);
 }
 
 @media(prefers-color-scheme: dark){
@@ -78,5 +104,13 @@
 
     .progress_tab .all_progress .pointless{
         background-color: #3a3a3a;
+    }
+
+    #estimate{
+        background-color: #3a3a3a;
+    }
+
+    .show_more:hover{
+        background-color: #2a2a2a;
     }
 }

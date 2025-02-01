@@ -424,7 +424,7 @@ p:nth-child(2){
 i:hover, .personal_review_container .star_reviews 
 i:hover ~ i
 {
-  color: white;
+  color: black;
 }
 
 .show_more{
@@ -437,7 +437,7 @@ i:hover ~ i
 }
 
 .show_more:hover{
-  background-color: #2a2a2a;
+  background-color: rgba(0,0,0,0.1);
 }
 
 @media(max-width: 900px){
@@ -555,5 +555,16 @@ i:hover ~ i
   .general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container .name_and_time 
   p:nth-child(2){
     color: grey;
+  }
+
+  .personal_review_container .star_reviews 
+  i:hover, .personal_review_container .star_reviews 
+  i:hover ~ i
+  {
+    color: white;
+  }
+
+  .show_more:hover{
+    background-color: #2a2a2a;
   }
 }

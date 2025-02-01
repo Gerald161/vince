@@ -96,6 +96,7 @@ nav .nav_links .nav__link{
     text-decoration: none;
     display: inline-block;
     padding: calc(var(--spacing) / 2) var(--spacing);
+    padding-bottom: 3px;
     position: relative;
     font-weight: bold;
   }

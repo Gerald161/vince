@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-	<link rel="stylesheet" href="./css/orders.css">
-	<link rel="stylesheet" href="./css/order_details.css">
+	<link rel="stylesheet" href="./css/order_tracking.css">
 	<link rel="shortcut icon" type="image/png" href="./images/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Your Orders</title>
@@ -200,128 +199,97 @@
     </div>
 
     <main>
-		<div class="progress_tab">
-			<h2 style="font-weight: normal;">Order Progress</h2>
+		<div class="filter_section">
+			<p>All Shipping</p>
 
-			<div class="all_progress">
-				<div class="checkpoint">
-					<div class="point_and_progress">
-						<div class="point"></div>
-						<div class="progress_bar">
-							<div class="progress_fill"></div>
-						</div>
-					</div>
-					<p>Order Confirming</p>
-				</div>
-				<div class="checkpoint">
-					<div class="point_and_progress">
-						<div class="point"></div>
-						<div class="progress_bar">
-							<div class="progress_fill"></div>
-						</div>
-					</div>
-					<p>Packaging</p>
-				</div>
-				<div class="checkpoint">
-					<div class="point_and_progress">
-						<div class="point"></div>
-						<div class="progress_bar">
-							<div class="progress_fill" style="width: 60%;"></div>
-						</div>
-					</div>
-					<p>Shipping</p>
-				</div>
-				<div class="checkpoint">
-					<div class="point_and_progress">
-						<div class="pointless"></div>
-						<div class="progress_bar">
-							<div class="progress_fill" style="width: 0;"></div>
-						</div>
-						<div class="pointless"></div>
-					</div>
-					<div class="both">
-						<p>Delivery</p>
-						<p>Done</p>
-					</div>
-				</div>
+			<div>
+				<input style="width: 100%;" type="text" placeholder="Search for driver">
 			</div>
 
-			<div class="bottom_section">
-				<div class="bottom_double_text">
-					<p>Status:</p>
-					<p id="packaging">Packaging</p>
-				</div>
-				<div class="bottom_double_text">
-					<p>Estimated Completion:</p>
-					<p id="estimate">9 July 2025</p>
-				</div>
+			<div class="all_drivers">
+				<a href="" class="image_container">
+					<img src="./images/1.jpg" alt="">
+					<div class="desc">
+						<div class="name_and_status">
+							<p>#Driver Name</p>
+							<p style="color: #28a745;">Delivering</p>
+						</div>
+						<p class="optional_desc">Some Optional</p>
+					</div>
+				</a>
+	
+				<a href="" class="image_container">
+					<img src="./images/2.jpg" alt="">
+					<div class="desc">
+						<div class="name_and_status">
+							<p>#Driver Name</p>
+							<p style="color: #fb923c;">Pending</p>
+						</div>
+						<p class="optional_desc">Some Optional</p>
+					</div>
+				</a>
+				<a href="" class="image_container active">
+					<img src="./images/1.jpg" alt="">
+					<div class="desc">
+						<div class="name_and_status">
+							<p>#Driver Name</p>
+							<p>Transit</p>
+						</div>
+						<p class="optional_desc">Some Optional</p>
+					</div>
+				</a>
+	
+				<a href="" class="image_container">
+					<img src="./images/2.jpg" alt="">
+					<div class="desc">
+						<div class="name_and_status">
+							<p>#Driver Name</p>
+							<p>In Delivery</p>
+						</div>
+						<p class="optional_desc">Some Optional</p>
+					</div>
+				</a>
 			</div>
 		</div>
-	
-		<table style="margin: 20px 0; margin-bottom: 30px;">
-			<thead>
-				<tr>
-					<th>Item</th>
-					<th>Quantity</th>
-					<th>Status</th>
-					<th>Discount</th>
-					<th>Tax</th>
-					<th>Total</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr data-href="product.html">
-					<td>
-						<div class="image_container">
-							<img src="./images/1.jpg" alt="">
-							<div class="desc">
-								<p>Product Name</p>
-								<p class="optional_desc">Some Optional</p>
-							</div>
-						</div>
-					</td>
-					<td>2</td>
-					<td><span class="status-badge status-pending">Pending</span></td>
-					<td>$200.00</td>
-					<td>3$</td>
-					<td>70$</td>
-				</tr>
-				<tr data-href="order_details.html">
-					<td>
-						<div class="image_container">
-							<img src="./images/3.jpg" alt="">
-							<div class="desc">
-								<p>Product Name</p>
-								<p class="optional_desc">Some Optional</p>
-							</div>
-						</div>
-					</td>
-					<td>4</td>
-					<td><span class="status-badge status-success">Ready</span></td>
-					<td>$220.00</td>
-					<td>2$</td>
-					<td>200$</td>
-				</tr>
-				<tr data-href="order_details.html">
-					<td>
-						<div class="image_container">
-							<img src="./images/2.jpg" alt="">
-							<div class="desc">
-								<p>Product Name</p>
-								<p class="optional_desc">Some Optional</p>
-							</div>
-						</div>
-					</td>
-					<td>1</td>
-					<td><span class="status-badge status-pending">Packaging</span></td>
-					<td>$250.00</td>
-					<td>9$</td>
-					<td>100$</td>
-				</tr>
-			</tbody>
-		</table>
+		<div class="details_section">
+			<p>Track Order on Map</p>
+			<div class="map_container">
 
-		<a href="order_tracking.html" class="show_more">Track Order</a>
+			</div>
+			
+			<p>Order Details</p>
+
+			<div class="order_details">
+				<div class="order_detail">
+					<div class="first">
+						<i class="fa-regular fa-clock"></i>
+						<p>10:23 pm <span>(21/12/2025)</span></p>
+					</div>
+					<p style="color: #6b7280;">Estimated Arrival Time</p>
+				</div>
+
+				<div class="order_detail">
+					<div class="first">
+						<i class="fa-solid fa-truck"></i>
+						<p>In Delivery</p>
+					</div>
+					<p style="color: #6b7280;">Shipping Status</p>
+				</div>
+
+				<div class="order_detail">
+					<div class="first">
+						<i class="fa-solid fa-location-dot"></i>
+						<p>Ahinsan Estate</p>
+					</div>
+					<p style="color: #6b7280;">Destination</p>
+				</div>
+			</div>
+
+			<div class="both_locations">
+				<p>KNUST</p>
+				<p>Ahinsan Estate</p>
+			</div>
+		</div>
     </main>
 
     <footer>
@@ -436,15 +404,6 @@
 				}
 			});
 		});
-		
-		document.querySelectorAll("tbody tr").forEach((row)=>{
-			row.addEventListener("click", function () {
-                const url = this.getAttribute("data-href");
-                if (url) {
-                    window.location.href = url;
-                }
-            });
-		})
     </script>
 </body>
 </html>
