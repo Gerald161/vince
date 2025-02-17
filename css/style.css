@@ -336,6 +336,7 @@ header form{
 
 .second_form{
 	display: none;
+    pointer-events: none;
 }
 
 header form input{
