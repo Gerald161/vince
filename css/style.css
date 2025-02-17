@@ -63,6 +63,12 @@ a{
 header{
     display: flex;
     flex-direction: column;
+    /* below is fixed stuff */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
 }
 
 nav{
@@ -470,6 +476,8 @@ header form button{
 	/* below is what I added later */
 	transition: all 1s;
 	left: 0;
+    /* below here is the fixed position */
+    margin-top: 72px;
 }
 
 .welcome_plus_slider{
@@ -478,7 +486,7 @@ header form button{
 
 .welcome_plus_slider .slider_controller{
 	position: absolute;
-	left: 45vw;
+	left: 39%;
 	bottom: 20px;
 	z-index: 9;
 	display: flex;
@@ -1132,14 +1140,23 @@ footer .footer_info a i{
         height: 230px;
     }
 
+    .faq_section .image_section{
+        display: none;
+    }
+
     .faq-container {
         width: 100%;
-        margin: 30px auto;
     }
 
     footer{
     	gap: 30px;
 	}
+
+    .copyright{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
 }
 
 @media (prefers-color-scheme: dark){
@@ -1157,6 +1174,10 @@ footer .footer_info a i{
     .tooltip .tooltip-text {
         background-color: #ccc;
         color: black;
+    }
+
+    header{
+        background-color: #121212;
     }
 
     .notifications_container .all_notifications .notification .message_container .response{
