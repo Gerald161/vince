@@ -136,7 +136,7 @@ h2{
   flex: 1;
   /* below here can take off in smaller screen */
   top: 0;
-  height: 66vh;
+  height: 100vh;
   position: sticky;
 }
 
