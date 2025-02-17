@@ -556,6 +556,7 @@ header form button{
 }
 
 main{
+    margin-top: 72px;
     padding: 20px;
 	padding-bottom: 40px;
     min-height: 60vh;
