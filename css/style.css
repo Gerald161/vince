@@ -681,9 +681,8 @@ input:focus, textarea:focus{
 
 .featured_styles .featured_style .overlay h1{
     color: white;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 30px;   
+    font-weight: normal;
+    font-size: 1.5em;   
 }
 
 .featured_styles .featured_style img{
@@ -752,69 +751,6 @@ input:focus, textarea:focus{
 	color: dodgerblue;
 }
 
-.break_info{
-    display: flex;
-    gap: 20px;
-}
-
-.break_info .left_side{
-    flex: 1;
-    height: 450px;
-    border-radius: 20px;
-    position: relative;
-    overflow: hidden;
-}
-
-.break_info .left_side img{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.break_info .right_side{
-    flex: 1;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.break_info .right_side div{
-    flex: 1;
-    border-radius: 20px;
-    position: relative;
-    overflow: hidden;
-}
-
-.break_info .right_side div img{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.break_info .left_side .overlay, 
-.break_info .right_side div .overlay{
-    background-color: rgba(0,0,0,0.7);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.break_info .right_side div .overlay h2{
-    font-weight: normal;
-}
-
-.break_info .heading,.break_info .heading .tags .tag{
-    color: white;
-}
-
 .other_categories{
     display: grid;
     gap: 10px;
@@ -868,7 +804,23 @@ input:focus, textarea:focus{
 .other_categories .other_category .overlay .heading{
     gap: 20px;
     padding-top: 0;
-    width: 70%;
+    width: 100%;
+}
+
+.other_categories .other_category .overlay h2{
+    font-weight: normal;
+}
+
+.other_categories .other_category .overlay2{
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .other_categories .big{
@@ -1111,6 +1063,15 @@ footer .footer_info a i{
         grid-row: span 1;
     }
 
+    .other_categories{
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-auto-rows: 190px;
+    }
+
+    .other_categories .big{
+        grid-row: span 1;
+    }
+
     .featured_products{
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
@@ -1136,11 +1097,6 @@ footer .footer_info a i{
 		border-bottom: 2px solid #ccc;
 		border-right: none;
 	}
-
-    .break_info .left_side{
-        flex: 1;
-        height: 230px;
-    }
 
     .faq_section .image_section{
         display: none;
