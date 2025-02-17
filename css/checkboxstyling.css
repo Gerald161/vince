@@ -37,7 +37,6 @@
 .custom-checkbox {
     position: absolute;
     opacity: 0;
-    cursor: pointer;
     height: 0;
     width: 0;
 }
@@ -52,6 +51,7 @@
     margin-right: 12px;
     margin-top: 2px;
     transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 .custom-checkbox:checked ~ .checkmark {
     background-color: var(--checkbox-color);
