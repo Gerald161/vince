@@ -69,8 +69,6 @@ main .details_section{
 }
 
 main .details_section .map_container{
-    /* border-radius: 10px; */
-    /* background-color: purple; */
     background: url(../images/placeholder.png) no-repeat center/cover;
     height: 60vh;
     width: 100%;
@@ -187,6 +185,28 @@ button{
 
 button:hover{
     background-color: #28a745;   
+}
+
+@media(max-width: 700px){
+    main{
+        flex-direction: column;
+    }
+
+    main .filter_section{
+        position: relative;
+        height: auto;
+    }
+
+    main .details_section .order_details{
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: normal;
+    }
+
+    main .details_section .map_container{
+        background: url(../images/placeholder.png) no-repeat center/cover;
+        height: 40vh;
+    }
 }
 
 @media (prefers-color-scheme: dark){

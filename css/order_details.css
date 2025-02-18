@@ -5,6 +5,11 @@
     gap: 20px;
 }
 
+.progress_tab .all_progress_container{
+    width: 100%; 
+    overflow-x: auto;
+}
+
 .progress_tab .all_progress{
     display: flex;
     align-items: center;
@@ -115,6 +120,17 @@
 
 .show_more:hover{
     background-color: rgba(0,0,0,0.1);
+}
+
+@media(max-width: 700px){
+    .progress_tab .bottom_section{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .progress_tab .all_progress{
+        width: 200%;
+    }
 }
 
 @media(prefers-color-scheme: dark){

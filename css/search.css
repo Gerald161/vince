@@ -25,7 +25,7 @@
 main{
   display: flex;
   margin-bottom: 5px;
-  padding: 0 20px;
+  padding: 0;
 	padding-bottom: 40px;
 }
   
@@ -193,6 +193,12 @@ main .filter_results_section .search_results .search_result h4{
 }
 
 @media(max-width: 700px){
+  .category_classifications{
+    justify-content: normal;
+    width: 100%;
+    overflow-x: auto;
+  }
+
   main{
     flex-direction: column;
   }
@@ -214,17 +220,6 @@ main .filter_results_section .search_results .search_result h4{
     border-left: none !important;
   }
 }
-
-/* take off later */
-.featured_products{
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-}
-
-.featured_products .product .image_container{
-	height: 200px;
-}
-
-/* it ends here */
 
 
 @media (prefers-color-scheme: dark){

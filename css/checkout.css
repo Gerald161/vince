@@ -202,6 +202,25 @@ h2{
   background-color: orangered;
 }
 
+@media(max-width: 700px){
+  .product_and_detail_container{
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .product_and_detail_container .detail_summary_container{
+    position: relative;
+    height: auto;
+  }
+
+  .product_and_detail_container .product_list_container .product_list .product .product_image{
+    min-width: 150px;
+    /* min-height: 30px; */
+    border-radius: 20px;
+    background: url(../images/1.jpg) no-repeat center/cover;
+  }
+}
+
 @media (prefers-color-scheme: dark){
   .product_and_detail_container .product_list_container .product_list .product{
     border-bottom: solid 1px #2a2a2a;

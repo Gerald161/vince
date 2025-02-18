@@ -203,55 +203,57 @@
 		<div class="progress_tab">
 			<h2 style="font-weight: normal;">Order Progress</h2>
 
-			<div class="all_progress">
-				<div class="checkpoint">
-					<div class="point_and_progress">
-						<div class="point">
-							<i class="fa-solid fa-check"></i>
+			<div class="all_progress_container">
+				<div class="all_progress">
+					<div class="checkpoint">
+						<div class="point_and_progress">
+							<div class="point">
+								<i class="fa-solid fa-check"></i>
+							</div>
+							<div class="progress_bar">
+								<div class="progress_fill"></div>
+							</div>
 						</div>
-						<div class="progress_bar">
-							<div class="progress_fill"></div>
-						</div>
+						<p>Order Confirming</p>
 					</div>
-					<p>Order Confirming</p>
-				</div>
-				<div class="checkpoint">
-					<div class="point_and_progress">
-						<div class="point">
-							<i class="fa-solid fa-check"></i>
+					<div class="checkpoint">
+						<div class="point_and_progress">
+							<div class="point">
+								<i class="fa-solid fa-check"></i>
+							</div>
+							<div class="progress_bar">
+								<div class="progress_fill"></div>
+							</div>
 						</div>
-						<div class="progress_bar">
-							<div class="progress_fill"></div>
-						</div>
+						<p>Packaging</p>
 					</div>
-					<p>Packaging</p>
-				</div>
-				<div class="checkpoint">
-					<div class="point_and_progress">
-						<div class="point">
-							<i class="fa-solid fa-check" style="opacity: 0;"></i>
+					<div class="checkpoint">
+						<div class="point_and_progress">
+							<div class="point">
+								<i class="fa-solid fa-check" style="opacity: 0;"></i>
+							</div>
+							<div class="progress_bar">
+								<div class="progress_fill" style="width: 60%;"></div>
+							</div>
 						</div>
-						<div class="progress_bar">
-							<div class="progress_fill" style="width: 60%;"></div>
-						</div>
+						<p class="ongoing">Shipping</p>
 					</div>
-					<p class="ongoing">Shipping</p>
-				</div>
-				<div class="checkpoint">
-					<div class="point_and_progress">
-						<div class="pointless">
-							<i class="fa-solid fa-check"></i>
+					<div class="checkpoint">
+						<div class="point_and_progress">
+							<div class="pointless">
+								<i class="fa-solid fa-check"></i>
+							</div>
+							<div class="progress_bar">
+								<div class="progress_fill" style="width: 0;"></div>
+							</div>
+							<div class="pointless">
+								<i class="fa-solid fa-check"></i>
+							</div>
 						</div>
-						<div class="progress_bar">
-							<div class="progress_fill" style="width: 0;"></div>
+						<div class="both">
+							<p class="unfulfilled">Delivery</p>
+							<p class="unfulfilled">Done</p>
 						</div>
-						<div class="pointless">
-							<i class="fa-solid fa-check"></i>
-						</div>
-					</div>
-					<div class="both">
-						<p class="unfulfilled">Delivery</p>
-						<p class="unfulfilled">Done</p>
 					</div>
 				</div>
 			</div>
@@ -268,68 +270,70 @@
 			</div>
 		</div>
 	
-		<table style="margin: 20px 0; margin-bottom: 30px;">
-			<thead>
-				<tr>
-					<th>Item</th>
-					<th>Quantity</th>
-					<th>Status</th>
-					<th>Discount</th>
-					<th>Tax</th>
-					<th>Total</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr data-href="product.html">
-					<td>
-						<div class="image_container">
-							<img src="./images/1.jpg" alt="">
-							<div class="desc">
-								<p>Product Name</p>
-								<p class="optional_desc">Some Optional</p>
+		<div class="table_container" style="margin: 20px 0; margin-bottom: 30px;">
+			<table>
+				<thead>
+					<tr>
+						<th>Item</th>
+						<th>Quantity</th>
+						<th>Status</th>
+						<th>Discount</th>
+						<th>Tax</th>
+						<th>Total</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr data-href="product.html">
+						<td>
+							<div class="image_container">
+								<img src="./images/1.jpg" alt="">
+								<div class="desc">
+									<p>Product Name</p>
+									<p class="optional_desc">Some Optional</p>
+								</div>
 							</div>
-						</div>
-					</td>
-					<td>2</td>
-					<td><span class="status-badge status-pending">Pending</span></td>
-					<td>$200.00</td>
-					<td>3$</td>
-					<td>70$</td>
-				</tr>
-				<tr data-href="order_details.html">
-					<td>
-						<div class="image_container">
-							<img src="./images/3.jpg" alt="">
-							<div class="desc">
-								<p>Product Name</p>
-								<p class="optional_desc">Some Optional</p>
+						</td>
+						<td>2</td>
+						<td><span class="status-badge status-pending">Pending</span></td>
+						<td>$200.00</td>
+						<td>3$</td>
+						<td>70$</td>
+					</tr>
+					<tr data-href="order_details.html">
+						<td>
+							<div class="image_container">
+								<img src="./images/3.jpg" alt="">
+								<div class="desc">
+									<p>Product Name</p>
+									<p class="optional_desc">Some Optional</p>
+								</div>
 							</div>
-						</div>
-					</td>
-					<td>4</td>
-					<td><span class="status-badge status-success">Ready</span></td>
-					<td>$220.00</td>
-					<td>2$</td>
-					<td>200$</td>
-				</tr>
-				<tr data-href="order_details.html">
-					<td>
-						<div class="image_container">
-							<img src="./images/2.jpg" alt="">
-							<div class="desc">
-								<p>Product Name</p>
-								<p class="optional_desc">Some Optional</p>
+						</td>
+						<td>4</td>
+						<td><span class="status-badge status-success">Ready</span></td>
+						<td>$220.00</td>
+						<td>2$</td>
+						<td>200$</td>
+					</tr>
+					<tr data-href="order_details.html">
+						<td>
+							<div class="image_container">
+								<img src="./images/2.jpg" alt="">
+								<div class="desc">
+									<p>Product Name</p>
+									<p class="optional_desc">Some Optional</p>
+								</div>
 							</div>
-						</div>
-					</td>
-					<td>1</td>
-					<td><span class="status-badge status-pending">Packaging</span></td>
-					<td>$250.00</td>
-					<td>9$</td>
-					<td>100$</td>
-				</tr>
-			</tbody>
-		</table>
+						</td>
+						<td>1</td>
+						<td><span class="status-badge status-pending">Packaging</span></td>
+						<td>$250.00</td>
+						<td>9$</td>
+						<td>100$</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 
 		<a href="order_tracking.html" class="show_more">Track Order</a>
     </main>

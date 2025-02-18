@@ -90,6 +90,17 @@ main .bottom_section a:hover{
     color: dodgerblue;
 }
 
+header{
+    position: relative; 
+    top: 60px;
+}
+
+@media(max-width: 700px){
+    header{
+        top: 0;
+    }
+}
+
 @media (prefers-color-scheme: dark){
     main .bottom_section p{
         color: #cccccc;
