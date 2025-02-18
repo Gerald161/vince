@@ -1,9 +1,9 @@
-form{
+main form{
     padding: 20px 0;
     gap: 20px;
 }
 
-form, .label_plus_input{
+main form, .label_plus_input{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -37,7 +37,7 @@ form, .label_plus_input{
     color: dodgerblue;
 }
 
-form button{
+main form button{
     cursor: pointer;
     padding: 10px 20px;
     border: none;
@@ -48,7 +48,7 @@ form button{
     border-radius: 20px;
 }
 
-form button:hover{
+main form button:hover{
 	background-color: orangered;
 }
 
@@ -93,6 +93,12 @@ select:focus {
 
 .bottom_info .both p{
     font-size: 1.3em;
+}
+
+@media(max-width: 700px){
+    .product_and_detail_container{
+        flex-direction: column-reverse;
+    }
 }
 
 @media(prefers-color-scheme: dark){

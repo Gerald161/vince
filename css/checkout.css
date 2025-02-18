@@ -28,7 +28,7 @@ h2{
 }
 
 .product_and_detail_container .product_list_container .product_list .product .product_image{
-  min-width: 170px;
+  width: 250px;
   min-height: 120px;
   border-radius: 20px;
   background: url(../images/1.jpg) no-repeat center/cover;
@@ -214,10 +214,29 @@ h2{
   }
 
   .product_and_detail_container .product_list_container .product_list .product .product_image{
-    min-width: 150px;
-    /* min-height: 30px; */
-    border-radius: 20px;
+    max-width: 100px;
+    height: 40px;
     background: url(../images/1.jpg) no-repeat center/cover;
+  }
+
+  .product_and_detail_container .product_list_container .product_list .product .product_details
+  .count_plus_price .count{
+    gap: 5px;
+  }
+
+  .product_and_detail_container .product_list_container .product_list .product .product_details
+  .count_plus_price .count i{
+    padding: 10px;
+  }
+
+  .product_and_detail_container .product_list_container .product_list .product .product_details
+  .count_plus_price .count input{
+    font-size: 1.2em;
+    width: 35px;
+  }
+
+  .product_and_detail_container .detail_summary_container .total_container .discount_container input{
+    width: 200px;
   }
 }
 
