@@ -178,6 +178,12 @@ tbody tr:hover{
     color: #6b7280;
 }
 
+@media(max-width: 700px){
+    .image_container{
+        align-items: normal;
+    }
+}
+
 @media (prefers-color-scheme: dark) {
     tbody tr:hover{
         background-color: rgba(255,255,255,0.06);

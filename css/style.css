@@ -466,6 +466,7 @@ header form button{
 .mobile_screen_sidebar div a{
     flex: 1;
     width: 100%;
+    text-align: center;
 }
 
 .welcome_container{
