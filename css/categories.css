@@ -36,7 +36,7 @@ main h2{
     min-height: 70px;
     border-radius: 20px;
     align-self: flex-start;
-    background: url(../images/avatar.jpeg) no-repeat center/cover;
+    background: url(../images/avatar.jpg) no-repeat center/cover;
 }
 
 @media (prefers-color-scheme: dark){

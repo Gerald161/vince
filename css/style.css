@@ -236,7 +236,7 @@ nav .more_options .tooltip .mark_all:hover{
     min-height: 50px;
     border-radius: 50%;
     align-self: flex-start;
-    background: url(../images/avatar.jpeg) no-repeat center/cover;
+    background: url(../images/avatar.jpg) no-repeat center/cover;
 }
 
 .notifications_container .all_notifications .notification .message_container{

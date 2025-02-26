@@ -14,6 +14,9 @@
 <style>
     main{
         gap: 20px;
+        justify-content: flex-start;
+        min-height: 60vh;
+        padding-top: 0;
     }
     form{
         gap: 30px;
@@ -23,6 +26,14 @@
     }
 </style>
 <body>
+    <header style="top: 20px;">
+		<nav style="align-self: center;">
+			<a href="./index.html" class="logo">
+				<img src="./images/logo.png" loading="lazy" alt="Lazy" style="width: 70px; height: 70px;">
+			</a>
+		</nav>
+	</header>
+
     <main>
         <h2>Forgot Password?</h2>
 
@@ -39,6 +50,21 @@
             <button>Send password reset email/number</button>
         </form>
     </main>
+
+    <div class="copyright">
+    	<div class="social_media_icons">
+    		<a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+    	</div>
+    	<div style="text-align: center;">
+    		<p>&copy2025 Vince Vineyard Empire Company Limited</p>
+    	</div>
+    	<div style="text-align: right;">
+    		<a href="#">Terms & Conditions</a>
+    	</div>
+    </div>
 
     <script src="https://kit.fontawesome.com/2843b9be73.js" crossorigin="anonymous"></script>
 </body>

@@ -274,7 +274,7 @@ main .product_description .completion_buttons button:hover{
   min-height: 50px;
   border-radius: 50%;
   align-self: flex-start;
-  background: url(../images/avatar.jpeg) no-repeat center/cover;
+  background: url(../images/avatar.jpg) no-repeat center/cover;
 }
 
 .general_reviews_container .reviews_section .reviews_container .review_container input{
