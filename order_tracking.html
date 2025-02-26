@@ -379,8 +379,6 @@
 
     <script src="https://kit.fontawesome.com/2843b9be73.js" crossorigin="anonymous"></script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg" defer></script>
-
 	<script>
         var sideBarButton = document.querySelector(".nav_icon");
 
@@ -438,25 +436,6 @@
 				}
 			});
 		});
-
-		var map;
-
-		if(navigator.geolocation){
-			navigator.geolocation.getCurrentPosition((position)=>{
-				const latitude = position.coords.latitude;
-				const longitude = position.coords.longitude;
-				
-				function createMap(){
-					var options = {
-						center:{ lat: latitude, lng: longitude },
-						zoom: 16
-					};
-				
-					map = new google.maps.Map(document.querySelector('.map_container'), options);
-				}
-				createMap();
-			})
-		}
     </script>
 </body>
 </html>
