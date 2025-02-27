@@ -262,7 +262,7 @@
 				<img src="./images/verified.png" loading="lazy" alt="Verified Icon">
 				<img src="./images/verified2.png" loading="lazy" alt="Verified Icon">
 				<h3>Secure</h3>
-				<p>Secure and Certified marketplace since 2009</p>
+				<p>Secure and Certified marketplace</p>
 			</div>
 
 			<div class="reason">
@@ -332,14 +332,14 @@
 		</div>
 
 		<div class="heading" style="padding-bottom: 40px; padding-top: 20px;">
-	        <h2>Your all in one platform for all your clothing needs</h2>
+	        <h2>Your all in one platform for all your shopping needs</h2>
 	    </div>
 
 		<div class="other_categories">
 			<div class="other_category">
 				<img src="./images/2.jpg" alt="">
 				<div class="overlay">
-					<h2>Footwear</h2>
+					<h2>Necklaces</h2>
 
 					<div class="heading2">
                         <div class="tags" style="padding: 5px;">
@@ -351,7 +351,7 @@
 			<div class="other_category big">
 				<img src="./images/6.jpg" alt="">
 				<div class="overlay">
-					<h2>Footwear</h2>
+					<h2>Clothing</h2>
 
 					<div class="heading2">
                         <div class="tags" style="padding: 5px;">
@@ -363,7 +363,7 @@
 			<div class="other_category">
 				<img src="./images/1.jpg" alt="">
 				<div class="overlay">
-					<h2>Footwear</h2>
+					<h2>Bracelets</h2>
 
 					<div class="heading2">
                         <div class="tags" style="padding: 5px;">
@@ -375,7 +375,7 @@
 			<div class="other_category">
 				<img src="./images/5.jpg" alt="">
 				<div class="overlay">
-					<h2>Footwear</h2>
+					<h2>Rings</h2>
 
 					<div class="heading2">
                         <div class="tags" style="padding: 5px;">
@@ -387,7 +387,7 @@
 			<div class="other_category">
 				<img src="./images/4.jpg" alt="">
 				<div class="overlay">
-					<h2>Footwear</h2>
+					<h2>Kente</h2>
 
 					<div class="heading2">
                         <div class="tags" style="padding: 5px;">
@@ -419,7 +419,7 @@
 			<div class="other_category">
 				<img src="./images/1.jpg" alt="">
 				<div class="overlay">
-					<h2>Footwear</h2>
+					<h2>Jade Pendant</h2>
 
 					<div class="heading">
 						<!-- <p>Your all in one platform</p> -->
@@ -432,7 +432,7 @@
 			<div class="other_category big">
 				<img src="./images/2.jpg" alt="">
 				<div class="overlay">
-					<h2>Footwear</h2>
+					<h2>Diamond Earrings</h2>
 
 					<div class="heading">
 						<!-- <p>Your all in one platform</p> -->
@@ -443,7 +443,7 @@
 			<div class="other_category">
 				<img src="./images/6.jpg" alt="">
 				<div class="overlay">
-					<h2>Footwear</h2>
+					<h2>CLothing</h2>
 
 					<div class="heading">
 						<!-- <p>Your all in one platform</p> -->
@@ -454,7 +454,7 @@
 			<div class="other_category big">
 				<img src="./images/3.jpg" alt="">
 				<div class="overlay">
-					<h2>Footwear</h2>
+					<h2>Jade Pendant</h2>
 
 					<div class="heading">
 						<!-- <p>Your all in one platform</p> -->
@@ -466,7 +466,7 @@
 			<div class="other_category big">
 				<img src="./images/4.jpg" alt="">
 				<div class="overlay">
-					<h2>Footwear</h2>
+					<h2>Kente</h2>
 
 					<div class="heading">
 						<!-- <p>Your all in one platform</p> -->
@@ -477,7 +477,7 @@
 			<div class="other_category">
 				<img src="./images/5.jpg" alt="">
 				<div class="overlay">
-					<h2>Footwear</h2>
+					<h2>Diamond Ring</h2>
 
 					<div class="heading">
 						<!-- <p>Your all in one platform</p> -->
@@ -621,7 +621,62 @@
             second_header_form.classList.toggle("show_header");
         });
 
-        var allImages = [[5,6,7,8,3], [1,2,3,4,5]];
+        var allImages = [
+			[
+			{
+				"image": 5,
+				"name": "Diamond Ring",
+				"price": "$45.5"
+			},
+			{
+				"image": 6,
+				"name": "Jeans",
+				"price": "$50.0"
+			},
+			{
+				"image": 7,
+				"name": "Sneakers",
+				"price": "$25.5"
+			},
+			{
+				"image": 8,
+				"name": "Gold Necklace",
+				"price": "$30.0"
+			},
+			{
+				"image": 3,
+				"name": "Jade Necklace",
+				"price": "$40.5"
+			},
+			],
+			[
+			{
+				"image": 1,
+				"name": "Jade Pendant",
+				"price": "$45.5"
+			},
+			{
+				"image":2,
+				"name": "Diamond Earrings",
+				"price": "$50.0"
+			},
+			{
+				"image": 3,
+				"name": "Jade Necklace",
+				"price": "$25.5"
+			},
+			{
+				"image": 4,
+				"name": "Kente",
+				"price": "$30.0"
+			},
+			{
+				"image": 5,
+				"name": "Ring",
+				"price": "$40.5"
+			}
+			],
+		];
 
         const featured_products = document.querySelectorAll(".featured_products");
         
@@ -630,14 +685,14 @@
                 featured_product.innerHTML += `
                 <a href="product.html" class="product">
                     <div class="image_container">
-                        <img src="./images/${image}.jpg" loading="lazy" alt="Ginseng">
+                        <img src="./images/${image.image}.jpg" loading="lazy" alt="Ginseng">
                     </div>
 
                     <i class="fa-regular fa-heart"></i>
 
-                    <h3>Product Name</h3>
+                    <h3>${image.name}</h3>
 
-                    <p>$45.5</p>
+                    <p>${image.price}</p>
                 </a>
                 `
             });

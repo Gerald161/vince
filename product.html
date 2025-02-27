@@ -309,7 +309,7 @@
         <a href="">M</a>
         <a href="">L</a>
         <a href="">XL</a>
-        <a href="">M</a>
+        <!-- <a href="">M</a>
         <a href="">L</a>
         <a href="">XL</a>
         <a href="">M</a>
@@ -317,7 +317,7 @@
         <a href="">XL</a>
         <a href="">M</a>
         <a href="">L</a>
-        <a href="">XL</a>
+        <a href="">XL</a> -->
       </div>
 
       <div class="completion_buttons">
@@ -684,7 +684,13 @@
 
       var allImages = [1,2,3,7,5];
 
-      var product_name = ["A", "B", "C", "D", "E"]
+      var product_name = [
+        "Jade Pendant", "Diamond Earrings", "Jade Pendant", "Sneakers", "Diamond Ring"
+      ]
+
+      var prices = [
+				"$45.5","$50.0","$25.5","$30.0","$40.5"
+      ]
 
       const featured_products = document.querySelector(".featured_products");
       
@@ -703,7 +709,7 @@
 
               <h3>${product_name[index]}</h3>
 
-              <p>$45.5</p>
+              <p>${prices[index]}</p>
           </a>
           `
       });
