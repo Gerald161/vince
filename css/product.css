@@ -322,6 +322,11 @@ p:nth-child(2){
   color: #4A4A4A;
 }
 
+.verify{
+  display: flex;  
+  gap: 5px;
+}
+
 .general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container .check_container{
   padding: 10px;
   width: 25px;
@@ -450,7 +455,7 @@ i:hover ~ i
   main .first{
     position: relative;
     width: 100vw;
-    /* height: 60vh; */
+    height: 60vh;
   }
   
   .slider{
@@ -485,19 +490,19 @@ i:hover ~ i
   }
 
   main .additional_images .additional_image{
-    min-width: 150px;
+    min-width: 130px;
     height: 120px;
   }
 
   .featured_products{
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    grid-auto-rows: fit-content;
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
   }
 
   .featured_products .product .image_container{
-    height: 110px;
+    min-width: 130px;
+    height: 130px;
   }
 
   .general_reviews_container{
@@ -508,8 +513,25 @@ i:hover ~ i
     font-size: 1em;
   }
 
+  .star_container{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .general_reviews_container .reviews_section .reviews_container .review_container input{
-    width: 220px;
+    width: 200px;
+  }
+}
+
+@media(max-width: 500px){
+  main .first{
+    position: relative;
+    width: 100vw;
+    height: 30vh;
+  }
+
+  .slider img{
+    height: 30vh;
   }
 }
 

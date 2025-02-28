@@ -43,6 +43,7 @@
 }
 
 body{
+    width: 100%;
 	overflow-x: hidden !important;
     transition: background-color 0.3s;
 }
@@ -440,7 +441,7 @@ header form button{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
     transition: all 0.5s;
 }
 
@@ -448,7 +449,7 @@ header form button{
     font-size: 25px;
     align-self: flex-end;
     cursor: pointer;
-    flex: 1;
+    /* flex: 1; */
     color: black;
 }
 
@@ -480,12 +481,13 @@ header form button{
 
 .welcome_plus_slider{
 	position: relative;
+    overflow-x: hidden;
 }
 
 .welcome_plus_slider .slider_controller{
 	position: absolute;
 	left: 45%;
-	bottom: 20px;
+	bottom: 10px;
 	z-index: 9;
 	display: flex;
 	gap: 20px;
@@ -555,7 +557,7 @@ header form button{
 
 main{
     margin-top: 72px;
-    padding: 20px;
+    padding: 20px 10px;
 	padding-bottom: 40px;
     min-height: 60vh;
 }
@@ -1059,7 +1061,7 @@ footer .footer_info a i{
 	}
 
     .welcome_container{
-        height: 50vh;
+        height: 30vh;
     }
 
     .welcome_plus_slider .slider_controller{
