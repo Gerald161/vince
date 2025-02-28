@@ -1,11 +1,12 @@
 .category_classifications{
   display: flex;
   gap: 20px;
-  align-items: center;
+  /* align-items: center; */
   padding: 10px;
   border-top: solid 1px #ccc;
   border-bottom: solid 1px #ccc;
   justify-content: space-around;
+  text-align: center;
 }
 
 .category_classifications img{

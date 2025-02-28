@@ -225,25 +225,25 @@
     <a href="#">
       <div class="description">
         <img src="./images/2.jpg" alt="">
-        Men
+        Young Adult
       </div>
     </a>
     <a href="#">
       <div class="description">
         <img src="./images/3.jpg" alt="">
-        Women
+        Shoes
       </div>
     </a>
     <a href="#">
       <div class="description">
         <img src="./images/2.jpg" alt="">
-        Children
+        Bags & Accessories
       </div>
     </a>
     <a href="#">
       <div class="description">
         <img src="./images/3.jpg" alt="">
-        Babies
+        Bracelets
       </div>
     </a>
   </div>
@@ -252,25 +252,25 @@
     <div class="filter_options_section">
         <div class="filter_section">
           <div class="filter_options_section_option">
-            <p>Diet</p>
+            <p>Color</p>
   
             <a href=""><i class="fa-solid fa-chevron-down"></i></a>
           </div>
   
           <div class="filter_options_section_option">
-            <p>Cuisine</p>
+            <p>Price Range</p>
   
             <a href=""><i class="fa-solid fa-chevron-down"></i></a>
           </div>
   
           <div class="filter_options_section_option">
-            <p>Diet</p>
+            <p>Condition</p>
   
             <a href=""><i class="fa-solid fa-chevron-down"></i></a>
           </div>
   
           <div class="filter_options_section_option">
-            <p>Cuisine</p>
+            <p>Brand</p>
   
             <a href=""><i class="fa-solid fa-chevron-down"></i></a>
           </div>
@@ -415,7 +415,53 @@
         });
       });
 
-      var allImages = [1,2,3,4,5,6,7,8];
+      var allImages = [
+        {
+          "image": 1,
+          "name": "Jade Pendant",
+          "price": "$45.5"
+        },
+        {
+          "image":2,
+          "name": "Diamond Earrings",
+          "price": "$50.0"
+        },
+        {
+          "image": 3,
+          "name": "Jade Necklace",
+          "price": "$25.5"
+        },
+        {
+          "image": 4,
+          "name": "Jade Necklace",
+          "price": "$25.5"
+        },
+        {
+          "image": 5,
+          "name": "Diamond Ring",
+          "price": "$45.5"
+        },
+        {
+          "image": 6,
+          "name": "Jeans",
+          "price": "$50.0"
+        },
+        {
+          "image": 7,
+          "name": "Sneakers",
+          "price": "$25.5"
+        },
+        {
+          "image": 8,
+          "name": "Gold Necklace",
+          "price": "$30.0"
+        },
+        {
+          "image": 3,
+          "name": "Jade Necklace",
+          "price": "$40.5"
+        }
+      ];
 
       const featured_products = document.querySelector(".featured_products");
       
@@ -423,14 +469,14 @@
           featured_products.innerHTML += `
           <a href="#" class="product">
               <div class="image_container">
-                  <img src="./images/${image}.jpg" loading="lazy" alt="Ginseng">
+                  <img src="./images/${image.image}.jpg" loading="lazy" alt="Ginseng">
               </div>
 
               <i class="fa-regular fa-heart"></i>
 
-              <h3>Product Name</h3>
+              <h3>${image.name}</h3>
 
-              <p>$45.5</p>
+              <p>${image.price}</p>
           </a>
           `
       });
