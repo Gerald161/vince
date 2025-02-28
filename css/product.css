@@ -450,7 +450,7 @@ i:hover ~ i
   main .first{
     position: relative;
     width: 100vw;
-    height: 60vh;
+    /* height: 60vh; */
   }
   
   .slider{

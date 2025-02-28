@@ -43,7 +43,7 @@
 }
 
 body{
-	overflow-x: hidden;
+	overflow-x: hidden !important;
     transition: background-color 0.3s;
 }
 
@@ -806,6 +806,7 @@ input:focus, textarea:focus{
 
 .other_categories .other_category .overlay h2{
     font-weight: normal;
+    text-align: center;
 }
 
 .other_categories .other_category .overlay2{
@@ -1058,7 +1059,7 @@ footer .footer_info a i{
 	}
 
     .welcome_container{
-        height: 70vh;
+        height: 50vh;
     }
 
     .welcome_plus_slider .slider_controller{
@@ -1093,7 +1094,7 @@ footer .footer_info a i{
 	}
 
     .why_us_reasons{
-		grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     	margin-bottom: 50px;
 	}
 
