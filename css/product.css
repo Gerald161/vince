@@ -266,19 +266,22 @@ main .product_description .completion_buttons button:hover{
 
 .general_reviews_container .reviews_section .reviews_container .review_container{
   display: flex;
+  align-items: center;
   gap: 10px;
+  width: 100%;
+  overflow-x: auto;
 }
 
 .general_reviews_container .reviews_section .reviews_container .review_container .user_image{
   min-width: 50px;
   min-height: 50px;
   border-radius: 50%;
-  align-self: flex-start;
   background: url(../images/avatar.jpg) no-repeat center/cover;
 }
 
-.general_reviews_container .reviews_section .reviews_container .review_container input{
-  width: 350px;
+.general_reviews_container .reviews_section .reviews_container .review_container form{
+  display: flex;
+  gap: 10px;
 }
 
 .general_reviews_container .reviews_section .reviews_container .review_container button{
@@ -455,7 +458,7 @@ i:hover ~ i
   main .first{
     position: relative;
     width: 100vw;
-    height: 60vh;
+    height: 40vh;
   }
   
   .slider{
@@ -467,6 +470,7 @@ i:hover ~ i
 
   .slider img{
     width: 100vw;
+    height: 40vh;
   }
 
   .prev{
@@ -490,8 +494,9 @@ i:hover ~ i
   }
 
   main .additional_images .additional_image{
-    min-width: 130px;
-    height: 120px;
+    min-width: 100px;
+    height: 100px;
+    border-radius: 10px;
   }
 
   .featured_products{
@@ -518,20 +523,9 @@ i:hover ~ i
     align-items: flex-start;
   }
 
-  .general_reviews_container .reviews_section .reviews_container .review_container input{
+  /* .general_reviews_container .reviews_section .reviews_container .review_container input{
     width: 170px;
-  }
-}
-
-@media(max-width: 500px){
-  main .first{
-    position: relative;
-    height: 30vh;
-  }
-
-  .slider img{
-    height: 30vh;
-  }
+  } */
 }
 
 @media(prefers-color-scheme: dark){

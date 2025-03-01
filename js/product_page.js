@@ -90,3 +90,9 @@ function checkWindowSize(){
         slideRight();
     }
 }
+
+if(window.innerWidth <= '900'){
+    current_slider_value = 100;
+}else{
+    current_slider_value = 45;
+}
