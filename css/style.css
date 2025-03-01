@@ -456,7 +456,7 @@ header form button{
 }
 
 .mobile_screen_sidebar .container{
-    height: 90%;
+    height: 80%;
     display: flex; 
     justify-content: space-between; 
     flex-direction: column;
