@@ -1,3 +1,10 @@
+main{
+    display: flex;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+}
+
 .verification{
     display: flex;
     flex-direction: column;
@@ -32,4 +39,11 @@
 
 .verification a:hover{
     background-color: orangered;
+}
+
+
+@media(max-width: 700px){
+    .continue{
+        max-width: 250px;
+    }
 }

@@ -452,19 +452,17 @@ header form button{
     font-size: 25px;
     align-self: flex-end;
     cursor: pointer;
-    /* flex: 1; */
     color: black;
 }
 
 .mobile_screen_sidebar .container{
-    flex: 5;
+    height: 53%;
     display: flex; 
     justify-content: space-between; 
     flex-direction: column;
 }
 
 .mobile_screen_sidebar .container a{
-    flex: 1;
     width: 100%;
     text-align: center;
 }
@@ -1068,7 +1066,7 @@ footer .footer_info a i{
 	}
 
     .welcome_container{
-        height: 60vh;
+        height: 45vh;
     }
 
     .welcome_plus_slider .slider_controller{

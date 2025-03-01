@@ -487,12 +487,6 @@ i:hover ~ i
     max-height: unset;
   }
 
-  main .additional_images{
-    display: flex;
-    width: 100%;
-    overflow-x: auto;
-  }
-
   main .additional_images .additional_image{
     min-width: 100px;
     height: 100px;
@@ -523,9 +517,17 @@ i:hover ~ i
     align-items: flex-start;
   }
 
-  /* .general_reviews_container .reviews_section .reviews_container .review_container input{
-    width: 170px;
-  } */
+  .general_reviews_container .reviews_section .reviews_container .review_container input{
+    width: 190px;
+  }
+}
+
+@media(max-width: 600px){
+  main .additional_images{
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+  }
 }
 
 @media(prefers-color-scheme: dark){
