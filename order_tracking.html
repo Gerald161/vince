@@ -12,27 +12,29 @@
 <body>
     <header>
 		<nav>
-			<a href="index.html" class="logo">
+			<a href="#" class="logo">
 				<img src="./images/logo.png" loading="lazy" alt="Lazy">
-				<h4>Vineyard</h4>
 			</a>
 
 			<div class="nav_links">
                 <a href="upload.html" class="nav__link">Upload</a>
                 <a href="orders.html" class="nav__link">Orders</a>
-                <a href="" class="nav__link">Blogs</a>
+                <a href="#" class="nav__link">English</a>
             </div>
 
 			<form action="" class="first_form">
 				<input type="text" placeholder="What are you looking for">
-				<i class="fa-solid fa-xmark"></i>
-				<label for="picture" class="picture_label">
-					<i class="fa-solid fa-camera camera_upload"></i>
-				</label>
+				<div class="form_options">
+					<i class="fa-solid fa-xmark"></i>
+					<p class="divider">|</p>
+					<label for="picture">
+						<i class="fa-solid fa-camera camera_upload"></i>
+					</label>
+				</div>
 				<input id="picture" type="file" accept="image/*" name="">
 				<button><i class="fa-solid fa-magnifying-glass"></i></button>
 				<div class="search_suggestions">
-					<a href="#">
+					<a href="search.html">
 						<i class="fa-solid fa-magnifying-glass"></i>
 						<p>Test</p>
 					</a>
@@ -40,11 +42,11 @@
 						<i class="fa-solid fa-magnifying-glass"></i>
 						<p>Search</p>
 					</a>
-					<a href="#">
+					<a href="search.html">
 						<i class="fa-solid fa-magnifying-glass"></i>
 						<p>Test</p>
 					</a>
-					<a href="#">
+					<a href="search.html">
 						<i class="fa-solid fa-magnifying-glass"></i>
 						<p>Search</p>
 					</a>
@@ -62,13 +64,13 @@
 					<i class="fa-solid fa-bell show_more_nav_icon"></i>
 					<div class="number_of_notifications">2</div>
 					<div class="notifications_container">
-						<!-- <p class="stuff">Your Notifications <span style="font-weight: bold;">5</span></p> -->
+						<p class="stuff">Your Notifications <span style="font-weight: bold;">5</span></p>
 
-						<!-- <a href="#" class="mark_all">Mark all as read</a> -->
+						<a href="#" class="mark_all">Mark all as read</a>
 
-						<p style="padding: 20px;">No messages available</p>
+						<!-- <p style="padding: 20px;">No messages available</p> -->
 						
-						<!-- <div class="all_notifications">
+						<div class="all_notifications">
 							<a href="#" class="notification">
 								<div class="profile_pic"></div>
 								<div class="message_container">
@@ -118,7 +120,7 @@
 
 						<a href="notifications.html" class="button">
 							View All Messages
-						</a> -->
+						</a>
 					</div>
 				</div>
 
@@ -160,10 +162,13 @@
 		</nav>
 		<form action="" class="second_form">
             <input type="text" placeholder="What are you looking for">
-            <i class="fa-solid fa-xmark"></i>
-			<label for="picture" class="picture_label">
-				<i class="fa-solid fa-camera camera_upload"></i>
-			</label>
+            <div class="form_options">
+				<i class="fa-solid fa-xmark"></i>
+				<p class="divider">|</p>
+				<label for="picture">
+					<i class="fa-solid fa-camera camera_upload"></i>
+				</label>
+			</div>
 			<input id="picture" type="file" accept="image/*" name="">
             <button><i class="fa-solid fa-magnifying-glass"></i></button>
             <div class="search_suggestions">
@@ -188,15 +193,15 @@
 	</header>
 
 	<div class="mobile_screen_sidebar">
-        <i class="close_button fas fa-times"></i>
+    <i class="close_button fas fa-times"></i>
 
-        <div style="display: flex; justify-content: space-between; flex-direction: column;">
-            <a href="index.html" class="nav_link">Home</a>
-            <a href="#about" class="nav_link">Products</a>
-            <a href="#services" class="nav_link">Services</a>
-            <a href="#" class="nav_link">Contact</a>
-        </div>
+    <div class="container">
+        <a href="orders.html" class="nav_link">Orders</a>
+        <a href="notifications.html" class="nav_link">Notifications</a>
+        <a href="upload.html" class="nav_link">Upload</a>
+        <a href="checkout.html" class="nav_link">Checkout</a>
     </div>
+  </div>
 
     <main>
 		<div class="filter_section">
