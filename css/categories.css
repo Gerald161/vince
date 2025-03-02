@@ -26,10 +26,10 @@ main h2{
     background-color: #d6d6d6;
 }
 
-.categories_container .category p{
+/* .categories_container .category p{
     word-break: break-all;
     white-space: normal;
-}
+} */
 
 .categories_container .category .representation{
     min-width: 70px;

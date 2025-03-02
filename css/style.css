@@ -816,6 +816,10 @@ input:focus, textarea:focus{
     color: white;
 }
 
+.other_categories .other_category .overlay h2{
+    text-align: center;
+}
+
 .faq_section{
     display: flex;
     gap: 10px;
