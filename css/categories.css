@@ -39,6 +39,12 @@ main h2{
     background: url(../images/avatar.jpg) no-repeat center/cover;
 }
 
+@media(max-width: 700px){
+    .categories_container{
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));;
+    }
+}
+
 @media (prefers-color-scheme: dark){
     .categories_container .category{
         background-color: #2a2a2a;

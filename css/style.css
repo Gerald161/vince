@@ -771,6 +771,11 @@ input:focus, textarea:focus{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all 0.5s;
+}
+
+.other_categories .other_category:hover img{
+    transform: scale(1.2);
 }
 
 .other_categories .other_category .overlay{
@@ -783,33 +788,6 @@ input:focus, textarea:focus{
     align-items: center;
     justify-content: center;
     gap: 10px;
-}
-
-.other_categories .other_category .overlay button{
-    cursor: pointer;
-    padding: 5px 15px;
-    max-width: fit-content;
-    border: none;
-    border-radius: 7px;
-    background-color: dodgerblue;
-    color: white;
-    transition: background-color 0.5s;
-    pointer-events: initial;
-}
-
-.other_categories .other_category .overlay button:hover{
-    background-color: orangered;   
-}
-
-.other_categories .other_category .overlay .heading{
-    gap: 20px;
-    padding-top: 0;
-    width: 100%;
-}
-
-.other_categories .other_category .overlay h2{
-    font-weight: normal;
-    text-align: center;
 }
 
 .other_categories .other_category .overlay2{
