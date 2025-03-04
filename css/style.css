@@ -16,7 +16,7 @@
     cursor: pointer;
 }
 
-.tooltip .tooltip-text{
+.tooltip .tooltip_text{
     visibility: hidden;
     width: 150px;
     background-color: #333;
@@ -33,18 +33,17 @@
     z-index: 1;
 }
 
-.tooltip:last-child .tooltip-text{
+.tooltip:last-child .tooltip_text{
     left: -25px;
 }
 
-.tooltip:hover .tooltip-text {
+.tooltip:hover .tooltip_text {
     visibility: visible;
     opacity: 1;
 }
 
 body{
-    width: 100%;
-	overflow-x: hidden !important;
+	overflow-x: hidden;
     transition: background-color 0.3s;
 }
 
@@ -339,17 +338,13 @@ header form input{
 
 header form .search_suggestions{
     position: absolute;
-    margin-top: 1px;
+    top: 44px;
     width: 100%;
     background: #f2f2f2;
     z-index: 3333;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-}
-
-header form .search_suggestions{
-    top: 45px;
 }
 
 .form_options{
@@ -1141,7 +1136,7 @@ footer .footer_info a i{
         background-color: #121212;
     }
 
-    .tooltip .tooltip-text {
+    .tooltip .tooltip_text {
         background-color: #ccc;
         color: black;
     }
@@ -1162,13 +1157,11 @@ footer .footer_info a i{
         background-color: #333333;
     }
 
-    header form .search_suggestions,
-    .welcome_message form .search_suggestions{
+    header form .search_suggestions{
         background-color: #333333;
     }
 
-    header form .search_suggestions a:hover,
-    .welcome_message form .search_suggestions a:hover{
+    header form .search_suggestions a:hover{
         background: #222222;
         color: white !important;
     }
@@ -1209,7 +1202,7 @@ footer .footer_info a i{
 		height: 60vh;
 	}
 
-    a{
+    a, h1, h2, h3, p, label{
         color: white;
     }
 
@@ -1269,10 +1262,6 @@ footer .footer_info a i{
 			border-bottom: 2px solid #141414;
 		}
 	}
-
-    h1, h2, h3, p, label{
-    	color: white;
-    }
     
     footer{
         background-color: #1f1f1f;
