@@ -306,6 +306,10 @@ nav .nav_icon_container{
     gap: 15px;
 }
 
+nav .nav_icon_container div{
+    cursor: pointer;
+}
+
 .hide_nav_links{
     opacity: 0;
     max-width: 0;
@@ -1041,7 +1045,7 @@ footer .footer_info a i{
 	}
 
     .welcome_container{
-        height: 45vh;
+        height: 60vh;
     }
 
     .welcome_plus_slider .slider_controller{
@@ -1199,6 +1203,10 @@ footer .footer_info a i{
     .intro{
 		height: 60vh;
 	}
+
+    nav .nav_icon_container div{
+        color: white;
+    }
 
     a, h1, h2, h3, p, label{
         color: white;
