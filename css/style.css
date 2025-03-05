@@ -204,6 +204,7 @@ nav .more_options .tooltip .stuff{
 nav .more_options .tooltip .mark_all{
     transition: all 0.5s;
     padding: 10px 0;
+    cursor: pointer;
 }
 
 nav .more_options .tooltip .mark_all:hover{
@@ -333,6 +334,7 @@ header form{
 }
 
 header form input{
+    flex: 1;
     padding-right: 75px;
 }
 
@@ -410,10 +412,6 @@ header form .search_suggestions a:hover{
     opacity: 1;
     max-height: 300px;
     margin: 0 8px;
-}
-
-header form input{
-    flex: 1;
 }
 
 header form button{
@@ -1207,6 +1205,10 @@ footer .footer_info a i{
     }
 
     .fa-xmark{
+        color: white;
+    }
+
+    nav .more_options .tooltip .mark_all{
         color: white;
     }
 
