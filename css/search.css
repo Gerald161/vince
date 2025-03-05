@@ -177,13 +177,14 @@ main .filter_results_section .search_results .search_result h4{
   gap: 50px;
 }
 
-.pagination_container a{
+.pagination_container div{
   padding: 10px 20px;
   border-radius: 10px;
   background-color: #eeeeee;
+  cursor: pointer;
 }
 
-.pagination_container a:hover{
+.pagination_container div:hover{
   background-color: #ccc;
   color: black;
 }  
@@ -225,15 +226,15 @@ main .filter_results_section .search_results .search_result h4{
 
 @media (prefers-color-scheme: dark){
   .page_numbering_section, 
-  .pagination_container a{
+  .pagination_container div{
     color: white;
   }
 
-  .pagination_container a{
+  .pagination_container div{
     background-color: #222222; 
   }
 
-  .pagination_container a:hover{
+  .pagination_container div:hover{
     color: black;
   }
 
