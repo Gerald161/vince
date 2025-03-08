@@ -74,6 +74,7 @@ table {
     background: var(--surface);
     border-radius: 8px;
     overflow: hidden;
+    color: var(--text);
 }
 
 th{

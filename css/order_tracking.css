@@ -204,7 +204,6 @@ button:hover{
     }
 
     main .details_section .map_container{
-        background: url(../images/placeholder.png) no-repeat center/cover;
         height: 40vh;
     }
 }
@@ -214,8 +213,7 @@ button:hover{
         background-color: rgba(255,255,255,0.06);
     }
 
-    main .details_section .order_details .order_detail .first i
-    {
+    main .details_section .order_details .order_detail .first i{
         color: white;
         background-color: rgba(255,255,255,0.06);
     }

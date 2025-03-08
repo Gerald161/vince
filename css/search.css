@@ -174,7 +174,7 @@ main .filter_results_section .search_results .search_result h4{
 .pagination_container{
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 15px;
 }
 
 .pagination_container div{
