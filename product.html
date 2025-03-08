@@ -216,9 +216,12 @@
         <div class="additional_image">
           <img src="./images/3.jpg" alt="Image">
         </div>
-        <div id="canvas_container" class="additional_image">
-          <canvas id="canvas"></canvas>
+        <div class="additional_image">
+          <img src="./images/4.jpg" alt="Image">
         </div>
+        <!-- <div id="canvas_container" class="additional_image">
+          <canvas id="canvas"></canvas>
+        </div> -->
       </div>
       <div class="first">
         <div class="slider">
@@ -740,19 +743,19 @@
         });
       });
 
-      var canvas_container = document.querySelector("#canvas_container");
+      //var canvas_container = document.querySelector("#canvas_container");
 
-      function capture(){
-        const canvas = document.getElementById("canvas");
-        const ctx = canvas.getContext("2d");
-        const video = document.querySelector('video');
+      // function capture(){
+      //   const canvas = document.getElementById("canvas");
+      //   const ctx = canvas.getContext("2d");
+      //   const video = document.querySelector('video');
 
-        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-      }
+      //   ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+      // }
 
-      canvas_container.addEventListener("click", (e)=>{
-        capture();
-      })
+      // canvas_container.addEventListener("click", (e)=>{
+      //   capture();
+      // })
 
     </script>
     <script src="./js/product_page.js"></script>
