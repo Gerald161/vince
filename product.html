@@ -216,8 +216,8 @@
         <div class="additional_image">
           <img src="./images/3.jpg" alt="Image">
         </div>
-        <div class="additional_image">
-          <img src="./images/4.jpg" alt="Image">
+        <div id="canvas_container" class="additional_image">
+          <canvas id="canvas"></canvas>
         </div>
       </div>
       <div class="first">
@@ -232,7 +232,7 @@
               <img src="./images/3.jpg" alt="image">
             </div>
             <div class="img" data-left>
-              <img src="./images/4.jpg" alt="image">
+              <video src="./images/1.mp4" controls="true"></video>
             </div> 
         </div>
 
@@ -739,6 +739,21 @@
           }
         });
       });
+
+      var canvas_container = document.querySelector("#canvas_container");
+
+      function capture(){
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+        const video = document.querySelector('video');
+
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+      }
+
+      canvas_container.addEventListener("click", (e)=>{
+        capture();
+      })
+
     </script>
     <script src="./js/product_page.js"></script>
 </body>

@@ -41,6 +41,12 @@ main .first{
   border-radius: 20px;
 }
 
+.slider video{
+  height: 76vh;
+  width: var(--image_width);
+  object-fit: cover;
+}
+
 .prev,
 .next {
   position: absolute;
@@ -109,7 +115,8 @@ main .additional_images .additional_image{
   opacity: 1 !important;
 }
 
-main .additional_images .additional_image img{
+main .additional_images .additional_image img, 
+main .additional_images .additional_image canvas{
   position: absolute;
   object-fit: cover;
   left: 0;
@@ -444,6 +451,15 @@ i:hover ~ i
   background-color: rgba(0,0,0,0.1);
 }
 
+/* overriding styles.css for featured products below here */
+.featured_products{
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.featured_products .product .image_container{
+  height: 220px;
+}
+
 @media(max-width: 900px){
   main{
     flex-direction: column;
@@ -458,7 +474,7 @@ i:hover ~ i
   main .first{
     position: relative;
     width: 100vw;
-    height: 40vh;
+    height: 60vh;
   }
   
   .slider{
@@ -470,7 +486,12 @@ i:hover ~ i
 
   .slider img{
     width: 100vw;
-    height: 40vh;
+    height: 60vh;
+  }
+  
+  .slider video{
+    width: 100vw;
+    height: 60vh;
   }
 
   .prev{
