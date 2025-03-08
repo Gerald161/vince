@@ -120,6 +120,7 @@ main .details_section .both_locations{
     display: flex;
     align-items: center;
     gap: 5px;
+    position: relative;
 }
 
 .point{
@@ -166,12 +167,19 @@ main .details_section .both_locations{
     background-color: #28a745;
 }
 
+.total_progress .timeline{
+    position: absolute;
+    width: 95%;
+    height: 30px;
+}
+
 .total_progress img{
     width: 30px;
-    height: 30px;
+    height: 100%;
     position: absolute;
     object-fit: cover;
-    right: 10%;
+/*    make left 101% when completed*/
+    left: 85%;
 }
 
 button{
