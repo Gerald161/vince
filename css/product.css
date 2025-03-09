@@ -125,6 +125,20 @@ main .additional_images .additional_image canvas{
   transition: 1s;
 }
 
+.vid_icon_container{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vid_icon_container i{
+  font-size: 1.5em;
+  color: white;
+}
+
 main .additional_images .additional_image:hover img{
   opacity: 1;
   transform: scale(1.3);

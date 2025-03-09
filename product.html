@@ -217,11 +217,11 @@
           <img src="./images/3.jpg" alt="Image">
         </div>
         <div class="additional_image">
-          <img src="./images/4.jpg" alt="Image">
-        </div>
-        <!-- <div id="canvas_container" class="additional_image">
           <canvas id="canvas"></canvas>
-        </div> -->
+          <div class="vid_icon_container">
+            <i class="fa-solid fa-circle-play"></i>
+          </div>
+        </div>
       </div>
       <div class="first">
         <div class="slider">
@@ -235,8 +235,7 @@
               <img src="./images/3.jpg" alt="image">
             </div>
             <div class="img" data-left>
-              <!-- <video src="./images/1.mp4" controls="true"></video> -->
-              <img src="./images/4.jpg" alt="image">
+              <video id="vid" src="./images/1.mp4" controls="true"></video>
             </div> 
         </div>
 
@@ -744,19 +743,19 @@
         });
       });
 
-      //var canvas_container = document.querySelector("#canvas_container");
+      function capture(){
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+        const video = document.getElementById('vid');
 
-      // function capture(){
-      //   const canvas = document.getElementById("canvas");
-      //   const ctx = canvas.getContext("2d");
-      //   const video = document.querySelector('video');
+        video.currentTime = 1;
 
-      //   ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-      // }
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+      }
 
-      // canvas_container.addEventListener("click", (e)=>{
-      //   capture();
-      // })
+       capture();
+
+       video.currentTime = 0;
 
     </script>
     <script src="./js/product_page.js"></script>
