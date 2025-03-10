@@ -55,7 +55,6 @@
 .category_classifications{
   display: flex;
   gap: 20px;
-  /* align-items: center; */
   padding: 10px;
   border-top: solid 1px #ccc;
   border-bottom: solid 1px #ccc;
@@ -111,7 +110,6 @@ main .filter_options_section .filter_section{
   margin-top: 8px;
 }
 
-/* here */
 main .filter_options_section .filter_section .filter_options_section_option{
   cursor: pointer;
   align-items: center;
@@ -120,7 +118,6 @@ main .filter_options_section .filter_section .filter_options_section_option{
   margin-right: 18px;
 }
 
-/* and here */
 main .filter_options_section .filter_section .filter_options_section_option .option{
   width: 100%;
   justify-content: space-between;
@@ -138,7 +135,6 @@ main .filter_options_section .filter_section .filter_options_section_option .opt
   font-weight: bold;
 }
 
-/* here */
 main .filter_options_section .filter_section .filter_options_section_option .actual_filter_options{
   max-height: 0;
   overflow: hidden;
@@ -146,7 +142,6 @@ main .filter_options_section .filter_section .filter_options_section_option .act
   padding: 0 15px;
 }
 
-/* here */
 main .filter_options_section .filter_section .filter_options_section_option .actual_filter_options p{
   margin: 10px 0;
   text-align: left;
@@ -160,7 +155,6 @@ main .filter_options_section .filter_section .filter_options_section_option .act
   transform: rotate(180deg);
 }
 
-/* here too */
 .active_filter{
   max-height: 150px !important;
 }
@@ -372,19 +366,6 @@ main .filter_results_section .search_results .search_result h4{
   }
 
   main .filter_options_section .filter_section .filter_options_section_option a{
-    color: white;
-  }
-
-  main .filter_options_section form .search_suggestions a{
-    background-color: #333333;
-  }
-
-  main .filter_options_section form .search_suggestions a:hover{
-    background: #222222;
-    color: white !important;
-  }
-
-  main .filter_options_section form .search_block .fa-xmark{
     color: white;
   }
 }

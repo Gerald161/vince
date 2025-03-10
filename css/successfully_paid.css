@@ -35,6 +35,7 @@ main{
     background-color: dodgerblue;
     width: 400px;
     text-align: center;
+    color: white;
 }
 
 .verification a:hover{
