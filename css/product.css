@@ -95,10 +95,13 @@ main .first{
 }
 
 main .additional_images{
-  display: grid;
-  gap: 5px;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  grid-auto-rows: fit-content;
+  display: flex;
+  width: 120px;
+  flex-direction: column;
+  height: 100%;
+  /* overflow-y: hidden; */
+  overflow-y: auto;
+  gap: 10px;
 }
 
 main .additional_images .additional_image{
@@ -108,7 +111,7 @@ main .additional_images .additional_image{
   border-radius: 20px;
   overflow: hidden;
   opacity: 0.5;
-  height: 119px;
+  min-height: 114px;
 }
 
 .active{
@@ -522,9 +525,18 @@ i:hover ~ i
     max-height: unset;
   }
 
+  main .additional_images{
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    flex-direction: row;
+    height: fit-content;
+    overflow-y: hidden;
+  }
+
   main .additional_images .additional_image{
-    min-width: 100px;
-    height: 100px;
+    min-width: 130px;
+    height: 50px;
     border-radius: 10px;
   }
 
@@ -554,14 +566,6 @@ i:hover ~ i
 
   .general_reviews_container .reviews_section .reviews_container .review_container input{
     width: 190px;
-  }
-}
-
-@media(max-width: 600px){
-  main .additional_images{
-    display: flex;
-    width: 100%;
-    overflow-x: auto;
   }
 }
 
