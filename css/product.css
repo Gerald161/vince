@@ -484,7 +484,7 @@ i:hover ~ i
   }
 
   .all_images img, .all_images video{
-    height: 50vh;
+    max-height: 50vh;
   }
 
   .prev{
