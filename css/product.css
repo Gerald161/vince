@@ -24,7 +24,6 @@ main .images_container{
 
 main .images_container .all_images{
   display: flex;
-  border-radius: 20px;
   width: fit-content;
   left: 0;
   transition: all 0.7s;
@@ -480,12 +479,12 @@ i:hover ~ i
     padding: 0;
   }
 
-  .all_images img{
+  main .images_container{
     border-radius: 0 !important;
   }
 
   .all_images img, .all_images video{
-    max-height: 60vh;
+    height: 50vh;
   }
 
   .prev{
