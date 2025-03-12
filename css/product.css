@@ -1,9 +1,5 @@
 :root{
-  --image_width:45vw;
-}
-
-body{
-  overflow-x: hidden;
+  --image_width: 45vw;
 }
 
 main{
@@ -19,31 +15,27 @@ main .product_preview_plus_extra_images{
   position: sticky;
 }
 
-main .first{
+main .images_container{
   position: relative;
   border-radius: 20px;
   width: var(--image_width);
   overflow: hidden;
 }
 
-.slider{
-  position: relative;
-  width: var(--image_width);
-  left: 0;
+main .images_container .all_images{
   display: flex;
-  transition: all 0.7s;
-}
-
-.slider img{
-  height: 76vh;
-  width: var(--image_width);
-  object-fit: cover;
   border-radius: 20px;
+  width: fit-content;
+  left: 0;
+  transition: all 0.7s;
+  position: relative;
 }
 
-.slider video{
+main .images_container .all_images img,
+main .images_container .all_images video{
   height: 76vh;
-  width: var(--image_width);
+  min-width: var(--image_width);
+  max-width: var(--image_width);
   object-fit: cover;
 }
 
@@ -478,37 +470,22 @@ i:hover ~ i
 }
 
 @media(max-width: 900px){
+  :root{
+    --image_width: 100vw;
+  }
+
   main{
     flex-direction: column;
     gap: 20px;
     padding: 0;
   }
 
-  main .first, .slider img{
+  .all_images img{
     border-radius: 0 !important;
   }
 
-  main .first{
-    position: relative;
-    width: 100vw;
-    height: 60vh;
-  }
-  
-  .slider{
-    position: relative;
-    width: 100vw;
-    left: 0;
-    display: flex;
-  }
-
-  .slider img{
-    width: 100vw;
-    height: 60vh;
-  }
-  
-  .slider video{
-    width: 100vw;
-    height: 60vh;
+  .all_images img, .all_images video{
+    max-height: 60vh;
   }
 
   .prev{
