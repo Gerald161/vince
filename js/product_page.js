@@ -1,4 +1,4 @@
-var slider = document.querySelector('.slider');
+var slider = document.querySelector('.all_images');
 
 var next = document.querySelector('.next');
 
