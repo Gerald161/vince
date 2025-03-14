@@ -1001,13 +1001,11 @@ footer .footer_info a i{
     padding: 5px 15px;
 	transition: all 0.5s;
     height: fit-content;
-    color: white;
 }
 
 .tag:hover{
-	background-color: black;
+	background: #e0e0e0;
 	border-color: black;
-	color: white;
 }
 
 @media(max-width: 700px){
@@ -1199,10 +1197,6 @@ footer .footer_info a i{
 		color: white;
 	}
 
-    .intro{
-		height: 60vh;
-	}
-
     nav .nav_icon_container div{
         color: white;
     }
@@ -1224,8 +1218,7 @@ footer .footer_info a i{
 	}
 
 	.tag:hover{
-		background-color: #ccc;
-		color: black !important;
+		background: #2a2a2a;
 	}
 
     .small_info h2{
