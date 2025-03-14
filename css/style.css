@@ -787,6 +787,10 @@ input:focus, textarea:focus{
     gap: 10px;
 }
 
+.other_categories .other_category .overlay h2{
+    font-weight: normal;
+}
+
 .other_categories .other_category .overlay2{
     background-color: rgba(0,0,0,0.7);
     position: absolute;
