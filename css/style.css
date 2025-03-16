@@ -891,6 +891,11 @@ input:focus, textarea:focus{
     transform: rotate(180deg);
 }
 
+/*this here below is a maybe*/
+.faq-item.active .faq-question{
+    background-color: var(--border-color);
+}
+
 footer{
     display: flex;
     justify-content: space-around;
@@ -1068,7 +1073,7 @@ footer .footer_info a i{
         grid-row: span 1;
     }
 
-    .larger{
+    .larger_other_category{
         grid-column: span 2;
     }
 
@@ -1173,6 +1178,7 @@ footer .footer_info a i{
         color: #4a4a4a;
     }
 
+/*    camera upload take off in a framework*/
     .fa-xmark:hover, .camera_upload:hover{
         background-color: rgba(255,255,255,0.3);
     }
