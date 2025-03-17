@@ -38,6 +38,10 @@ main .images_container .all_images video{
   object-fit: cover;
 }
 
+main .images_container .all_images video{
+  z-index: 20000;
+}
+
 .prev,
 .next {
   position: absolute;
