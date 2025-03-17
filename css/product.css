@@ -63,7 +63,7 @@ main .images_container .all_images video{
   border-radius: 3px 0 0 3px;
 }
 
-.like_product_container{
+.like_product_container, .edit_product_container{
   position: absolute;
   bottom: 10px;
   font-size: 1.4em;
@@ -76,7 +76,12 @@ main .images_container .all_images video{
   transition: color 0.5s;
 }
 
-.like_product_container:hover{
+.edit_product_container{
+  left: 10px;
+  max-width: fit-content;
+}
+
+.like_product_container:hover, .edit_product_container:hover{
   color: dodgerblue;
 }
 
