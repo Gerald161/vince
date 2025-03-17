@@ -297,6 +297,7 @@ main .product_description .completion_buttons button:hover{
   min-height: 50px;
   border-radius: 50%;
   background: url(../images/avatar.jpg) no-repeat center/cover;
+  align-self: flex-start;
 }
 
 .general_reviews_container .reviews_section .reviews_container .review_container form{
@@ -377,6 +378,32 @@ p:nth-child(2){
 }
 
 .general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container
+.helpful_container .thumb_icons a{
+  transition: color 0.5s;
+}
+
+.general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container
+.helpful_container .thumb_icons a:hover{
+  color: dodgerblue;
+}
+
+.general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container
+.helpful_container .thumb_icons a span{
+  margin-left: 4px;
+}
+
+.thumbs_down_spin{
+  transform: rotate(-180deg); 
+  scale: 1 -1;
+}
+
+.report{
+  text-decoration: underline; 
+  margin-left: 20px; 
+  font-weight: 600;
+}
+
+.general_reviews_container .reviews_section .reviews_container .review_container .review_detail_container
 .seller_response{
   background-color: #ccc;
   padding: 10px 15px;
@@ -391,6 +418,16 @@ p:nth-child(2){
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+.general_reviews_container .ratings_explanation_section .star_container{
+  justify-content: space-between;
+  border-bottom: 1px solid #666;
+  padding-bottom: 5px;
+}
+
+.general_reviews_container .ratings_explanation_section .star_reviews{
+  gap: 10px;
 }
 
 .general_reviews_container .ratings_explanation_section .rating_bars{
