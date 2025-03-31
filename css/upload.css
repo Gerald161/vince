@@ -10,7 +10,7 @@ main form{
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  max-width: 600px;
+  max-width: 500px;
 }
 
 .label_plus_input{
@@ -73,11 +73,6 @@ main form{
 
 .label_plus_input .container i:hover{
   background-color: rgba(0,0,0,0.2);
-}
-
-.color_container{
-  background-color: #ccc;
-  padding: 20px;
 }
 
 main form .selected_images_container{
