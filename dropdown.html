@@ -10,6 +10,7 @@
       --primary-hover: #6366f1;
       --text: #1f2937;
       --text-secondary: #6b7280;
+      --text-disabled: #9ca3af;
       --bg: #ffffff;
       --bg-secondary: #f9fafb;
       --border: #e5e7eb;
@@ -20,6 +21,9 @@
       --green-light: #bbf7d0;
       --orange-light: #fed7aa;
       --red-light: #fecaca;
+      --grey-light: #e5e7eb;
+      --outofstock: #dc2626;
+      --outofstock-light: #fee2e2;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -28,13 +32,16 @@
         --primary-hover: #818cf8;
         --text: #f9fafb;
         --text-secondary: #d1d5db;
+        --text-disabled: #6b7280;
         --bg: #1f2937;
         --bg-secondary: #111827;
         --border: #374151;
         --border-hover: #4b5563;
         --green-light: #14532d;
-        --orange-light: #451a03;  /* Lightened from previous */
-        --red-light: #450a0a;     /* Lightened from previous */
+        --orange-light: #451a03;
+        --red-light: #450a0a;
+        --grey-light: #374151;
+        --outofstock-light: rgba(220, 38, 38, 0.2);
       }
     }
 
@@ -164,11 +171,26 @@
       background-color: var(--red);
     }
 
+    .stock-out {
+      color: var(--outofstock);
+      background-color: var(--outofstock-light);
+    }
+
+    .stock-out .stock-indicator-dot {
+      background-color: var(--outofstock);
+    }
+
     .product-title {
       font-size: 1.5rem;
       font-weight: 600;
       margin-bottom: 1.5rem;
       color: var(--text);
+    }
+
+    /* Out of stock styling */
+    .size-select option[data-stock="0"] {
+      color: var(--text-disabled);
+      background-color: var(--grey-light);
     }
 
     /* Demo purposes only */
@@ -192,11 +214,11 @@
     /* Dark mode overrides for better visibility */
     @media (prefers-color-scheme: dark) {
       .stock-medium {
-        background-color: rgba(251, 146, 60, 0.2);  /* Brighter orange background with transparency */
+        background-color: rgba(251, 146, 60, 0.2);
       }
       
       .stock-low {
-        background-color: rgba(248, 113, 113, 0.2);  /* Brighter red background with transparency */
+        background-color: rgba(248, 113, 113, 0.2);
       }
       
       .dark-mode .stock-medium {
@@ -225,7 +247,7 @@
           <option value="m" data-stock="20">M - Medium</option>
           <option value="l" data-stock="8">L - Large</option>
           <option value="xl" data-stock="3">XL - Extra Large</option>
-          <option value="xxl" data-stock="2">XXL - Double XL</option>
+          <option value="xxl" data-stock="0">XXL - Double XL</option>
         </select>
         <svg class="select-arrow" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -245,18 +267,35 @@
     const stockText = document.getElementById('stockText');
     const themeToggle = document.getElementById('themeToggle');
     
+    // Apply visual styling to out-of-stock options
+    function styleOutOfStockOptions() {
+      const options = sizeSelect.options;
+      for (let i = 0; i < options.length; i++) {
+        const stock = parseInt(options[i].getAttribute('data-stock') || "1");
+        if (stock === 0) {
+          options[i].text = options[i].text + " (Out of Stock)";
+        }
+      }
+    }
+    
+    // Call this function when the page loads
+    styleOutOfStockOptions();
+    
     sizeSelect.addEventListener('change', function() {
       const selectedOption = this.options[this.selectedIndex];
       const stock = parseInt(selectedOption.getAttribute('data-stock'));
-      const sizeName = selectedOption.text.split(' - ')[0];
+      const sizeName = selectedOption.text.split(' - ')[0].split(' (')[0]; // Remove any "Out of Stock" text
       
-      stockIndicator.classList.remove('stock-high', 'stock-medium', 'stock-low');
+      stockIndicator.classList.remove('stock-high', 'stock-medium', 'stock-low', 'stock-out');
       stockIndicator.classList.add('visible');
       
       let stockClass = '';
       let stockMessage = '';
       
-      if (stock > 10) {
+      if (stock === 0) {
+        stockClass = 'stock-out';
+        stockMessage = `${sizeName}: Out of Stock`;
+      } else if (stock > 10) {
         stockClass = 'stock-high';
         stockMessage = `${sizeName}: ${stock} items in stock`;
       } else if (stock > 5) {
