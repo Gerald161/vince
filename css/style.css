@@ -988,6 +988,18 @@ footer .footer_info a i{
     color: dodgerblue;
 }
 
+.terms{
+    text-align: right;
+}
+
+.terms a{
+    transition: color 0.5s;
+}
+
+.terms a:hover{
+    color: dodgerblue;
+}
+
 .tags{
 	display: flex;
 	flex-wrap: wrap;

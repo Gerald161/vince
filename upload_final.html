@@ -23,7 +23,7 @@
                 <a href="#" class="nav__link">English</a>
             </div>
 
-            <form action="" class="first_form">
+            <form action="upload_final.html" class="first_form">
                 <input type="text" placeholder="What are you looking for">
                 <div class="form_options">
                     <i class="fa-solid fa-xmark"></i>
@@ -205,110 +205,46 @@
   </div>
 
     <main>
-        <form action="upload_final.html">
-            <h3>Upload product</h3>
+        <form action="">
+            <h3>Add Sizes and Pictures</h3>
+            
             <div class="label_plus_input">
-                <p>Product name</p>
-                <input type="text" placeholder="Product Name">
-            </div>
-            <div class="label_plus_input">
-                <p>Product Description</p>
-                <textarea placeholder="Product Description"></textarea>
-            </div>
-            <div class="label_plus_input">
-                <p>Price Confidential (eg.Gold/Diamond)</p>
-                <select name="" id="">
-                    <option value="">No</option>
-                    <option value="">Yes</option>
-                </select>
-            </div>
-            <div class="label_plus_input">
-                <p>Product Price</p>
-                <input type="text" placeholder="Product Price">
-            </div>
-            <div class="label_plus_input">
-                <p>WholeSale Price Applicable</p>
-                <select name="" id="">
-                    <option value="">No</option>
-                    <option value="">Yes</option>
-                </select>
-            </div>
-            <div class="label_plus_input">
-                <p>Product WholeSale Price</p>
-                <input type="text" placeholder="Product Price">
-            </div>
-            <div class="label_plus_input">
-                <p>Discount Applied</p>
-                <select name="" id="">
-                    <option value="">No</option>
-                    <option value="">Yes</option>
-                </select>
-            </div>
-            <div class="label_plus_input">
-                <p>Discount Percent</p>
-                <input type="text" placeholder="Discount Amount">
-            </div>
-            <div class="label_plus_input">
-                <p>Different Genders (eg. Clothing)</p>
-                <select name="" id="">
-                    <option value="">Yes</option>
-                    <option value="">No</option>
-                </select>
-            </div>
-            <div class="label_plus_input">
-                <p>Product Gender Category</p>
-                <select name="" id="">
-                    <option value="">Male</option>
-                    <option value="">Female</option>
-                    <option value="">Teen Boy</option>
-                    <option value="">Teen Girl</option>
-                    <option value="">Tween Boy</option>
-                    <option value="">Tween Girl</option>
-                    <option value="">Toddler Boy</option>
-                    <option value="">Toddler Girl</option>
-                    <option value="">Baby Boy</option>
-                    <option value="">Baby Girl</option>
-                </select>
-            </div>
-            <div class="label_plus_input">
-                <p>Different Categories Applicable</p>
-                <select name="" id="">
-                    <option value="">Yes</option>
-                    <option value="">No</option>
-                </select>
-            </div>
-            <div class="label_plus_input">
-                <p>Product Category</p>
-                <select name="" id="all_categories"></select>
-            </div>
-            <div class="label_plus_input">
-                <p>Different Sub-Categories Applicable</p>
-                <select name="" id="">
-                    <option value="">No</option>
-                    <option value="">Yes</option>
-                </select>
-            </div>
-            <div class="label_plus_input">
-                <p>Product Sub-Category</p>
-                <select name="" id="all_sub_categories"></select>
-            </div>
-            <div class="label_plus_input">
-                <p>Different Brands Applicable</p>
-                <select name="" id="">
-                    <option value="">Yes</option>
-                    <option value="">No</option>
-                </select>
-            </div>
-            <div class="label_plus_input">
-                <p>Brand</p>
-                <select name="" id="">
-                    <option value="">Yes</option>
-                    <option value="">No</option>
-                </select>
+                <p>Product Sizes</p>
+                
+                <div class="pagination_container" style="
+                    justify-content: space-between; 
+                    width: 100%; gap: 10px;
+                    flex-wrap: wrap;
+                    ">
+                    <div class="active_page">XS</div>
+                    <div>S</div>
+                    <div class="active_page">M</div>
+                    <div>L</div>
+                    <div>XL</div>
+                    <div>XXL</div>
+                </div>
             </div>
 
             <div class="label_plus_input">
-                <button>Save and Continue</button>
+                <p>Product Images</p>
+            </div>
+
+            <div class="selected_images_container">
+                
+            </div>
+
+            <div class="label_plus_input">
+                <label for="extra_image">
+                    <i class="fa-solid fa-image"></i>
+                </label>
+            </div>
+
+            <div class="label_plus_input">
+                <input id="extra_image" type="file" accept="image/*" name="">
+            </div>
+
+            <div class="label_plus_input">
+                <button>Upload</button>
             </div>
         </form>
     </main>
@@ -426,6 +362,6 @@
 		});
     </script>
 
-    <script src="./js/categories.js"></script>
+    <script src="./js/upload.js"></script>
 </body>
 </html>
