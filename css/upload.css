@@ -110,6 +110,10 @@ form button:hover{
 	background-color: orangered;
 }
 
+.note_text{
+  color: orangered;
+}
+
 @media(prefers-color-scheme: dark){
   main form .selected_images_container .selected_image i{
     background: rgba(255,255,255,0.3);
@@ -129,5 +133,9 @@ form button:hover{
   .label_plus_input select:focus {
     border-color: #66b2ff;
     box-shadow: 0 0 4px rgba(102, 178, 255, 0.5);
+  }
+
+  .note_text{
+    color: #FF4500;
   }
 }
