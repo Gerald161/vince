@@ -44,3 +44,39 @@ function updateAllExtraImages(){
 		});
 	});
 }
+
+//for video upload
+var extra_image_button = document.querySelector("#extra_image");
+
+var video_input = document.querySelector("#video_input");
+
+var video = document.querySelector("video");
+
+const video_container = document.querySelector(".video_container");
+
+video_input.addEventListener('change', function(){
+    const file = this.files[0];
+
+    if(file !== undefined){
+        if(file.type.split("/")[1] !== "mp4"){
+            video.src = null;
+            return;
+        }
+
+        if(file.type.startsWith("video/")){
+            const reader = new FileReader();
+
+            reader.readAsDataURL(file);
+
+            reader.onload = () => {
+                video_container.classList.remove("inactive_vid");
+
+                video.src = reader.result;
+            }
+        }
+    }else{
+        video_container.classList.add("inactive_vid");
+        video.src = null;
+    }
+
+})

@@ -114,6 +114,24 @@ form button:hover{
   color: orangered;
 }
 
+.video_container{
+  display: block;
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+.video_container video{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inactive_vid{
+  display: none;
+}
+
 @media(prefers-color-scheme: dark){
   main form .selected_images_container .selected_image i{
     background: rgba(255,255,255,0.3);
