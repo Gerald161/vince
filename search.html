@@ -17,11 +17,11 @@
       </a>
 
       <div class="nav_links">
-                <!-- <a href="upload.html" class="nav__link">Upload</a> -->
-                <a href="orders.html" class="nav__link">Orders</a>
-                <a href="#" class="nav__link">English</a>
-                <a href="#" class="nav__link">Categories</a>
-            </div>
+        <!-- <a href="upload.html" class="nav__link">Upload</a> -->
+        <a href="orders.html" class="nav__link">Orders</a>
+        <a href="#" class="nav__link">English</a>
+        <a href="#" class="nav__link">Categories</a>
+      </div>
 
       <form action="" class="first_form">
         <input type="text" placeholder="What are you looking for">
@@ -198,7 +198,7 @@
 
         <div class="container">
           <a href="profile.html">Profile</a>
-      <a href="categories.html" class="nav_link">Categories</a>
+          <a href="categories.html" class="nav_link">Categories</a>
             <a href="orders.html" class="nav_link">Orders</a>
             <a href="notifications.html" class="nav_link">Notifications</a>
             <!-- <a href="upload.html" class="nav_link">Upload</a> -->
@@ -534,18 +534,22 @@
 
       const featured_products = document.querySelector(".featured_products");
       
-      allImages.forEach((image)=>{
+      allImages.forEach((image, index)=>{
           featured_products.innerHTML += `
           <a href="#" class="product">
               <div class="image_container">
-                  <img src="./images/${image.image}.jpg" loading="lazy" alt="Ginseng">
+                <img src="./images/${image.image}.jpg" loading="lazy" alt="Ginseng">
+                ${index % 2 == 0 && `<div class="badge">30% off</div>`}
               </div>
 
               <i class="fa-regular fa-heart"></i>
 
               <h3>${image.name}</h3>
 
-              <p>£${image.price}</p>
+              <div class="price_and_discount">
+                <p>£${image.price}</p>
+                <span>${index % 2 == 0 ? "£"+parseInt(image.price) + 20 : ""}</span>
+              </div>
           </a>
           `
       });

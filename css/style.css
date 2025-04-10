@@ -303,7 +303,7 @@ nav .more_options .tooltip .profile .profile_option i:hover{
 nav .nav_icon_container{
     display: none !important;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 
 nav .nav_icon_container div{
@@ -464,45 +464,9 @@ header form button{
     text-align: center;
 }
 
+/* slider starts here */
 .welcome_container{
-	height: 60vh;
-	/* changed below from 500 to 400 */
-	width: 400%;
-	position: relative;
-	display: flex;
-	/* below is what I added later */
-	transition: all 1s;
-	left: 0;
-    /* below here is the fixed position */
-    margin-top: 72px;
-}
-
-.welcome_plus_slider{
-	position: relative;
-    overflow-x: hidden;
-}
-
-.welcome_plus_slider .slider_controller{
-	position: absolute;
-	left: 45%;
-	bottom: 10px;
-	z-index: 9;
-	display: flex;
-	gap: 20px;
-}
-
-.welcome_plus_slider .slider_controller i{
-	font-size: 1.5em;
-	cursor: pointer;
-    color: white;
-}
-
-.hide_icon{
-	display: none;
-}
-
-.welcome_container .slider_info{
-	flex-basis: 50%;
+	height: 70vh;
 	position: relative;
 }
 
@@ -528,12 +492,10 @@ header form button{
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
-	max-width: 60%;
+	max-width: 80%;
 }
 
-.welcome_container .overlay .welcome_message button, 
-.main_categories .category .category_description button
-{
+.welcome_container .overlay .welcome_message button{
     cursor: pointer;
     padding: 10px 20px;
     max-width: fit-content;
@@ -548,7 +510,23 @@ header form button{
 	background-color: dodgerblue;
 }
 
-.welcome_container .overlay .welcome_message button:hover, 
+.welcome_container .overlay .welcome_message button:hover{
+    background-color: orangered;
+}
+/* it ends here */
+ 
+.main_categories .category .category_description button
+{
+    cursor: pointer;
+    padding: 10px 20px;
+    max-width: fit-content;
+    border: none;
+    background-color: black;
+    color: white;
+    transition: background-color 0.5s;
+    pointer-events: initial;
+}
+ 
 .main_categories .category .category_description button:hover{
     background-color: orangered;   
 }
@@ -661,7 +639,7 @@ input:focus, textarea:focus{
 }
 
 .featured_styles .featured_style .overlay{
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.3);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -704,6 +682,7 @@ input:focus, textarea:focus{
     grid-auto-rows: fit-content;
 }
 
+/* slider here too */
 .featured_products .product{
 	position: relative;
 	transition: all 0.5s;
@@ -711,15 +690,15 @@ input:focus, textarea:focus{
 	flex-direction: column;
 	gap: 10px;
 	margin-top: 15px;
-    text-align: center;
 }
 
+/* slider here too */
 .featured_products .product .image_container{
-	height: 250px;
+	height: 205px;
 	z-index: -1;
 	position: relative;
 	overflow: hidden;
-	border-radius: 10px;
+	border-radius: 5px;
 }
 
 .featured_products .product img{
@@ -735,6 +714,19 @@ input:focus, textarea:focus{
     transform: scale(1.2);
 }
 
+/* slider here too */
+.featured_products .product .badge{
+    background-color: #FF3B30;
+    color: white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-weight: bold;
+    font-size:0.9em;
+}
+
 .featured_products .product i{
 	position: absolute;
 	top: 0;
@@ -747,69 +739,20 @@ input:focus, textarea:focus{
 	border-radius: 100%;
 }
 
+/* slider here too */
+.featured_products .product .price_and_discount{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.featured_products .product .price_and_discount span{
+    text-decoration: line-through; 
+    color: gray;
+}
+
 .featured_products .product i:hover{
 	color: dodgerblue;
-}
-
-.other_categories{
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-auto-rows: 190px;
-    grid-auto-flow: dense;
-    padding: 10px;
-}
-
-.other_categories .other_category{
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-}
-
-.other_categories .other_category img{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.5s;
-}
-
-.other_categories .other_category:hover img{
-    transform: scale(1.2);
-}
-
-.other_categories .other_category .overlay{
-    background-color: rgba(0,0,0,0.4);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.other_categories .other_category .overlay h2{
-    font-weight: normal;
-}
-
-.other_categories .big{
-    grid-row: span 2;
-}
-
-.other_categories .big .overlay{
-    gap: 20px;
-}
-
-.other_categories .other_category .overlay h2,
-.other_categories .other_category .overlay .heading
-{
-    color: white;
-}
-
-.other_categories .other_category .overlay h2{
-    text-align: center;
 }
 
 .faq_section{
@@ -1000,26 +943,6 @@ footer .footer_info a i{
     color: dodgerblue;
 }
 
-.tags{
-	display: flex;
-	flex-wrap: wrap;
-	gap: 10px;
-}
-
-.tag{
-    border-radius: 15px;
-    border: solid 1px #ccc;
-    max-width: fit-content;
-    padding: 5px 15px;
-	transition: all 0.5s;
-    height: fit-content;
-}
-
-.tag:hover{
-	background: #e0e0e0;
-	border-color: black;
-}
-
 .featured_styles .big_feature img{
     position: absolute;
     width: 100%;
@@ -1065,13 +988,22 @@ footer .footer_info a i{
 		padding-bottom: 10px;
 	}
 
-    .welcome_container{
-        height: 60vh;
+    /* slider here below */
+    .welcome_container .overlay .welcome_message{
+		max-width: unset;
+	}
+
+    /* slider below here */
+    .why_us_reasons .reason img{
+        height: 30px;
+        width: 30px;
+        object-fit: cover;
     }
 
-    .welcome_plus_slider .slider_controller{
-        position: absolute;
-        left: 38%;
+    /* here too */
+    .why_us_reasons .reason{
+        display: flex;
+        padding: 20px 0;
     }
 
     .featured_styles .big_feature{
@@ -1079,17 +1011,11 @@ footer .footer_info a i{
         grid-row: span 1;
     }
 
-    .other_categories{
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        grid-auto-rows: 190px;
-    }
-
-    .other_categories .big{
-        grid-row: span 1;
-    }
-
-    .larger_other_category{
-        grid-column: span 2;
+    /* slider below */
+    .featured_styles .big_feature .overlay{
+        align-items: center;
+        padding: unset;
+        justify-content: center;
     }
 
     .featured_products{
@@ -1100,13 +1026,9 @@ footer .footer_info a i{
         height: 150px;
     }
 
-    .welcome_container .overlay .welcome_message{
-		max-width: unset;
-	}
-
+    /* slider here too */
     .why_us_reasons{
 		grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    	margin-bottom: 50px;
 	}
 
 	.why_us_reasons .reason:nth-child(1){
@@ -1237,14 +1159,6 @@ footer .footer_info a i{
     nav .more_options .tooltip .mark_all{
         color: white;
     }
-
-	.tag{
-		border: solid 1px #ccc;
-	}
-
-	.tag:hover{
-		background: #2a2a2a;
-	}
 
     .small_info h2{
         color: white;

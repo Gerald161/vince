@@ -59,6 +59,11 @@
 					<i class="fa-solid fa-magnifying-glass"></i>
 				</a>
 
+				<a href="#" class="tooltip">
+					<span class="tooltip_text">Favorites</span>
+					<i class="fa-regular fa-heart"></i>
+				  </a>
+
 				<div class="notifications_button tooltip">
 					<span class="tooltip_text">Notifications</span>
 					<i class="fa-solid fa-bell show_more_nav_icon"></i>
@@ -155,6 +160,11 @@
 	            <div class="show_search_form_button">
 	                <i class="fa-solid fa-magnifying-glass"></i>
 	            </div>
+				<div>
+					<a href="notifications.html">
+						<i class="fa-solid fa-bell show_more_nav_icon"></i>
+					</a>
+				</div>
 	            <div class="nav_icon">
 	                <i class="fa fa-bars"></i>
 	            </div>
@@ -199,98 +209,27 @@
         	<a href="profile.html">Profile</a>
 			<a href="categories.html" class="nav_link">Categories</a>
             <a href="orders.html" class="nav_link">Orders</a>
-            <a href="notifications.html" class="nav_link">Notifications</a>
+            <a href="#" class="nav_link">Favorites</a>
             <!-- <a href="upload.html" class="nav_link">Upload</a> -->
             <a href="checkout.html" class="nav_link">Checkout</a>
         </div>
     </div>
 
-    <div class="welcome_plus_slider">
-		<div class="slider_controller">
-			<a href="#" class="backward"><i class="fa-solid fa-backward"></i></a>
-			<a href="#" class="pause"><i class="fa-solid fa-pause"></i></a>
-			<a href="#" class="play hide_icon"><i class="fa-solid fa-play"></i></a>
-			<a href="#" class="forward"><i class="fa-solid fa-forward"></i></a>
+    <div class="welcome_container" style="margin-top: 72px;">
+		<img src="./images/welcome.jpg" loading="lazy" alt="Welcome Image">
+		<div class="overlay">
+			<div class="welcome_message">
+				<h2>Discover Your Perfect Style</h2>
+				<p>Elevate your wardrobe with our premium selection of designer pieces. Shop the latest trends and timeless classics.</p>
+				<button>Shop Now</button>
+				<!-- <button>Explore Collections</button> -->
+			</div>
 		</div>
-
-		<div class="welcome_container">
-			<div class="slider_info">
-				<img src="./images/welcome2.jpg" loading="lazy" alt="Welcome Image">
-				<div class="overlay">
-					<div class="welcome_message">
-						<h2>Fast & Secure Shopping, Hassle-Free Experience</h2>
-						<p>Enjoy a seamless shopping experience with secure payments, fast delivery, and reliable customer support. We make online shopping simple, safe, and stress-free.</p>
-						<!-- <button>Shop Now</button> -->
-					</div>
-				</div>
-			</div>
-			<div class="slider_info">
-				<img src="./images/welcome8.jpg" loading="lazy" alt="Welcome Image">
-				<div class="overlay">
-					<div class="welcome_message">
-						<h2>Shop with Confidence, Quality You Can Trust</h2>
-						<p>Every product in our store is carefully selected, tested for quality, and backed by industry standards. Enjoy safe, reliable, and effective shopping—because you deserve the best.</p>
-					</div>
-				</div>
-			</div>
-			<div class="slider_info">
-				<img src="./images/customer.jpg" loading="lazy" alt="Welcome Image">
-				<div class="overlay">
-					<div class="welcome_message">
-						<h2>24/7 customer support</h2>
-						<p>Enjoy round-the-clock support! Our team is available 24/7 to assist you with any questions or concerns, ensuring you have the help you need, whenever.</p>
-					</div>
-				</div>
-			</div>
-			<div class="slider_info">
-				<img src="./images/welcome7.jpg" loading="lazy" alt="Welcome Image">
-				<div class="overlay">
-					<div class="welcome_message">
-						<h2>Exclusive Deals, Just for You</h2>
-						<p>Unlock special discounts, limited-time offers, and exclusive products when you shop with us. Don't miss out—grab the best deals today.</p>
-					</div>
-				</div>
-			</div>
-		</div>  
 	</div>
 
     <main style="margin-top: 0; padding-top: 0;">
-        <div class="small_info">
-			<h2>Why choose us?</h2>
-		</div>
-
-		<div class="why_us_reasons">
-			<div class="reason">
-				<img src="./images/quality.png" loading="lazy" alt="Quality Icon">
-				<img src="./images/quality2.png" loading="lazy" alt="Quality Icon">
-				<h3>Certified</h3>
-				<p>Available Certificates of authenticity</p>
-			</div>
-			
-			<div class="reason">
-				<img src="./images/verified.png" loading="lazy" alt="Verified Icon">
-				<img src="./images/verified2.png" loading="lazy" alt="Verified Icon">
-				<h3>Secure</h3>
-				<p>Secure and Certified marketplace</p>
-			</div>
-
-			<div class="reason">
-				<img src="./images/delivery.png" loading="lazy" alt="Delivery Icon">
-				<img src="./images/delivery2.png" loading="lazy" alt="Delivery Icon">
-				<h3>Fast Delivery</h3>
-				<p>Fast and reliable shipping</p>
-			</div>
-
-			<div class="reason">
-				<img src="./images/return.png" loading="lazy" alt="Return Policy Icon">
-				<img src="./images/return2.png" loading="lazy" alt="Return Policy Icon">
-				<h3>Transparancy</h3>
-				<p>Hustle-free return policy</p>
-			</div>
-		</div>
-
         <div class="heading" style="padding-bottom: 20px;">
-	        <h2>Our Various Categories</h2>
+	        <h2>Our Featured Categories</h2>
 
 	        <p>Browse through our various collections</p>
 	    </div>
@@ -322,10 +261,6 @@
 	        </a>
     	</div>
 
-		<div class="tags" style="padding: 20px;">
-			<a href="categories.html" class="tag" style="border: none;">All Categories &UpperRightArrow;</a>
-		</div>
-
 		<div class="heading" style="padding-bottom: 20px;">
 	        <h2>Latest Arrivals</h2>
 
@@ -336,41 +271,38 @@
             
 		</div>
 
-		<div class="heading" style="padding-bottom: 40px; padding-top: 20px;">
-	        <h2>Your all in one platform for all your shopping needs</h2>
-	    </div>
+		<div class="small_info">
+			<h2>Why choose us?</h2>
+		</div>
 
-		<div class="other_categories">
-			<a href="product.html" class="other_category">
-				<img src="./images/2.jpg" alt="">
-				<div class="overlay">
-					<h2>Necklaces</h2>
-				</div>
-			</a>
-			<a href="product.html" class="other_category big">
-				<img src="./images/6.jpg" alt="">
-				<div class="overlay">
-					<h2>Clothing</h2>
-				</div>
-			</a>
-			<a href="product.html" class="other_category">
-				<img src="./images/1.jpg" alt="">
-				<div class="overlay">
-					<h2>Bracelets</h2>
-				</div>
-			</a>
-			<a href="product.html" class="other_category larger_other_category">
-				<img src="./images/5.jpg" alt="">
-				<div class="overlay">
-					<h2>Rings</h2>
-				</div>
-			</a>
-			<a href="product.html" class="other_category">
-				<img src="./images/4.jpg" alt="">
-				<div class="overlay">
-					<h2>Kente</h2>
-				</div>
-			</a>
+		<div class="why_us_reasons">
+			<div class="reason">
+				<img src="./images/quality.png" loading="lazy" alt="Quality Icon">
+				<img src="./images/quality2.png" loading="lazy" alt="Quality Icon">
+				<h3>Certified</h3>
+				<p>Available Certificates of authenticity</p>
+			</div>
+			
+			<div class="reason">
+				<img src="./images/verified.png" loading="lazy" alt="Verified Icon">
+				<img src="./images/verified2.png" loading="lazy" alt="Verified Icon">
+				<h3>Secure</h3>
+				<p>Secure and Certified marketplace</p>
+			</div>
+
+			<div class="reason">
+				<img src="./images/delivery.png" loading="lazy" alt="Delivery Icon">
+				<img src="./images/delivery2.png" loading="lazy" alt="Delivery Icon">
+				<h3>Fast Delivery</h3>
+				<p>Fast and reliable shipping</p>
+			</div>
+
+			<div class="reason">
+				<img src="./images/return.png" loading="lazy" alt="Return Policy Icon">
+				<img src="./images/return2.png" loading="lazy" alt="Return Policy Icon">
+				<h3>Transparency</h3>
+				<p>Hustle-free return policy</p>
+			</div>
 		</div>
 
         <div class="heading" style="padding-bottom: 20px;">
@@ -383,55 +315,9 @@
             
 		</div>
 
-		<div class="heading" style="padding-bottom: 20px;">
-	        <h2>Other Categories</h2>
-
-	        <p>Click to browse similar products</p>
-	    </div>
-
-		<div class="other_categories">
-			<a href="product.html" class="other_category">
-				<img src="./images/1.jpg" alt="">
-				<div class="overlay">
-					<h2>Jade Pendant</h2>
-				</div>
-			</a>
-
-			<a href="product.html" class="other_category big">
-				<img src="./images/2.jpg" alt="">
-				<div class="overlay">
-					<h2>Diamond Earrings</h2>
-				</div>
-			</a>
-			<a href="product.html" class="other_category">
-				<img src="./images/6.jpg" alt="">
-				<div class="overlay">
-					<h2>Clothing</h2>
-				</div>
-			</a>
-			<a href="product.html" class="other_category big">
-				<img src="./images/3.jpg" alt="">
-				<div class="overlay">
-					<h2>Jade Pendant</h2>
-				</div>
-			</a>
-			<a href="product.html" class="other_category big">
-				<img src="./images/4.jpg" alt="">
-				<div class="overlay">
-					<h2>Kente</h2>
-				</div>
-			</a>
-			<a href="product.html" class="other_category">
-				<img src="./images/5.jpg" alt="">
-				<div class="overlay">
-					<h2>Diamond Ring</h2>
-				</div>
-			</a>
-		</div>
-
         <div class="faq_section">
 			<div class="image_section">
-				<img src="./images/3.jpg" alt="">
+				<img src="./images/customer.jpg" alt="">
 			</div>
 			<div class="faq-container">
 				<h2>Queries about Vineyard</h2>
@@ -517,8 +403,6 @@
 
     <script src="https://kit.fontawesome.com/2843b9be73.js" crossorigin="anonymous"></script>
 
-    <script src="js/carousel.js"></script>
-
 	<script>
         var sideBarButton = document.querySelector(".nav_icon");
 
@@ -585,7 +469,36 @@
 				"name": "Gold Necklace",
 				"price": "30.0"
 			},
-			
+			{
+				"image":2,
+				"name": "Diamond Earrings",
+				"price": "50.0"
+			},
+			{
+				"image": 1,
+				"name": "Jade Pendant",
+				"price": "45.5"
+			},
+			{
+				"image":2,
+				"name": "Diamond Earrings",
+				"price": "50.0"
+			},
+			{
+				"image": 3,
+				"name": "Jade Necklace",
+				"price": "25.5"
+			},
+			{
+				"image": 4,
+				"name": "Kente",
+				"price": "30.0"
+			},
+			{
+				"image": 7,
+				"name": "Sneakers",
+				"price": "25.5"
+			},
 			],
 			[
 			{
@@ -608,25 +521,58 @@
 				"name": "Kente",
 				"price": "30.0"
 			},
-			
+			{
+				"image": 7,
+				"name": "Sneakers",
+				"price": "25.5"
+			},
+			{
+				"image": 5,
+				"name": "Diamond Ring",
+				"price": "45.5"
+			},
+			{
+				"image": 6,
+				"name": "Jeans",
+				"price": "50.0"
+			},
+			{
+				"image": 7,
+				"name": "Sneakers",
+				"price": "25.5"
+			},
+			{
+				"image": 8,
+				"name": "Gold Necklace",
+				"price": "30.0"
+			},
+			{
+				"image":2,
+				"name": "Diamond Earrings",
+				"price": "50.0"
+			},
 			],
 		];
 
         const featured_products = document.querySelectorAll(".featured_products");
         
         featured_products.forEach((featured_product, index)=>{
-            allImages[index].forEach((image)=>{
+            allImages[index].forEach((image, index2)=>{
                 featured_product.innerHTML += `
                 <a href="product.html" class="product">
                     <div class="image_container">
                         <img src="./images/${image.image}.jpg" loading="lazy" alt="Ginseng">
+						${index2 % 2 == 0 && `<div class="badge">30% off</div>`}
                     </div>
 
                     <i class="fa-regular fa-heart"></i>
 
                     <h3>${image.name}</h3>
 
-                    <p>£${image.price}</p>
+                    <div class="price_and_discount">
+						<p>£${image.price}</p>
+						<span>${index2 % 2 == 0 ? "£"+parseInt(image.price) + 20 : ""}</span>
+					</div>
                 </a>
                 `
             });
