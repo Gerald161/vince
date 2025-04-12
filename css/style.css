@@ -1077,8 +1077,9 @@ footer .footer_info a i{
         --border-color: #444444;
     }
 
+    /* slider */
 	body{
-        background-color: #121212;
+        background-color: #1a1a1a;
     }
 
     .tooltip .tooltip_text {
@@ -1086,8 +1087,9 @@ footer .footer_info a i{
         color: black;
     }
 
+    /* slider */
     header{
-        background-color: #121212;
+        background-color: #1a1a1a;
     }
 
     .notifications_container .all_notifications .notification .message_container .response{

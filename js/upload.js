@@ -46,11 +46,10 @@ function updateAllExtraImages(){
 }
 
 //for video upload
-var extra_image_button = document.querySelector("#extra_image");
-
 var video_input = document.querySelector("#video_input");
 
-var video = document.querySelector("video");
+if(video_input !== null){
+	var video = document.querySelector("video");
 
 const video_container = document.querySelector(".video_container");
 
@@ -74,9 +73,10 @@ video_input.addEventListener('change', function(){
                 video.src = reader.result;
             }
         }
-    }else{
-        video_container.classList.add("inactive_vid");
-        video.src = null;
-    }
-
-})
+		}
+		else{
+			video_container.classList.add("inactive_vid");
+			video.src = null;
+		}
+	})
+}
