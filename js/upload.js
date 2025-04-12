@@ -4,11 +4,13 @@ var selected_images_container = document.querySelector(".selected_images_contain
 
 var all_extra_images = [];
 
-extra_image_button.addEventListener("change", e =>{
-	if(extra_image_button.files.length){
-		add_extra_image_to_list(extra_image_button.files[0]);
-	}
-});
+if(extra_image_button !== null){
+	extra_image_button.addEventListener("change", e =>{
+		if(extra_image_button.files.length){
+			add_extra_image_to_list(extra_image_button.files[0]);
+		}
+	});
+}
 
 function add_extra_image_to_list(file){
 	if(file.type.startsWith("image/")){
