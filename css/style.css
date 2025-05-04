@@ -551,7 +551,7 @@ header form button{
 }
 
 main{
-    margin-top: 72px;
+    margin-top: 76px;
     padding: 20px 10px;
 	padding-bottom: 40px;
     min-height: 60vh;
@@ -1002,6 +1002,10 @@ footer .footer_info a:hover{
         margin-top: 65px;
     }
 
+    main{
+        margin-top: 65px;
+    }
+
     .welcome_container .overlay .welcome_description{
         width: 100%;
         align-self: center;
@@ -1073,7 +1077,7 @@ footer .footer_info a:hover{
 
     /* slider */
     header{
-        background-color: #1a1a1a;
+        background-color: #121212;
     }
 
     .notifications_container .all_notifications .notification .message_container .response{

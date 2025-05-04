@@ -205,11 +205,20 @@ tbody tr:hover{
 }
 
 /* from the notifications css, overriding it below */
-main .options{
+/* main .options{
     justify-content: initial;
     gap: 10px;
-}
+} */
 
 main .options button{
-    flex: initial;
+    /* flex: initial; */
+    display: block;
+}
+
+main .options button:first-child{
+    text-align: left;
+}
+
+main .options button:last-child{
+    text-align: right;
 }
