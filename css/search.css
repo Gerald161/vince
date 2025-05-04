@@ -313,6 +313,19 @@ main .filter_results_section .search_results .search_result h4{
   main .filter_results_section{
     border-left: none !important;
   }
+
+  /* to override the new one inside main styles.css */
+  .featured_products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    overflow-x: hidden;
+    /* padding bottom is for the scroll bar when small */
+    padding-bottom: unset;
+  }
+
+  .featured_products .product .image_container{
+    height: 150px;
+  }
 }
 
 
