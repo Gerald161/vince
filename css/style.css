@@ -135,6 +135,7 @@ nav .more_options i{
     padding: 13px;
     border-radius: 100%;
     transition: all 0.5s;
+    font-size: 20px;
 }
 
 nav .more_options i:hover{
@@ -464,10 +465,18 @@ header form button{
     text-align: center;
 }
 
-/* slider starts here */
 .welcome_container{
-	height: 70vh;
-	position: relative;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.welcome_container .overlay{
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
 }
 
 .welcome_container img{
@@ -477,25 +486,23 @@ header form button{
     object-fit: cover;
 }
 
-.welcome_container .overlay{
-    background-color: rgba(0,0,0,0.6);
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.welcome_container .overlay .welcome_description{
+    color: white;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    width: 50%;
+    padding: 30px;
+    padding-top: 10%;
 }
 
-.welcome_container .overlay .welcome_message{
-	color: white;
-	padding: 20px;
-	display: flex;
-	flex-direction: column;
-	gap: 30px;
-	max-width: 80%;
+.welcome_container .overlay .welcome_description h1{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
 }
 
-.welcome_container .overlay .welcome_message button{
+.welcome_container .overlay .welcome_description button{
     cursor: pointer;
     padding: 10px 20px;
     max-width: fit-content;
@@ -503,17 +510,28 @@ header form button{
     background-color: black;
     color: white;
     transition: background-color 0.5s;
-    pointer-events: initial;
 }
 
-.welcome_container .overlay .welcome_message button{
-	background-color: dodgerblue;
+.welcome_container .overlay .welcome_description button:hover{
+    background-color: orangered;   
 }
 
-.welcome_container .overlay .welcome_message button:hover{
-    background-color: orangered;
+.welcome_container img:nth-child(2){
+    animation: animate ease 10s infinite alternate;
+    animation-delay: 5s;
 }
-/* it ends here */
+
+@keyframes animate{
+	0%{
+		opacity: 1;
+	}
+    50%{
+        opacity: 0;
+    }
+	100%{
+		opacity: 1;
+	}
+}
  
 .main_categories .category .category_description button
 {
@@ -548,38 +566,6 @@ main .small_info p{
 	margin: 10px
 }
 
-.why_us_reasons{
-	display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-rows: fit-content;
-    grid-auto-flow: dense;
-    background-color: #EAEAEA;
-}	
-
-.why_us_reasons .reason{
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	align-items: center;
-	padding: 20px;
-	gap: 15px;
-	border-right: 2px solid #ccc;
-}
-
-.why_us_reasons .reason img{
-	height: 50px;
-	width: 50px;
-	object-fit: cover;
-}
-
-.why_us_reasons .reason img:nth-child(2){
-	display: none;
-}
-
-.why_us_reasons .reason:last-child{
-	border-right: none;
-}
-
 input{
     padding: 10px;
     border: 1px solid #ccc;
@@ -598,7 +584,7 @@ input:focus, textarea:focus{
     border-color: #007bff;
 }
 
-.heading{
+.heading_category{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -606,17 +592,28 @@ input:focus, textarea:focus{
     padding-top: 20px;
 }
 
-.heading .header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
+.heading_category h2{
+    font-weight: normal;
 }
 
-.heading h3, .heading i,
+.heading{
+    display: flex;
+    padding-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .heading h2{
     font-weight: normal;
+}
+
+.heading a{
+    text-decoration: underline;
+    transition: all 0.6s;
+}
+
+.heading a:hover{
+    color: dodgerblue;
 }
 
 .featured_styles{
@@ -682,7 +679,13 @@ input:focus, textarea:focus{
     grid-auto-rows: fit-content;
 }
 
-/* slider here too */
+/* new styling below */
+/* .featured_products{
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+} */
+
 .featured_products .product{
 	position: relative;
 	transition: all 0.5s;
@@ -692,7 +695,6 @@ input:focus, textarea:focus{
 	margin-top: 15px;
 }
 
-/* slider here too */
 .featured_products .product .image_container{
 	height: 205px;
 	z-index: -1;
@@ -888,64 +890,32 @@ footer{
     justify-content: space-around;
     padding: 20px;
     flex-wrap: wrap;
-    background-color: #eee; 
-    gap: 5px;
-    padding-bottom: 40px;
+    border-bottom: solid black 1px;
+    background-color: #e0e0e0; 
 }
 
 footer .footer_info{
     display: flex;
     flex-direction: column;
-    max-width: 400px;
-}
-
-footer .footer_info:nth-child(1){
-	display: flex;
-	flex-direction: column;
-	gap: 20px;	
-}
-
-footer .footer_info button{
-    cursor: pointer;
-    padding: 10px 20px;
-    max-width: fit-content;
-    border: none;
-    background-color: dodgerblue;
-    color: white;
-    transition: background-color 0.5s;
-    pointer-events: initial;
-}
-
-footer .footer_info button:hover{
-	background-color: orangered;
-}
-
-footer .footer_info h1{
-	font-weight: normal;
-	font-size: 1.4em;
 }
 
 footer .footer_info h2{
-    font-size: 1.2em;   
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1rem;   
     padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
 }
 
 footer .footer_info a{
     padding: 10px 0;
-    transition: all 0.5s;
-    color: #4A4A4A;
-}
-
-footer .footer_info .first_p{
-	color: #4A4A4A;
+    text-align: center;
+    transition: all 0.6s;
 }
 
 footer .footer_info a:hover{
-	color: dodgerblue;
-}
-
-footer .footer_info a i{
-    font-size: 20px;
+    color: dodgerblue;
 }
 
 .copyright{
@@ -1029,22 +999,13 @@ footer .footer_info a i{
 		padding-bottom: 10px;
 	}
 
-    /* slider here below */
-    .welcome_container .overlay .welcome_message{
-		max-width: unset;
-	}
-
-    /* slider below here */
-    .why_us_reasons .reason img{
-        height: 30px;
-        width: 30px;
-        object-fit: cover;
+    .welcome_container{
+        height: 63vh;
     }
 
-    /* here too */
-    .why_us_reasons .reason{
-        display: flex;
-        padding: 20px 0;
+    .welcome_container .overlay .welcome_description{
+        width: 100%;
+        align-self: center;
     }
 
     .featured_styles .big_feature{
@@ -1052,7 +1013,6 @@ footer .footer_info a i{
         grid-row: span 1;
     }
 
-    /* slider below */
     .featured_styles .big_feature .overlay{
         align-items: center;
         padding: unset;
@@ -1060,26 +1020,17 @@ footer .footer_info a i{
     }
 
     .featured_products{
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+        /* padding bottom is for the scroll bar when small */
+        padding-bottom: 10px;
     }
-    
+
     .featured_products .product .image_container{
-        height: 150px;
+        min-width: 200px;
+        height: 130px;
     }
-
-    /* slider here too */
-    .why_us_reasons{
-		grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-	}
-
-	.why_us_reasons .reason:nth-child(1){
-		border-bottom: 2px solid #ccc;
-	}
-
-	.why_us_reasons .reason:nth-child(2){
-		border-bottom: 2px solid #ccc;
-		border-right: none;
-	}
 
     .faq_section .image_section{
         display: none;
@@ -1090,19 +1041,12 @@ footer .footer_info a i{
     }
 
     footer{
-    	gap: 30px;
-	}
-
+        gap: 30px;
+    }
+    
     footer .footer_info{
-        align-items: center;
-    }
-
-    footer .footer_info form input{
-        width: 200px;
-    }
-
-    footer .footer_info h1{
-        font-size: 1.2em;
+        display: flex;
+        flex-direction: column;
     }
 
     .copyright{
@@ -1120,7 +1064,7 @@ footer .footer_info a i{
 
     /* slider */
 	body{
-        background-color: #1a1a1a;
+        background-color: #121212;
     }
 
     .tooltip .tooltip_text {
@@ -1211,22 +1155,6 @@ footer .footer_info a i{
         color: rgb(170, 170, 170);
     }
 
-    .why_us_reasons{
-    	background-color: #1f1f1f;
-    }
-
-    .why_us_reasons .reason{
-		border-right: 2px solid #141414;
-	}
-
-	.why_us_reasons .reason img:nth-child(1){
-		display: none;
-	}
-
-	.why_us_reasons .reason img:nth-child(2){
-		display: block;
-	}
-
 	.message button{
 		background-color: #333;
 	}
@@ -1237,16 +1165,6 @@ footer .footer_info a i{
 	  border: 1px solid #333;
 	}
 
-	@media(max-width: 700px){
-		.why_us_reasons .reason:nth-child(1){
-			border-bottom: 2px solid #141414;
-		}
-
-		.why_us_reasons .reason:nth-child(2){
-			border-bottom: 2px solid #141414;
-		}
-	}
-
     /* slider */
     .featured_products .product .add_container .add_cart_button{
         color: white;
@@ -1254,19 +1172,12 @@ footer .footer_info a i{
     
     footer{
         background-color: #1f1f1f;
+        border-bottom: solid #ccc 1px;
     }
 
     footer .footer_info h2{
         color: white;
     }
-
-    footer .footer_info a{
-	    color: rgb(190, 190, 190);
-	}
-
-	footer .footer_info .first_p{
-		color: rgb(190, 190, 190);
-	}
 
     .copyright{
         color: white;
