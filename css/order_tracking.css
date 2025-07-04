@@ -10,7 +10,7 @@ main .filter_section{
     gap: 20px;
     height: 66vh;
     position: sticky;
-    top: 0;
+    top: 76px;
 }
 
 main .filter_section .all_drivers{
@@ -66,6 +66,10 @@ main .details_section{
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+main .details_section h3{
+    font-weight: normal;
 }
 
 main .details_section .map_container{
@@ -195,7 +199,7 @@ button:hover{
     background-color: #28a745;   
 }
 
-@media(max-width: 700px){
+@media(max-width: 800px){
     main{
         flex-direction: column;
     }
@@ -203,6 +207,7 @@ button:hover{
     main .filter_section{
         position: relative;
         height: auto;
+        top: 0;
     }
 
     main .details_section .order_details{

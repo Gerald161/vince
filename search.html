@@ -3,242 +3,478 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/navbar_searchbar_categories.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel="stylesheet" href="./css/search.css">
+	<link rel="stylesheet" type="text/css" href="./css/navbar.css">
+	<link rel="stylesheet" href="./css/sidebar.css">
+	<link rel="stylesheet" href="./css/footer.css">
+	<link rel="stylesheet" href="./css/home_profile_settings.css">
+	<link rel="stylesheet" href="./css/navbar_notifications.css">
+	<!-- page specific css below -->
+	<link rel="stylesheet" href="./css/search.css">
+	<link rel="stylesheet" href="./css/search_filters.css">
+	<link rel="stylesheet" href="./css/searchpage_product_display.css">
+	<!-- it ends here -->
 	<link rel="shortcut icon" type="image/png" href="./images/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Welcome to Vince Vineyard International</title>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html" class="logo">
-        <img src="./images/logo.png" loading="lazy" alt="Lazy">
-      </a>
+	<header>
+		<nav>
+			<div class="ham_and_icon">
+				<div class="nav_icon">
+					<i class="fa fa-bars"></i>
+				</div>
+				<a href="index.html" class="logo">
+					<img src="./images/logo.png" loading="lazy" alt="Logo">
+				</a>
+			</div>
 
-      <div class="nav_links">
-        <!-- <a href="upload.html" class="nav__link">Upload</a> -->
-        <a href="orders.html" class="nav__link">Orders</a>
-        <a href="#" class="nav__link">English</a>
-        <a href="#" class="nav__link">Categories</a>
-      </div>
+			<form action="search.html" class="first_form">
+				<input type="text" placeholder="What are you looking for..." required>
+				<div class="form_options">
+					<i class="fa-solid fa-xmark clear_search"></i>
+					<label for="picture">
+						<i class="fa-solid fa-camera camera_upload"></i>
+					</label>
+					<p class="divider">|</p>
+					<button>
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</button>
+				</div>
+				<input id="picture" type="file" accept="image/*" name="">
+				<div class="search_suggestions">
+					<a href="search.html">
+						<i class="fa-solid fa-magnifying-glass"></i>
+						<p>Test</p>
+					</a>
+					<a href="search.html">
+						<i class="fa-solid fa-magnifying-glass"></i>
+						<p>Search</p>
+					</a>
+					<a href="search.html">
+						<i class="fa-solid fa-magnifying-glass"></i>
+						<p>Test</p>
+					</a>
+					<a href="search.html">
+						<i class="fa-solid fa-magnifying-glass"></i>
+						<p>Search</p>
+					</a>
+				</div>
+				<div class="search_ideas">
+					<h3>Ideas for you</h3>
 
-      <form action="" class="first_form">
-        <input type="text" placeholder="What are you looking for">
-        <div class="form_options">
-          <i class="fa-solid fa-xmark"></i>
-          <p class="divider">|</p>
-          <label for="picture">
-            <i class="fa-solid fa-camera camera_upload"></i>
-          </label>
-        </div>
-        <input id="picture" type="file" accept="image/*" name="">
-        <button><i class="fa-solid fa-magnifying-glass"></i></button>
-        <div class="search_suggestions">
-          <a href="search.html">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <p>Test</p>
-          </a>
-          <a href="#">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <p>Search</p>
-          </a>
-          <a href="search.html">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <p>Test</p>
-          </a>
-          <a href="search.html">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <p>Search</p>
-          </a>
-        </div>
-      </form>
+					<div class="categories_container">
+						
+					</div>
 
-      <div class="more_options">
-        <a href="#" class="toggle_big_search_button tooltip">
-          <span class="tooltip_text">Search</span>
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </a>
+					<h3>Popular on Vince Search</h3>
 
-        <div class="notifications_button tooltip">
-          <span class="tooltip_text">Notifications</span>
-          <i class="fa-solid fa-bell show_more_nav_icon"></i>
-          <div class="number_of_notifications">2</div>
-          <div class="notifications_container">
-            <p class="stuff">Your Notifications <span style="font-weight: bold;">5</span></p>
+					<div class="categories_container">
+						
+					</div>
+				</div>
+			</form>
 
-            <div class="mark_all">Mark all as read</div>
+			<div class="more_options">
+				<a href="#" class="tooltip">
+					<span class="tooltip_text">Favorites</span>
+					<i class="fa-regular fa-heart"></i>
+					</a>
 
-            <!-- <p style="padding: 20px;">No messages available</p> -->
-            
-            <div class="all_notifications">
-              <a href="#" class="notification">
-                <div class="profile_pic"></div>
-                <div class="message_container">
-                  <div class="both">
-                    <p>Your <span style="font-weight: bold;">order</span> is <span style="color: #28A745;">ready</span></p>
-                    <div class="dot"></div>
-                  </div>
-                  <div class="time">
-                    <p style="color: grey;">Friday 3:12 PM</p>
-                    <p style="color: grey;">2 hours ago</p>
-                  </div>
-                </div>
-              </a>
-              <a href="#" class="notification">
-                <div class="profile_pic"></div>
-                <div class="message_container">
-                  <div class="both">
-                    <p>Your order will <span style="color: #D35454">expire</span> </p>
-                    <div class="dot"></div>
-                  </div>
-                  <div class="time">
-                    <p style="color: grey;">Friday 3:12 PM</p>
-                    <p style="color: grey;">2 hours ago</p>
-                  </div>
-                </div>
-              </a>
-              <a href="#" class="notification">
-                <div class="profile_pic"></div>
-                <div class="message_container">
-                  <div class="both">
-                    <p><span style="font-weight: bold;">@Vince</span> responded to comment</p>
-                    <div class="dot"></div>
-                  </div>
-                  <div class="time">
-                    <p style="color: grey;">Friday 3:12 PM</p>
-                    <p style="color: grey;">2 hours ago</p>
-                  </div>
-                  <div class="response">
-                    <p>
-                      This is going to be an encouraging text we will send our customers so 
-                      they keep working with us
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
+				<div class="notifications_button tooltip">
+					<span class="tooltip_text">Notifications</span>
+					<i class="fa-solid fa-bell show_more_nav_icon"></i>
+					<div class="number_of_notifications">2</div>
+					<div class="notifications_container">
+						<div class="notification_header">
+							<h3>Notifications</h3>
 
-            <a href="notifications.html" class="button">
-              View All Messages
-            </a>
-          </div>
-        </div>
+							<button class="mark_all_read">Mark all as read</button>
+						</div>
+						<div class="notification_content">
+							<a href="notifications.html" class="notification_item unread_noti">
+								<div class="icon text_success">
+									<i class="fa-solid fa-check"></i>
+								</div>
+								<div class="title_and_details">
+									<div class="title_and_status">
+										<p class="text_success">Your order is ready</p>
+										<div class="unread_dot"></div>
+									</div>
+									<p class="detail">Your order #12345 has been shipped and it is on the way!</p>
 
-        <a href="./checkout.html" class="tooltip">
-          <span class="tooltip_text">Cart</span>
-          <i class="fa-solid fa-cart-shopping"></i>
-        </a>
+									<div class="time_section">
+										<p>Friday 3:12 PM</p>
+										<p>2h ago</p>
+									</div>
+								</div>
+							</a>
+							<a href="notifications.html" class="notification_item">
+								<div class="icon text_warning">
+									<i class="fa-solid fa-triangle-exclamation"></i>
+								</div>
+								<div class="title_and_details">
+									<div class="title_and_status">
+										<p class="text_warning">Your order will expire</p>
+										<!-- <div class="unread_dot"></div> -->
+									</div>
+									<p class="detail">Complete your purchase soon to secure your items.</p>
 
-        <div class="tooltip">
-          <span class="tooltip_text">Log/Sign in</span>
-          <i class="fa-regular fa-circle-user show_more_nav_icon"></i>
-          <div class="notifications_container profile">
-            <a href="profile.html" class="profile_option">
-              <i class="fa-duotone fa-solid fa-gear"></i>
-              <p>Settings</p>
-            </a>
+									<div class="time_section">
+										<p>Friday 3:12 PM</p>
+										<p>2h ago</p>
+									</div>
+								</div>
+							</a>
+							<a href="notifications.html" class="notification_item unread_noti">
+								<div class="icon text_processing">
+									<i class="fa-solid fa-clock"></i>
+								</div>
+								<div class="title_and_details">
+									<div class="title_and_status">
+										<p class="text_processing">Payment processing</p>
+										<div class="unread_dot"></div>
+									</div>
+									<p class="detail">Your order #12345 has been shipped and it is on the way!</p>
 
-            <a href="signinnew.html" class="profile_option">
-              <i class="fa-solid fa-user"></i>
-              <p>Sign in</p>
-            </a>
-            
-            <a href="#" class="profile_option">
-              <i class="fa-solid fa-arrow-right-from-bracket"></i>
-              <p>Logout</p>
-            </a>            
-          </div>
-        </div>
-      </div>
+									<div class="time_section">
+										<p>Friday 3:12 PM</p>
+										<p>2h ago</p>
+									</div>
+								</div>
+							</a>
+							<a href="notifications.html" class="notification_item unread_noti">
+								<div class="icon text_error">
+									<i class="fa-solid fa-credit-card"></i>
+								</div>
+								<div class="title_and_details">
+									<div class="title_and_status">
+										<p class="text_error">Payment failed</p>
+										<div class="unread_dot"></div>
+									</div>
+									<p class="detail">Your order #12345 has been shipped and it is on the way!</p>
 
-      <div class="nav_icon_container">
-              <div class="show_search_form_button">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-              </div>
-              <div class="nav_icon">
-                  <i class="fa fa-bars"></i>
-              </div>
-          </div>
-    </nav>
-    <form action="" class="second_form">
-            <input type="text" placeholder="What are you looking for">
-            <div class="form_options">
-        <i class="fa-solid fa-xmark"></i>
-        <p class="divider">|</p>
-        <label for="picture">
-          <i class="fa-solid fa-camera camera_upload"></i>
-        </label>
-      </div>
-      <input id="picture" type="file" accept="image/*" name="">
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
-            <div class="search_suggestions">
-                <a href="#">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <p>Test2</p>
-                </a>
-                <a href="#">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <p>Search2</p>
-                </a>
-                <a href="#">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <p>Test2</p>
-                </a>
-                <a href="#">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <p>Search2</p>
-                </a>
-            </div>
-        </form>
-  </header>
+									<div class="time_section">
+										<p>Friday 3:12 PM</p>
+										<p>2h ago</p>
+									</div>
+								</div>
+							</a>
+						</div>
 
-  <div class="mobile_screen_sidebar">
-        <i class="close_button fas fa-times"></i>
+						<div class="notification_footer">
+							<a href="notifications.html">View all notifications</a>
+						</div>
+					</div>
+				</div>
 
-        <div class="container">
-          <a href="profile.html">Profile</a>
-          <a href="categories.html" class="nav_link">Categories</a>
-            <a href="orders.html" class="nav_link">Orders</a>
-            <a href="notifications.html" class="nav_link">Notifications</a>
-            <!-- <a href="upload.html" class="nav_link">Upload</a> -->
-            <a href="checkout.html" class="nav_link">Checkout</a>
-        </div>
-    </div>
+				<a href="./checkout.html" class="tooltip">
+					<span class="tooltip_text">Cart</span>
+					<i class="fa-solid fa-cart-shopping"></i>
+				</a>
 
-  <div class="mobile_filter_options">
-    <div class="option">
-      <p>Filter</p>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 11h10v2H7zM4 7h16v2H4zm6 8h4v2h-4z"></path></svg>
-    </div>
+				<div class="tooltip">
+					<span class="tooltip_text">Log/Sign in</span>
+					<i class="fa-regular fa-circle-user show_more_nav_icon"></i>
+					<div class="profile_settings_container">
+						<a href="profile.html" class="profile_option">
+							<i class="fa-duotone fa-solid fa-gear"></i>
+							<p>Settings</p>
+						</a>
 
-    <div class="option">
-      <p>Sort</p>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8 16H4l6 6V2H8zm6-11v17h2V8h4l-6-6z"></path></svg>
-    </div>
+						<a href="orders.html" class="profile_option">
+							<i class="fa-solid fa-box-open"></i>
+							<p>Orders</p>
+						</a>
 
-    <div class="option">
-      <p>Color</p>
-      <i class="fa-solid fa-chevron-down"></i>
-    </div>
-    <div class="option">
-      <p>Price Range</p>
-      <i class="fa-solid fa-chevron-down"></i>
-    </div>
-    <div class="option">
-      <p>Gender</p>
-      <i class="fa-solid fa-chevron-down"></i>
-    </div>
-    <div class="option">
-      <p>Brand</p>
-      <i class="fa-solid fa-chevron-down"></i>
-    </div>
-  </div>
+						<a href="signinnew.html" class="profile_option">
+							<i class="fa-solid fa-user"></i>
+							<p>Sign in</p>
+						</a>
 
-  <div class="bottom_filter_options_container">
-    <h2 style="text-align: center; font-weight: normal; padding-top: 30px;">Filter Option</h2>
-    <i class="fa-solid fa-xmark close_filter"></i>
-  </div>
+						<a href="upload.html" class="profile_option">
+							<i class="fa-solid fa-upload"></i>
+							<p>Upload</p>
+						</a>
+						
+						<a href="#" class="profile_option">
+							<i class="fa-solid fa-arrow-right-from-bracket"></i>
+							<p>Logout</p>
+						</a>						
+					</div>
+				</div>
+			</div>
+
+			<div class="nav_icon_container">
+				<div class="show_search_form_button">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</div>
+				<div>
+					<a href="notifications.html">
+						<i class="fa-solid fa-bell show_more_nav_icon"></i>
+					</a>
+				</div>
+			</div>
+		</nav>
+		<form action="" class="second_form">
+			<input type="text" placeholder="What are you looking for" required>
+			<div class="form_options">
+				<i class="fa-solid fa-xmark clear_search"></i>
+				<label for="picture">
+					<i class="fa-solid fa-camera camera_upload"></i>
+				</label>
+				<p class="divider">|</p>
+				<button>
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</button>
+			</div>
+			<input id="picture" type="file" accept="image/*" name="">
+			<div class="search_suggestions">
+				<a href="search.html">
+					<i class="fa-solid fa-magnifying-glass"></i>
+					<p>Test2</p>
+				</a>
+				<a href="search.html">
+					<i class="fa-solid fa-magnifying-glass"></i>
+					<p>Search2</p>
+				</a>
+				<a href="search.html">
+					<i class="fa-solid fa-magnifying-glass"></i>
+					<p>Test2</p>
+				</a>
+				<a href="search.html">
+					<i class="fa-solid fa-magnifying-glass"></i>
+					<p>Search2</p>
+				</a>
+			</div>
+			<div class="search_ideas">
+				<h3>Ideas for you</h3>
+
+				<div class="categories_container">
+					
+				</div>
+
+				<h3>Popular on Vince Search</h3>
+
+				<div class="categories_container">
+					
+				</div>
+			</div>
+		</form>
+	</header>
+
+	<div class="mobile_screen_sidebar">
+		<div class="nav_drawer">
+			<div class="drawer_header">
+				<div class="logo">
+					<img src="./images/logo.png" alt="Logo">
+					<div class="logo_text">
+						<h3>Ecommerce</h3>
+						<p>Welcome Back!</p>
+					</div>
+				</div>
+
+				<i class="close_button fas fa-times"></i>
+			</div>
+		</div>
+
+		<div class="drawer_content">
+			<div class="nav_section">
+				<h3 class="nav_section_title">Quick Actions</h3>
+
+				<div class="nav_section_items">
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-solid fa-cart-shopping"></i>
+							<p>Cart</p>
+						</div>
+
+						<p>20</p>
+					</a>
+
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-regular fa-heart"></i>
+							<p>Wishlist</p>
+						</div>
+
+						<p>9</p>
+					</a>
+
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-solid fa-truck"></i>
+							<p>Track Orders</p>
+						</div>
+
+						<p>34</p>
+					</a>
+				</div>
+			</div>
+
+			<div class="nav_section">
+				<h3 class="nav_section_title">Categories</h3>
+
+				<div class="nav_section_items">
+					<div class="item category_button">
+						<div class="icon_and_label">
+							<img src="./icons/fashion.png" alt="Fashion">
+							<p>Fashion</p>
+						</div>
+
+						<div class="arrow">
+							<i class="fa-solid fa-chevron-down"></i>
+						</div>
+					</div>
+
+					<div class="nav_sub_cat">
+						<a href="">Men</a>
+						<a href="">Women</a>
+						<a href="">Children</a>
+					</div>
+
+					<div class="item category_button">
+						<div class="icon_and_label">
+							<img src="./icons/electronics.png" alt="Electronics">
+							<p>Electronics</p>
+						</div>
+
+						<div class="arrow">
+							<i class="fa-solid fa-chevron-down"></i>
+						</div>
+					</div>
+
+					<div class="nav_sub_cat">
+						<a href="">Phones</a>
+						<a href="">Laptops</a>
+						<a href="">PCs</a>
+					</div>
+
+					<div class="item category_button">
+						<div class="icon_and_label">
+							<img src="./icons/beauty.png" alt="Beauty">
+							<p>Beauty</p>
+						</div>
+
+						<div class="arrow">
+							<i class="fa-solid fa-chevron-down"></i>
+						</div>
+					</div>
+
+					<div class="nav_sub_cat">
+						<a href="">Makeup</a>
+						<a href="">Lipstick</a>
+						<a href="">Lotions</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="nav_section">
+				<h3 class="nav_section_title">Browse</h3>
+
+				<div class="nav_section_items">
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-solid fa-fire-flame-curved"></i>
+							<p>Trending Now</p>
+						</div>
+					</a>
+
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-regular fa-star"></i>
+							<p>New Arrivals</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="nav_section">
+				<h3 class="nav_section_title">Account</h3>
+
+				<div class="nav_section_items">
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-regular fa-circle-user"></i>
+							<p>My Account</p>
+						</div>
+					</a>
+
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-solid fa-location-dot"></i>
+							<p>Saved Addresses</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="nav_section">
+				<h3 class="nav_section_title">Support</h3>
+
+				<div class="nav_section_items">
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-solid fa-circle-question"></i>
+							<p>Help Center</p>
+						</div>
+					</a>
+
+					<a href="#" class="item">
+						<div class="icon_and_label">
+							<i class="fa-solid fa-gear"></i>
+							<p>Settings</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="drawer_footer">
+			<a href="#">
+				<i class="fa-solid fa-arrow-right-from-bracket"></i>
+				<span style="margin-left: 5px;">Sign Out</span>
+			</a>
+		</div>
+  	</div>
+
+	<div class="drawer_overlay"></div>
+
+	<div class="mobile_filter_options">
+		<div class="option">
+			<p>Filter</p>
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 11h10v2H7zM4 7h16v2H4zm6 8h4v2h-4z"></path></svg>
+		</div>
+
+		<div class="option">
+			<p>Sort</p>
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8 16H4l6 6V2H8zm6-11v17h2V8h4l-6-6z"></path></svg>
+		</div>
+
+		<div class="option">
+			<p>Color</p>
+			<i class="fa-solid fa-chevron-down"></i>
+		</div>
+		<div class="option">
+			<p>Price Range</p>
+			<i class="fa-solid fa-chevron-down"></i>
+		</div>
+		<div class="option">
+			<p>Gender</p>
+			<i class="fa-solid fa-chevron-down"></i>
+		</div>
+		<div class="option">
+			<p>Brand</p>
+			<i class="fa-solid fa-chevron-down"></i>
+		</div>
+	</div>
+
+	<div class="bottom_filter_options_container">
+		<h2 style="text-align: center; font-weight: normal; padding-top: 30px;">Filter Option</h2>
+		<i class="fa-solid fa-xmark close_filter"></i>
+	</div>
 
   <div class="category_classifications">
     <a href="#">
@@ -294,6 +530,45 @@
   <main style="margin-top: 0;">
     <div class="filter_options_section">
         <div class="filter_section">
+          <div class="filter_text_container">
+            <div class="filter_icon_and_text">
+              <svg class="filter_icon" viewBox="0 0 24 24">
+                <path d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM4.875 12.75a2.625 2.625 0 1 1 5.25 0 2.625 2.625 0 0 1-5.25 0ZM15 18.75a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0Z"/>
+              </svg>
+              <h2>Filters</h2>
+            </div>
+            <p class="clear_filters">Clear Filters</p>
+          </div>
+
+		  <div class="filter_options_section_option">
+            <div class="option">
+              <p>Categories</p>
+  
+              <a href="#" class="arrow"><i class="fa-solid fa-chevron-down"></i></a>
+            </div>
+
+            <div class="actual_filter_options">
+              <div class="selection_container">
+				<label class="selection_box">
+					<input type="checkbox">
+					<p>Electronics</p>
+				</label>
+				<label class="selection_box">
+					<input type="checkbox">
+					<p>Clothings</p>
+				</label>
+				<label class="selection_box">
+					<input type="checkbox">
+					<p>Books</p>
+				</label>
+				<label class="selection_box">
+					<input type="checkbox">
+					<p>Home & Garden</p>
+				</label>
+			  </div>
+            </div>
+          </div>
+
           <div class="filter_options_section_option">
             <div class="option">
               <p>Color</p>
@@ -302,9 +577,79 @@
             </div>
 
             <div class="actual_filter_options">
-              <p>Red</p>
-              <p>Blue</p>
-              <p>Green</p>
+              <div class="color_options_container">
+                <div class="color_options">
+                  <div class="actual_color" style="background-color: #ff5252;">
+                    <div class="checkmark_container">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                  </div>
+                  <p>Red</p>
+                </div>
+
+                <div class="color_options">
+                  <div class="actual_color" style="background-color: #448aff;">
+                    <div class="checkmark_container">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                  </div>
+                  <p>Blue</p>
+                </div>
+
+                <div class="color_options">
+                  <div class="actual_color" style="background-color: #2ecc71;">
+                    <div class="checkmark_container">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                  </div>
+                  <p>Green</p>
+                </div>
+
+                <div class="color_options">
+                  <div class="actual_color" style="background-color: #ffa000;">
+                    <div class="checkmark_container">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                  </div>
+                  <p>Orange</p>
+                </div>
+
+                <div class="color_options">
+                  <div class="actual_color" style="background-color: #a855f7;">
+                    <div class="checkmark_container">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                  </div>
+                  <p>Purple</p>
+                </div>
+
+                <div class="color_options">
+                  <div class="actual_color" style="background-color: #ff4081;">
+                    <div class="checkmark_container">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                  </div>
+                  <p>Pink</p>
+                </div>
+
+                <div class="color_options">
+                  <div class="actual_color" style="background-color: #ffffff;">
+                    <div class="checkmark_container">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                  </div>
+                  <p>White</p>
+                </div>
+
+                <div class="color_options">
+                  <div class="actual_color" style="background-color: #263238;">
+                    <div class="checkmark_container">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                  </div>
+                  <p>Gray</p>
+                </div>
+              </div>
             </div>
           </div>
   
@@ -316,9 +661,19 @@
             </div>
 
             <div class="actual_filter_options">
-              <p>Cheap</p>
-              <p>Mid</p>
-              <p>Expensive</p>
+              <div class="range_and_price">
+				<div class="range_container">
+					<div class="range">
+						<p>Min</p>
+						<input type="number" placeholder="0">
+					</div>
+					<div class="range">
+						<p>Max</p>
+						<input type="number" placeholder="1000">
+					</div>
+				</div>
+				<p>$0 - $1000</p>
+			  </div>
             </div>
           </div>
   
@@ -330,22 +685,53 @@
             </div>
 
             <div class="actual_filter_options">
-              <p>Male</p>
-              <p>Female</p>
+				<div class="selection_container">
+					<label class="selection_box">
+						<input type="checkbox">
+						<p>Male</p>
+					</label>
+					<label class="selection_box">
+						<input type="checkbox">
+						<p>Female</p>
+					</label>
+				</div>
             </div>
           </div>
   
           <div class="filter_options_section_option">
             <div class="option">
-              <p>Brand</p>
+              <p>Brands</p>
   
               <a href="#" class="arrow"><i class="fa-solid fa-chevron-down"></i></a>
             </div>
 
             <div class="actual_filter_options">
-              <p>Gucci</p>
-              <p>Samsung</p>
-              <p>LG</p>
+              	<div class="selection_container">
+					<label class="selection_box">
+						<input type="checkbox">
+						<p>Apple</p>
+					</label>
+					<label class="selection_box">
+						<input type="checkbox">
+						<p>Samsung</p>
+					</label>
+					<label class="selection_box">
+						<input type="checkbox">
+						<p>Nike</p>
+					</label>
+					<label class="selection_box">
+						<input type="checkbox">
+						<p>Adidas</p>
+					</label>
+					<label class="selection_box">
+						<input type="checkbox">
+						<p>Sony</p>
+					</label>
+					<label class="selection_box">
+						<input type="checkbox">
+						<p>LG</p>
+					</label>
+				</div>
             </div>
           </div>
         </div>
@@ -357,7 +743,7 @@
     </div>
   
     <div class="filter_results_section">
-      <h3>Results for products...</h3>
+      <h3 class="result_for_text">Results for products...</h3>
 
       <div class="featured_products">
 
@@ -416,156 +802,13 @@
   </div>
 </div>
 
-  <script src="https://kit.fontawesome.com/2843b9be73.js" crossorigin="anonymous"></script>
-
-	<script>
-      var sideBarButton = document.querySelector(".nav_icon");
-
-      var closeButton = document.querySelector(".close_button");
-
-      var sideBar = document.querySelector(".mobile_screen_sidebar");
-
-      sideBarButton.addEventListener("click", (e)=>{
-        e.preventDefault();
-          sideBar.style.left = "0";
-      });
-
-      closeButton.addEventListener("click", (e)=>{
-        sideBar.style.left = "100%";
-      });
-
-      var toggle_big_search_button = document.querySelector(".toggle_big_search_button");
-
-      var nav_links = document.querySelector(".nav_links");
-
-      var first_header_form = document.querySelector("header").querySelector(".first_form");
-
-      toggle_big_search_button.addEventListener("click", (e)=>{
-        e.preventDefault();
-
-        if(nav_links.classList.contains("hide_nav_links")){
-          first_header_form.style.transition = "all 0s";
-        }else{
-          first_header_form.style.transition = "all 0.5s";
-        }
-        nav_links.classList.toggle("hide_nav_links");
-
-        first_header_form.classList.toggle("show_header");
-      });
-
-      var show_search_form_button = document.querySelector(".show_search_form_button");
-
-      var second_header_form = document.querySelector("header").querySelector(".second_form");
-      
-      show_search_form_button.addEventListener("click", (e)=>{
-        e.preventDefault();
-        second_header_form.classList.toggle("show_header");
-      });
-
-      var all_show_more_nav_icon = document.querySelectorAll(".show_more_nav_icon");
-
-      all_show_more_nav_icon.forEach((show_more_nav_icon)=>{
-        show_more_nav_icon.addEventListener("click", (e)=>{
-          var old_one = document.querySelector(".show_display");
-
-          show_more_nav_icon.parentElement.querySelector(".notifications_container").classList.toggle("show_display");
-
-          if(old_one !== null){
-            old_one.classList.remove("show_display");
-          }
-        });
-      });
-
-      var allImages = [
-        {
-          "image": 1,
-          "name": "Jade Pendant",
-          "price": "45.5"
-        },
-        {
-          "image":2,
-          "name": "Diamond Earrings",
-          "price": "50.0"
-        },
-        {
-          "image": 3,
-          "name": "Jade Necklace",
-          "price": "25.5"
-        },
-        {
-          "image": 4,
-          "name": "Jade Necklace",
-          "price": "25.5"
-        },
-        {
-          "image": 5,
-          "name": "Diamond Ring",
-          "price": "45.5"
-        },
-        {
-          "image": 6,
-          "name": "Jeans",
-          "price": "50.0"
-        },
-        {
-          "image": 7,
-          "name": "Sneakers",
-          "price": "25.5"
-        },
-        {
-          "image": 8,
-          "name": "Gold Necklace",
-          "price": "30.0"
-        },
-      ];
-
-      const featured_products = document.querySelector(".featured_products");
-      
-      allImages.forEach((image, index)=>{
-          featured_products.innerHTML += `
-          <a href="#" class="product">
-              <div class="image_container">
-                <img src="./images/${image.image}.jpg" loading="lazy" alt="Ginseng">
-                ${index % 2 == 0 && `<div class="badge">30% off</div>`}
-              </div>
-
-              <i class="fa-regular fa-heart"></i>
-
-              <h3>${image.name}</h3>
-
-              <div class="price_and_discount">
-                <p>£${image.price}</p>
-                <span>${index % 2 == 0 ? "£"+parseInt(image.price) + 20 : ""}</span>
-              </div>
-          </a>
-          `
-      });
-
-      var filter_options_section_options = document.querySelectorAll(".filter_options_section_option");
-
-      filter_options_section_options.forEach((filter_options_section_option)=>{
-        filter_options_section_option.addEventListener("click", (e)=>{
-          filter_options_section_option.firstElementChild.nextElementSibling.classList.toggle("active_filter");
-          filter_options_section_option.firstElementChild.querySelector("a").classList.toggle("active_arrow");
-        })
-      })
-      
-      var options = document.querySelector(".mobile_filter_options").querySelectorAll(".option");
-
-      var bottom_filter_options_container = document.querySelector(".bottom_filter_options_container");
-
-      options.forEach((option)=>{
-        option.addEventListener("click", (e)=>{
-          bottom_filter_options_container.classList.toggle("active_bottom_filter_container");
-        })
-      })
-
-      var close_filter = document.querySelector(".close_filter");
-
-      close_filter.addEventListener("click", (e)=>{
-        bottom_filter_options_container.classList.remove("active_bottom_filter_container");
-      })
-    </script>
-    <script src="./js/search.js"></script>
+	<script src="https://kit.fontawesome.com/2843b9be73.js" crossorigin="anonymous"></script>
+	<script src="./js/sidebarcontroller.js"></script>
+	<script src="./js/primarysearch.js"></script>
+	<script src="./js/nav_icon_click.js"></script>
+	<!-- page specific js below -->
+	<script src="./js/searchpage_toggleOptions.js"></script>
+	<script src="./js/searchpage_item_display.js"></script>
+	<script src="./js/search_filters.js"></script>
 </body>
 </html>
