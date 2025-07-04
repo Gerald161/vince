@@ -1,10 +1,5 @@
-:root {
-  --margin-top-big: 76px;
-  --margin-top-small: 70px;
-}
-
 .mobile_filter_options{
-  margin-top: var(--margin-top-small);
+  margin-top: 72px;
   align-items: center;
   gap: 20px;
   padding: 20px;
@@ -65,7 +60,7 @@
   border-bottom: solid 1px #ccc;
   justify-content: space-around;
   text-align: center;
-  margin-top: var(--margin-top-big);
+  margin-top: 72px;
 }
 
 .category_classifications img{
@@ -86,6 +81,7 @@ main{
   display: flex;
   margin-bottom: 5px;
   padding: 0;
+	padding-bottom: 40px;
 }
   
 main .filter_options_section{
@@ -95,13 +91,9 @@ main .filter_options_section{
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  height: 68vh;
+  height: 66vh;
   position: sticky;
-  overflow-y: auto;
-  /* padding-left: 1px; */
-  overflow-x: hidden;
-  /* below is for the fixed top spacing */
-  top: 76px;
+  top: 0;
 }
 
 main .filter_results_section{
@@ -111,10 +103,6 @@ main .filter_results_section{
   gap: 20px;
   border-left: solid 1px #ccc;
   padding: 15px;
-}
-
-.result_for_text{
-  font-weight: normal;
 }
 
 main .filter_options_section .filter_section{
@@ -128,10 +116,6 @@ main .filter_options_section .filter_section .filter_options_section_option{
   gap: 20px;
   border-bottom: solid 1px #ccc;
   margin-right: 18px;
-}
-
-main .filter_options_section .filter_section .filter_options_section_option:nth-child(2){
-  border-top: solid 1px #ccc;
 }
 
 main .filter_options_section .filter_section .filter_options_section_option .option{
@@ -148,6 +132,19 @@ main .filter_options_section .filter_section .filter_options_section_option .opt
 
 main .filter_options_section .filter_section .filter_options_section_option .option p{
   font-size: 1.1em;
+  font-weight: bold;
+}
+
+main .filter_options_section .filter_section .filter_options_section_option .actual_filter_options{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  padding: 0 15px;
+}
+
+main .filter_options_section .filter_section .filter_options_section_option .actual_filter_options p{
+  margin: 10px 0;
+  text-align: left;
 }
 
 .arrow{
@@ -159,7 +156,7 @@ main .filter_options_section .filter_section .filter_options_section_option .opt
 }
 
 .active_filter{
-  max-height: 300px !important;
+  max-height: 150px !important;
 }
 
 main .filter_options_section .filter_section .filter_options_section_option a{
@@ -284,104 +281,6 @@ main .filter_results_section .search_results .search_result h4{
   color: black !important;
 }
 
-/* new ones added for the filter */
-.filter_text_container{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10px;
-  margin-bottom: 10px;
-}
-
-.filter_icon_and_text{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.filter_icon_and_text h2{
-  font-weight: normal;
-  font-size: 1.3em;
-}
-
-.filter_icon {
-  width: 24px;
-  height: 24px;
-  fill: #10b981;
-}
-
-.clear_filters{
-  border: none;
-  color: #10b981;
-  cursor: pointer;
-  font-weight: 500;
-  padding: 6px 12px;
-  border-radius: 8px;
-  margin-right: 5px;
-  transition: all 0.2s ease;
-  text-align: center;
-}
-
-.clear_filters:hover {
-  background: rgba(16, 185, 129, 0.1);
-}
-
-.color_options_container{
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-  grid-auto-rows: fit-content;
-  padding: 10px 0;
-}
-
-.color_options_container .color_options{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.color_options_container .actual_color{
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  cursor: pointer;
-  /* border: 2px solid transparent; */
-  transition: transform 0.2s ease;
-  position: relative;
-}
-
-.color_options_container .actual_color:hover {
-  transform: scale(1.1);
-  border: 2px solid #ccc;
-}
-
-.color_options_container .actual_color .checkmark_container{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  background-color: rgba(0,0,0,0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* to toggle on and off */
-  display: none;
-}
-
-.color_options_container .actual_color .checkmark_container i{
-  color: white;
-}
-/* it ends here */
-
-/* to override the new one inside main styles.css */
-.featured_products{
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-.featured_products .product .image_container{
-  height: 180px;
-}
-
 @media(max-width: 700px){
   .mobile_filter_options{
     display: flex;
@@ -407,7 +306,7 @@ main .filter_results_section .search_results .search_result h4{
     grid-auto-rows: 200px;
   }
 
-  .result_for_text{
+  main .filter_results_section h3{
     text-align: center;
   }
 
@@ -415,14 +314,18 @@ main .filter_results_section .search_results .search_result h4{
     border-left: none !important;
   }
 
-  .filter_text_container{
-    display: none;
+  /* to override the new one inside main styles.css */
+  .featured_products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    overflow-x: hidden;
+    /* padding bottom is for the scroll bar when small */
+    padding-bottom: unset;
   }
-}
 
-/* below is for when option is opened with js */
-.opened_option{
-  background-color: #e0e0e0;
+  .featured_products .product .image_container{
+    height: 150px;
+  }
 }
 
 
@@ -461,18 +364,13 @@ main .filter_results_section .search_results .search_result h4{
     border-bottom: solid 1px #222222;
   }
 
-  main .filter_options_section .filter_section .filter_options_section_option:nth-child(2){
-    border-top: solid 1px #222222;
-  }
-
   .category_classifications{
     border-top: solid 1px #222222;
     border-bottom: solid 1px #222222;
   }
 
-  /* .opened_option below is for when option is opened with js */
   main .filter_options_section .filter_section .filter_options_section_option .option:hover,
-  .mobile_filter_options .option, .opened_option{
+  .mobile_filter_options .option{
     background: #2a2a2a;
   }
 
